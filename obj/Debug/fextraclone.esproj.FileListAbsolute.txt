@@ -1,0 +1,2 @@
+D:\Users\Spencer\source\repos\FextraClone\FextraClone\obj\Debug\fextraclone.esproj.SuggestedBindingRedirects.cache
+D:\Users\Spencer\source\repos\FextraClone\FextraClone\obj\Debug\fextraclone.esproj.CoreCompileInputs.cache

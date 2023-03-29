@@ -1,0 +1,145 @@
+@font-face {
+    font-family: 'OptimusPrinceps';
+    src: url('/fonts/OptimusPrinceps.woff2') format('woff2'), url('/fonts/OptimusPrinceps.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'OptimusPrincepsSemiBold';
+    src: url('/fonts/OptimusPrincepsSemiBold.woff2') format('woff2'), url('/fonts/OptimusPrincepsSemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
+.navbar {
+    position: fixed;
+    top: 0;
+    z-index: 50;
+}
+
+.navbar-nav {
+    align-items: center;
+    background-color: #333;
+    display: inline-flex;
+    gap: 2rem;
+    line-height: 1em;
+    justify-content: flex-start;
+    list-style:none;
+    margin: 0;
+    padding: 0;
+    background-color: #333333;
+    width: 100%;
+}
+
+.nav-item {
+    color: darkgray;
+    position:relative;
+    width: 10rem;
+}
+
+
+.nav-item:hover{
+    cursor:pointer;
+}
+    .nav-item:hover>.nav-icon{
+        filter:brightness(1.8);
+        cursor:pointer;
+    }
+
+    .nav-item:hover > .nav-text {
+        filter: brightness(1.8);
+        cursor: pointer;
+    }
+
+.nav-icon {
+    margin-right: 0.3rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.8rem;
+    height: 3rem;
+    width: 3rem;
+    vertical-align: middle;
+    user-select: none;
+}
+
+.nav-text {
+    user-select: none;
+    vertical-align:middle;
+    font-size: 18px;
+    font-family: OptimusPrincepsSemiBold;
+}
+
+.logo-link{
+    display: contents;
+}
+
+.logo{
+    height:7%;
+    width:7%;
+    margin-top: 0.3rem;
+}
+
+.logo:hover{
+    filter: brightness(1.8);
+}
+
+.nav-dropdown {
+    position: absolute;
+    pointer-events: none;
+    animation: rotateMenu 500ms ease-in-out forwards;
+    transform-origin: top center;
+}
+
+@keyframes rotateMenu {
+    0% {
+        transform: rotateX(-90deg)
+    }
+
+    70% {
+        transform: rotateX(20deg)
+    }
+
+    100% {
+        transform: rotateX(0deg)
+    }
+}
+
+.nav-dropdown:hover{
+    cursor:default;
+}
+
+    .nav-dropdown ul {
+    }
+
+        .nav-dropdown ul a {
+            font-family: OptimusPrinceps;
+            font-size: 16px;
+            transform: translateX(-25%);
+            background-color: black;
+            border-width: 1px;
+            border-style: solid;
+            border-color: dimgray;
+            box-sizing: border-box;
+            justify-items: center;
+            display: grid;
+            background-size: 30%;
+            width: 11.75rem;
+            padding-top: 0.5rem;
+            padding-bottom: 0.5rem;
+            padding-left: 5px;
+            padding-right: 5px;
+            color: white;
+            text-decoration: none;
+            white-space: nowrap;
+            user-select: none;
+            pointer-events: all;
+        }
+
+            .nav-dropdown ul a:hover {
+                filter: brightness(0.7);
+                background-color: dimgray;
+            }

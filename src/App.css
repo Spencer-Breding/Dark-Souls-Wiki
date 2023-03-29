@@ -36,3 +36,15 @@
     transform: rotate(360deg);
   }
 }
+
+body {
+    background-attachment: fixed;
+    background-image: url(https://images6.alphacoders.com/390/390190.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    width: 100vw;
+    height: 100vh;
+    overflow-x:hidden;
+    overflow-y: auto;
+}

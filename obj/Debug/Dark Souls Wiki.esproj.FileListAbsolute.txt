@@ -1,0 +1,2 @@
+D:\Users\Spencer\source\repos\FextraClone\Dark Souls Wiki\obj\Debug\Dark Souls Wiki.esproj.SuggestedBindingRedirects.cache
+D:\Users\Spencer\source\repos\FextraClone\Dark Souls Wiki\obj\Debug\Dark Souls Wiki.esproj.CoreCompileInputs.cache
