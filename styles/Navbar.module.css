@@ -19,44 +19,48 @@
 .navbar {
     position: fixed;
     top: 0;
+    left: 0;
     z-index: 50;
+    margin:0;
+    white-space:nowrap;
+    padding:0;
 }
 
-.navbar-nav {
+.navbar_nav {
     align-items: center;
     background-color: #333;
     display: inline-flex;
-    gap: 2rem;
-    line-height: 1em;
+    gap: 2em;
     justify-content: flex-start;
     list-style:none;
     margin: 0;
     padding: 0;
     background-color: #333333;
-    width: 100%;
+    width: 100vw;
+    justify-content: flex-start;
 }
 
-.nav-item {
+.nav_item {
     color: darkgray;
     position:relative;
     width: 10rem;
 }
 
 
-.nav-item:hover{
+.nav_item:hover{
     cursor:pointer;
 }
-    .nav-item:hover>.nav-icon{
+    .nav_item:hover>.nav_icon{
         filter:brightness(1.8);
         cursor:pointer;
     }
 
-    .nav-item:hover > .nav-text {
+    .nav_item:hover > .nav_text {
         filter: brightness(1.8);
         cursor: pointer;
     }
 
-.nav-icon {
+.nav_icon {
     margin-right: 0.3rem;
     margin-top: 0.5rem;
     margin-bottom: 0.8rem;
@@ -66,20 +70,20 @@
     user-select: none;
 }
 
-.nav-text {
+.nav_text {
     user-select: none;
     vertical-align:middle;
     font-size: 18px;
     font-family: OptimusPrincepsSemiBold;
 }
 
-.logo-link{
+.logo_link{
     display: contents;
 }
 
 .logo{
-    height:7%;
-    width:7%;
+    height:3.4em;
+    width:8.7em;
     margin-top: 0.3rem;
 }
 
@@ -87,7 +91,7 @@
     filter: brightness(1.8);
 }
 
-.nav-dropdown {
+.nav_dropdown {
     position: absolute;
     pointer-events: none;
     animation: rotateMenu 500ms ease-in-out forwards;
@@ -108,14 +112,14 @@
     }
 }
 
-.nav-dropdown:hover{
+.nav_dropdown:hover{
     cursor:default;
 }
 
-    .nav-dropdown ul {
+    .nav_dropdown ul {
     }
 
-        .nav-dropdown ul a {
+        .nav_dropdown ul a {
             font-family: OptimusPrinceps;
             font-size: 16px;
             transform: translateX(-25%);
@@ -126,8 +130,7 @@
             box-sizing: border-box;
             justify-items: center;
             display: grid;
-            background-size: 30%;
-            width: 11.75rem;
+            width: 11.75em;
             padding-top: 0.5rem;
             padding-bottom: 0.5rem;
             padding-left: 5px;
@@ -139,7 +142,7 @@
             pointer-events: all;
         }
 
-            .nav-dropdown ul a:hover {
+            .nav_dropdown ul a:hover {
                 filter: brightness(0.7);
                 background-color: dimgray;
             }

@@ -1,6 +1,6 @@
 ﻿@font-face {
     font-family: 'OptimusPrinceps';
-    src: url('/fonts/OptimusPrinceps.woff2') format('woff2'), url('/fonts/OptimusPrinceps.woff') format('woff');
+    src: url('/public/fonts/OptimusPrinceps.woff2') format('woff2'), url('/public/fonts/OptimusPrinceps.woff') format('woff');
     font-weight: 500;
     font-style: normal;
     font-display: swap;
@@ -8,7 +8,7 @@
 
 @font-face {
     font-family: 'OptimusPrincepsSemiBold';
-    src: url('/fonts/OptimusPrincepsSemiBold.woff2') format('woff2'), url('/fonts/OptimusPrincepsSemiBold.woff') format('woff');
+    src: url('/public/fonts/OptimusPrincepsSemiBold.woff2') format('woff2'), url('/public/fonts/OptimusPrincepsSemiBold.woff') format('woff');
     font-weight: 600;
     font-style: normal;
     font-display: swap;
@@ -71,7 +71,7 @@
             text-decoration:underline;
         }
 
-.menu-item {
+.menu_item {
     display: flex;
     text-align: center;
     justify-content: center;
@@ -80,13 +80,13 @@
     flex: 1 1 0px;
 }
 
-    .menu-item div {
+    .menu_item div {
         margin-right: auto;
         padding-left: 1em;
         transform: translateX(-1em);
     }
 
-    .menu-item img {
+    .menu_item img {
         height: 3rem;
         width: 3rem;
         margin-right: auto;
@@ -94,30 +94,30 @@
         transform: translateX(1em);
     }
 
-    .menu-item a {
+    .menu_item a {
         color: #9B8865;
         text-decoration: none;
     }
 
-        .menu-item a:hover {
+        .menu_item a:hover {
             color: #7A6A4F;
             text-decoration: underline;
         }
 
-    .menu-item ul {
+    .menu_item ul {
         position: center;
         margin: auto;
         padding: 0;
         flex: 1 1 0px;
         
     }
-        .menu-item ul li {
+        .menu_item ul li {
             font-size: 20px;
             display: inline-block;
             
         }
 
-            .menu-item ul li:not(:last-child)::after {
+            .menu_item ul li:not(:last-child)::after {
                 color: gray;
                 content: " ♦ ";
                 text-align: center;
@@ -125,20 +125,20 @@
                 margin-right: 0.5em;
             }
 
-.h-divider {
+.h_divider {
     margin: auto;
     margin-top: 80px;
     width: 80%;
     position: relative;
 }
 
-    .h-divider .shadow {
+    .h_divider .shadow {
         color:red;
         overflow: hidden;
         height: 20px;
     }
 
-        .h-divider .shadow:after {
+        .h_divider .shadow:after {
             content: '';
             display: block;
             margin: -25px auto 0;
@@ -159,23 +159,23 @@
     margin-left: 1em;
     margin-right: 1em;
     padding-top: 0.5em;
-    justify-content: start;
+    justify-content: flex-start;
 }
 
-.title-divider {
+.title_divider {
     margin: auto;
     margin-top: -20px;
     width: 100%;
     position: relative;
 }
 
-    .title-divider .shadow {
+    .title_divider .shadow {
         color: red;
         overflow: hidden;
         height: 20px;
     }
 
-        .title-divider .shadow:after {
+        .title_divider .shadow:after {
             content: '';
             display: block;
             margin: -25px auto 0;
