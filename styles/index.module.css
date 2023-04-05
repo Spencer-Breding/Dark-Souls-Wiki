@@ -47,13 +47,13 @@
     font-family: OptimusPrinceps;
     margin-left: 0.5em;
     margin-right: 0.5em;
+    margin-top:0.5em;
     padding-top: 0.5em;
     text-align: center;
     justify-content: center;
 }
 
 .row {
-    color: #9B8865;
     font-size: 32px;
     font-family: OptimusPrinceps;
     display: inline-flex;
@@ -63,13 +63,6 @@
     padding-top: 1em;
     justify-content: center;
 }
-
-    
-
-        .row text:hover{
-            color: #7A6A4F;
-            text-decoration:underline;
-        }
 
 .menu_item {
     display: flex;
@@ -94,14 +87,20 @@
         transform: translateX(1em);
     }
 
+    .menu_item text{
+        color: white;
+    }
+
     .menu_item a {
-        color: #9B8865;
+        color: #AE9E69;
+        filter: opacity(0.9);
         text-decoration: none;
     }
 
         .menu_item a:hover {
-            color: #7A6A4F;
+            color: #e25022;
             text-decoration: underline;
+            filter: brightness(1.5) opacity(0.9);
         }
 
     .menu_item ul {
@@ -189,6 +188,6 @@
     display: flex;
     position: relative;
     background-color: rgba(0,0,0,0);
-    margin-top: 5em;
+    margin-top: 7em;
     height: 8em;
 }

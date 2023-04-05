@@ -13,32 +13,36 @@ const Home = () => {
                 </div>
                 <text className={styles.welcome}>Dark Souls Wiki</text>
                 <div className={styles.h_divider}>
-                    <div class={styles.shadow}></div>
+                    <div className={styles.shadow}></div>
                 </div>
                 <text className={styles.description}>From weapons to enemies to lore, find out everything you need to know about Dark Souls here!</text>
                 <div className={styles.h_divider}>
-                    <div class={styles.shadow}></div>
+                    <div className={styles.shadow}></div>
                 </div>
                 <div className={styles.row}>
                     <div className={styles.menu_item }>
                         <Image src="http://i.Imgur.com/841SOQU.gif" width={100} height={100} alt="" />
                         <div>
-                            <Link href="/General_Information">General Information</Link>
+                            <Link href="General_Information">General Information</Link>
                             <ul>
-                                <li><Link href="About+Dark+Souls">About Dark Souls</Link></li>
+                                <li><Link href="About_Dark_Souls">About Dark Souls</Link></li>
                                 <li><Link href="Combat">Combat</Link></li>
                                 <li><Link href="Controls">Controls</Link></li>
-                                <li><Link href="Weapon+Scaling">Weapon Scaling</Link></li>
+                                <li><Link href="Dark_Souls_Remastered">About the Remaster</Link></li>
+                                <li><Link href="Game_Mechanics">Game Mechanics</Link></li>
+                                <li><Link href="Secrets">Secrets</Link></li>
                             </ul>
                         </div>
                     </div>
                     <div className={styles.menu_item}>
                         <Image src="https://darksouls.wiki.fextralife.com/file/Dark-Souls/2146.png" width={100} height={100} alt="" />
                         <div>
-                            <Link href="/Character+Information">Character Information</Link>
+                            <Link href="/Character_Information">Character Information</Link>
                             <ul>
-                                <li><Link href="/Builds">Builds</Link></li>
-                                <li><Link href="/Classes">Classes</Link></li>
+                                <li><Link href="Builds">Builds</Link></li>
+                                <li><Link href="Classes">Classes</Link></li>
+                                <li><Link href="Gestures">Gestures</Link></li>
+                                <li><Link href="Gifts">Gifts</Link></li>
                                 <li><Link href="Stats">Stats</Link></li>
                             </ul>
                         </div>
@@ -49,7 +53,10 @@ const Home = () => {
                             <Link href="Equipment">Equipment Information</Link>
                             <ul>
                                 <li><Link href="Armor">Armor</Link></li>
-                                <li><Link href="Magic">Magic</Link></li>
+                                <li><Link href="Items">Items</Link></li>
+                                <li><Link href="Rings">Rings</Link></li>
+                                <li><Link href="Shields">Shields</Link></li>
+                                <li><Link href="Spells">Spells</Link></li>
                                 <li><Link href="Upgrades">Upgrades</Link></li>
                                 <li><Link href="Weapons">Weapons</Link></li>
                             </ul>
@@ -90,8 +97,8 @@ const Home = () => {
                             <Link href="Guides">Guides</Link>
                             <ul>
                                 <li><Link href="Bosses">Bosses</Link></li>
-                                <li><Link href="New+Game+Plus">New Game +</Link></li>
-                                <li><Link href="New+Player+Help">New Player Help</Link></li>
+                                <li><Link href="New_Game_Plus">New Game +</Link></li>
+                                <li><Link href="New_Player_Help">New Player Help</Link></li>
                                 <li><Link href="Walkthrough">Walkthrough</Link></li>
                             </ul>
                         </div>

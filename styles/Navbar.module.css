@@ -27,23 +27,25 @@
 }
 
 .navbar_nav {
-    align-items: center;
     background-color: #333;
-    display: inline-flex;
-    gap: 2em;
+    display: flex;
+    gap: 0.5em;
     justify-content: flex-start;
     list-style:none;
     margin: 0;
     padding: 0;
     background-color: #333333;
     width: 100vw;
-    justify-content: flex-start;
+}
+
+.navbar_nav li{
+    display: block;
+    width:12.5em;
 }
 
 .nav_item {
     color: darkgray;
     position:relative;
-    width: 10rem;
 }
 
 
@@ -51,12 +53,12 @@
     cursor:pointer;
 }
     .nav_item:hover>.nav_icon{
-        filter:brightness(1.8);
+        filter:brightness(1.5);
         cursor:pointer;
     }
 
     .nav_item:hover > .nav_text {
-        filter: brightness(1.8);
+        filter: brightness(1.5);
         cursor: pointer;
     }
 
@@ -73,7 +75,7 @@
 .nav_text {
     user-select: none;
     vertical-align:middle;
-    font-size: 18px;
+    font-size: 20px;
     font-family: OptimusPrincepsSemiBold;
 }
 
@@ -116,33 +118,116 @@
     cursor:default;
 }
 
+.test{
+    
+}
+
+.nav_dropdown {
+    align-items: center;
+}
+
     .nav_dropdown ul {
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        padding: 0;
+        padding-left: 1em;
+        padding-right: 1em;
     }
 
-        .nav_dropdown ul a {
+        .nav_dropdown ul li {
+            transform: translateX(-1.1em);
+            display: flex;
             font-family: OptimusPrinceps;
-            font-size: 16px;
-            transform: translateX(-25%);
             background-color: black;
-            border-width: 1px;
-            border-style: solid;
-            border-color: dimgray;
+            padding-left: 4px;
+            padding-right: 4px;
+            padding-top: 2px;
+            padding-bottom: 2px;
+            border-left: 2px solid dimgray;
+            border-right: 2px solid dimgray;
             box-sizing: border-box;
-            justify-items: center;
-            display: grid;
-            width: 11.75em;
-            padding-top: 0.5rem;
-            padding-bottom: 0.5rem;
-            padding-left: 5px;
-            padding-right: 5px;
-            color: white;
-            text-decoration: none;
-            white-space: nowrap;
+            text-align: center;
             user-select: none;
             pointer-events: all;
+            width: 12.5em;
+            min-height:2.75em;
+            height:auto;
+            white-space:nowrap;
         }
 
-            .nav_dropdown ul a:hover {
-                filter: brightness(0.7);
-                background-color: dimgray;
+        .nav_dropdown ul li:first-child{
+            border-top: 2px solid dimgray;
+        }
+
+        .nav_dropdown ul li:last-child{
+            border-bottom: 2px solid dimgray
+        }
+
+            .nav_dropdown ul li text {
+                color: white;
+                filter: brightness(1.2) opacity(0.9);
+                text-decoration: none;
+                line-height: 2.5;
             }
+
+            
+
+.dropdown_item{
+    align-items:center;
+}
+
+    .dropdown_item:hover{
+        cursor: pointer;
+    }
+
+    .dropdown_item text{
+        font-size:18px;
+    }
+
+    .dropdown_item:hover > img{
+        filter:brightness(2.5);
+        filter: sepia(1);
+    }
+
+        .dropdown_item:hover > text {
+            color: #e25022;
+            text-decoration: underline;
+            filter: brightness(1.6);
+        }
+
+    .dropdown_item img {
+        transform: translateY(-0.25em);
+        padding: 0;
+        margin: 0;
+    }
+
+.sub_item{
+    align-items:center;
+}
+
+.sub_item text{
+    margin-right:-0.25em;
+    font-size:15px;
+}
+
+    .sub_item img {
+        transform: translateY(-0.5em);
+        padding: 0;
+        margin-left: 1.5em;
+    }
+
+    .sub_item:hover {
+        cursor: pointer;
+    }
+
+    .sub_item:hover > img {
+        filter: brightness(2.5);
+        filter: sepia(1);
+    }
+
+    .sub_item:hover > text {
+        color: #e25022;
+        text-decoration: underline;
+        filter: brightness(1.6);
+    }
