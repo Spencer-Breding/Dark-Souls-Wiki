@@ -2,58 +2,46 @@ import React from 'react';
 import Link from 'next/link';
 import styles from "../styles/Information.module.css";
 
-const desc = "Equipment information covers anything that can be equipped such as: Weapons, Armor, Rings, and Spells";
+const desc = "Character information covers things relating to the player's character like classes and stats.";
 
-const Equipment = () => {
+const Character = () => {
     return (
         <React.Fragment>
-            <div className={styles.container }>
-                <h2 className={styles.title }>Equipment Information</h2>
-                <div className={styles.title_divider }>
-                    <div className={styles.shadow }></div>
+            <div className={styles.container}>
+                <h2 className={styles.title}>Character Information</h2>
+                <div className={styles.title_divider}>
+                    <div className={styles.shadow}></div>
                 </div>
                 <text className={styles.description}>{desc}</text>
                 <div className={styles.h_divider}>
                     <div className={styles.shadow}></div>
                 </div>
                 <div className={styles.row}>
-                    <Link href="Armor">Armor</Link>
+                    <Link href="Builds">Builds</Link>
                 </div>
                 <div className={styles.h_divider}>
                     <div className={styles.shadow}></div>
                 </div>
                 <div className={styles.row}>
-                    <Link href="Items">Items</Link>
+                    <Link href="Classes">Classes</Link>
                 </div>
                 <div className={styles.h_divider}>
                     <div className={styles.shadow}></div>
                 </div>
                 <div className={styles.row}>
-                    <Link href="Rings">Rings</Link>
+                    <Link href="Gestures">Gestures</Link>
                 </div>
                 <div className={styles.h_divider}>
                     <div className={styles.shadow}></div>
                 </div>
                 <div className={styles.row}>
-                    <Link href="Shields">Shields</Link>
+                    <Link href="Gifts">Gifts</Link>
                 </div>
                 <div className={styles.h_divider}>
                     <div className={styles.shadow}></div>
                 </div>
                 <div className={styles.row}>
-                    <Link href="Spells">Spells</Link>
-                </div>
-                <div className={styles.h_divider}>
-                    <div className={styles.shadow}></div>
-                </div>
-                <div className={styles.row}>
-                    <Link href="Upgrades">Upgrades</Link>
-                </div>
-                <div className={styles.h_divider}>
-                    <div className={styles.shadow}></div>
-                </div>
-                <div className={styles.row}>
-                    <Link href="Weapons">Weapons</Link>
+                    <Link href="Stats">Stats</Link>
                 </div>
                 <div className={styles.spacer} />
             </div>
@@ -62,4 +50,4 @@ const Equipment = () => {
     );
 }
 
-export default Equipment;
+export default Character;

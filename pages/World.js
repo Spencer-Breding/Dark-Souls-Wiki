@@ -2,58 +2,52 @@ import React from 'react';
 import Link from 'next/link';
 import styles from "../styles/Information.module.css";
 
-const desc = "Equipment information covers anything that can be equipped such as: Weapons, Armor, Rings, and Spells";
+const desc = "World information covers information relating to the world of Dark Souls.";
 
-const Equipment = () => {
+const World = () => {
     return (
         <React.Fragment>
-            <div className={styles.container }>
-                <h2 className={styles.title }>Equipment Information</h2>
-                <div className={styles.title_divider }>
-                    <div className={styles.shadow }></div>
+            <div className={styles.container}>
+                <h2 className={styles.title}>World Information</h2>
+                <div className={styles.title_divider}>
+                    <div className={styles.shadow}></div>
                 </div>
                 <text className={styles.description}>{desc}</text>
                 <div className={styles.h_divider}>
                     <div className={styles.shadow}></div>
                 </div>
                 <div className={styles.row}>
-                    <Link href="Armor">Armor</Link>
+                    <Link href="Covenants">Covenants</Link>
                 </div>
                 <div className={styles.h_divider}>
                     <div className={styles.shadow}></div>
                 </div>
                 <div className={styles.row}>
-                    <Link href="Items">Items</Link>
+                    <Link href="Enemies">Enemies</Link>
                 </div>
                 <div className={styles.h_divider}>
                     <div className={styles.shadow}></div>
                 </div>
                 <div className={styles.row}>
-                    <Link href="Rings">Rings</Link>
+                    <Link href="Illusory_Walls">Illusory Walls</Link>
                 </div>
                 <div className={styles.h_divider}>
                     <div className={styles.shadow}></div>
                 </div>
                 <div className={styles.row}>
-                    <Link href="Shields">Shields</Link>
+                    <Link href="Locales">Locales</Link>
                 </div>
                 <div className={styles.h_divider}>
                     <div className={styles.shadow}></div>
                 </div>
                 <div className={styles.row}>
-                    <Link href="Spells">Spells</Link>
+                    <Link href="Lore">Lore</Link>
                 </div>
                 <div className={styles.h_divider}>
                     <div className={styles.shadow}></div>
                 </div>
                 <div className={styles.row}>
-                    <Link href="Upgrades">Upgrades</Link>
-                </div>
-                <div className={styles.h_divider}>
-                    <div className={styles.shadow}></div>
-                </div>
-                <div className={styles.row}>
-                    <Link href="Weapons">Weapons</Link>
+                    <Link href="NPCs">NPCs</Link>
                 </div>
                 <div className={styles.spacer} />
             </div>
@@ -62,4 +56,4 @@ const Equipment = () => {
     );
 }
 
-export default Equipment;
+export default World;

@@ -23,12 +23,12 @@ const Home = () => {
                     <div className={styles.menu_item }>
                         <Image src="http://i.Imgur.com/841SOQU.gif" width={100} height={100} alt="" />
                         <div>
-                            <Link href="General_Information">General Information</Link>
+                            <Link href="General">General Information</Link>
                             <ul>
                                 <li><Link href="About_Dark_Souls">About Dark Souls</Link></li>
+                                <li><Link href="Dark_Souls_Remastered">About the Remaster</Link></li>
                                 <li><Link href="Combat">Combat</Link></li>
                                 <li><Link href="Controls">Controls</Link></li>
-                                <li><Link href="Dark_Souls_Remastered">About the Remaster</Link></li>
                                 <li><Link href="Game_Mechanics">Game Mechanics</Link></li>
                                 <li><Link href="Secrets">Secrets</Link></li>
                             </ul>
@@ -37,7 +37,7 @@ const Home = () => {
                     <div className={styles.menu_item}>
                         <Image src="https://darksouls.wiki.fextralife.com/file/Dark-Souls/2146.png" width={100} height={100} alt="" />
                         <div>
-                            <Link href="/Character_Information">Character Information</Link>
+                            <Link href="/Character">Character Information</Link>
                             <ul>
                                 <li><Link href="Builds">Builds</Link></li>
                                 <li><Link href="Classes">Classes</Link></li>
@@ -70,7 +70,7 @@ const Home = () => {
                     <div className={styles.menu_item}>
                         <Image src="https://darksouls.wiki.fextralife.com/file/Dark-Souls/2082.png" width={100} height={100} alt="" />
                         <div>
-                            <Link href="Online+Information">Online Information</Link>
+                            <Link href="Online">Online Information</Link>
                             <ul>
                                 <li><Link href="Features">Features</Link></li>
                                 <li><Link href="Invasions">Invasions</Link></li>
@@ -81,7 +81,7 @@ const Home = () => {
                     <div className={styles.menu_item}>
                         <Image src="https://darksouls.wiki.fextralife.com/file/Dark-Souls/2035.png" width={100} height={100} alt="" />
                         <div>
-                            <Link href="World+Information">World Information</Link>
+                            <Link href="World">World Information</Link>
                             <ul>
                                 <li><Link href="Covenants">Covenants</Link></li>
                                 <li><Link href="Enemies">Enemies</Link></li>
@@ -104,6 +104,7 @@ const Home = () => {
                         </div>
                     </div>
                 </div>
+                <div className={styles.spacer} />
             </div>
             <div className={styles.blank }></div>
         </React.Fragment>
