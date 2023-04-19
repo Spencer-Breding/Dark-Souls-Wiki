@@ -1,13 +1,16 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import Grad from "../components/grad";
+import Spacer from "../components/spacer";
 import styles from '../styles/index.module.css';
-
 const Home = () => {
+
     return (
         <React.Fragment>
+            <Grad/>
             <div className={styles.home}>
-                <h2 className={styles.title}>Wiki Home</h2>
+                <h1 className={styles.title}>Wiki Home</h1>
                 <div className={styles.title_divider}>
                     <div className={styles.shadow}></div>
                 </div>
@@ -25,7 +28,7 @@ const Home = () => {
                         <div>
                             <Link href="General">General Information</Link>
                             <ul>
-                                <li><Link href="About_Dark_Souls">About Dark Souls</Link></li>
+                                <li><Link href="/General_Information/About_Dark_Souls">About Dark Souls</Link></li>
                                 <li><Link href="Dark_Souls_Remastered">About the Remaster</Link></li>
                                 <li><Link href="Combat">Combat</Link></li>
                                 <li><Link href="Controls">Controls</Link></li>
@@ -104,9 +107,8 @@ const Home = () => {
                         </div>
                     </div>
                 </div>
-                <div className={styles.spacer} />
+                <Spacer/>
             </div>
-            <div className={styles.blank }></div>
         </React.Fragment>
     );
 }

@@ -43,7 +43,7 @@ export default function Navbar(props) {
 
                         <div className={styles.nav_dropdown}>
                             <ul>
-                                <li className={styles.dropdown_item} onClick={() => router.push('/About_Dark_Souls')}>
+                                <li className={styles.dropdown_item} onClick={() => router.push('General_Information/About_Dark_Souls')}>
                                     <Image src="https://darksouls.wiki.fextralife.com/file/Dark-Souls/2051.png" width={25} height={25}></Image>
                                     <text>About Dark Souls</text>
                                 </li>

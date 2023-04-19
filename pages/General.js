@@ -1,5 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
+import Grad from "../components/grad";
+import Spacer from "../components/spacer";
 import styles from "../styles/Information.module.css";
 
 const desc = "General information covers the basics of Dark Souls and its systems.";
@@ -7,8 +9,9 @@ const desc = "General information covers the basics of Dark Souls and its system
 const General = () => {
     return (
         <React.Fragment>
+            <Grad/>
             <div className={styles.container}>
-                <h2 className={styles.title}>General Information</h2>
+                <h1 className={styles.title}>General Information</h1>
                 <div className={styles.title_divider}>
                     <div className={styles.shadow }></div>
                 </div>
@@ -17,7 +20,7 @@ const General = () => {
                     <div className={styles.shadow}></div>
                 </div>
                 <div className={styles.row}>
-                    <Link href="About_Dark_Souls">About Dark Souls</Link>
+                    <Link href="/General_Information/About_Dark_Souls">About Dark Souls</Link>
                 </div>
                 <div className={styles.h_divider}>
                     <div className={styles.shadow}></div>
@@ -43,9 +46,8 @@ const General = () => {
                 <div className={styles.row}>
                     <Link href="Game_Mechanics">Game Mechanics</Link>
                 </div>
-                <div className={styles.spacer }/>
+                <Spacer/>
             </div>
-            <div className={styles.blank}></div>
         </React.Fragment>
     );
 }

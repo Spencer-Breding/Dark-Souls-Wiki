@@ -1,5 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
+import Grad from "../components/grad";
+import Spacer from "../components/spacer";
 import styles from "../styles/Information.module.css";
 
 const desc = "Equipment information covers anything that can be equipped such as: Weapons, Armor, Rings, and Spells";
@@ -7,8 +9,9 @@ const desc = "Equipment information covers anything that can be equipped such as
 const Equipment = () => {
     return (
         <React.Fragment>
-            <div className={styles.container }>
-                <h2 className={styles.title }>Equipment Information</h2>
+            <Grad/>
+            <div className={styles.container}>
+                <h1 className={styles.title}>Equipment Information</h1>
                 <div className={styles.title_divider }>
                     <div className={styles.shadow }></div>
                 </div>
@@ -55,9 +58,8 @@ const Equipment = () => {
                 <div className={styles.row}>
                     <Link href="Weapons">Weapons</Link>
                 </div>
-                <div className={styles.spacer} />
+                <Spacer/>
             </div>
-            <div className={styles.blank}></div>
         </React.Fragment>
     );
 }

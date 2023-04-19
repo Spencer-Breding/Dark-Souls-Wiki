@@ -1,5 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
+import Grad from "../components/grad";
+import Spacer from "../components/spacer";
 import styles from "../styles/Information.module.css";
 
 const desc = "Character information covers things relating to the player's character like classes and stats.";
@@ -7,6 +9,7 @@ const desc = "Character information covers things relating to the player's chara
 const Character = () => {
     return (
         <React.Fragment>
+            <Grad/>
             <div className={styles.container}>
                 <h2 className={styles.title}>Character Information</h2>
                 <div className={styles.title_divider}>
@@ -43,9 +46,8 @@ const Character = () => {
                 <div className={styles.row}>
                     <Link href="Stats">Stats</Link>
                 </div>
-                <div className={styles.spacer} />
+                <Spacer/>
             </div>
-            <div className={styles.blank}></div>
         </React.Fragment>
     );
 }

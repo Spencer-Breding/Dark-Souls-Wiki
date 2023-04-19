@@ -1,24 +1,7 @@
-﻿@font-face {
-    font-family: 'OptimusPrinceps';
-    src: url('/public/fonts/OptimusPrinceps.woff2') format('woff2'), url('/public/fonts/OptimusPrinceps.woff') format('woff');
-    font-weight: 500;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'OptimusPrincepsSemiBold';
-    src: url('/public/fonts/OptimusPrincepsSemiBold.woff2') format('woff2'), url('/public/fonts/OptimusPrincepsSemiBold.woff') format('woff');
-    font-weight: 600;
-    font-style: normal;
-    font-display: swap;
-}
-
-.home {
+﻿.home {
     position: relative;
-    background-color: rgba(0,0,0,0.90);
-    top:9em;
-    width: 85%;
+    background-color: rgba(0,0,0,0.93);
+    width: 90%;
     margin:auto;
     padding-bottom: 2em;
     overflow: visible;
@@ -151,7 +134,7 @@
     position: relative;
     display: flex;
     color: white;
-    font-size: 24px;
+    font-size: 28px;
     font-family: OptimusPrinceps;
     text-align: center;
     margin-top: auto;
