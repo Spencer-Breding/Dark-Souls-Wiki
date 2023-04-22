@@ -1,7 +1,10 @@
 import React from 'react';
 import Link from 'next/link';
+import Header_Div from "../components/header_div";
+import Title_Div from "../components/title_div";
 import Grad from "../components/grad";
 import Spacer from "../components/spacer";
+import Title from "../components/title";
 import styles from "../styles/Information.module.css";
 
 const desc = "World information covers information relating to the world of Dark Souls.";
@@ -11,46 +14,32 @@ const World = () => {
         <React.Fragment>
             <Grad/>
             <div className={styles.container}>
-                <h1 className={styles.title}>World Information</h1>
-                <div className={styles.title_divider}>
-                    <div className={styles.shadow}></div>
-                </div>
+                <Title title="World Information" />
+                <Title_Div/>
                 <text className={styles.description}>{desc}</text>
-                <div className={styles.h_divider}>
-                    <div className={styles.shadow}></div>
-                </div>
+                <Header_Div />
                 <div className={styles.row}>
-                    <Link href="Covenants">Covenants</Link>
+                    <Link href="World/Covenants">Covenants</Link>
                 </div>
-                <div className={styles.h_divider}>
-                    <div className={styles.shadow}></div>
-                </div>
+                <Header_Div />
                 <div className={styles.row}>
-                    <Link href="Enemies">Enemies</Link>
+                    <Link href="World/Enemies">Enemies</Link>
                 </div>
-                <div className={styles.h_divider}>
-                    <div className={styles.shadow}></div>
-                </div>
+                <Header_Div />
                 <div className={styles.row}>
-                    <Link href="Illusory_Walls">Illusory Walls</Link>
+                    <Link href="World/Illusory_Walls">Illusory Walls</Link>
                 </div>
-                <div className={styles.h_divider}>
-                    <div className={styles.shadow}></div>
-                </div>
+                <Header_Div />
                 <div className={styles.row}>
-                    <Link href="Locales">Locales</Link>
+                    <Link href="World/Locales">Locales</Link>
                 </div>
-                <div className={styles.h_divider}>
-                    <div className={styles.shadow}></div>
-                </div>
+                <Header_Div />
                 <div className={styles.row}>
-                    <Link href="Lore">Lore</Link>
+                    <Link href="World/Lore">Lore</Link>
                 </div>
-                <div className={styles.h_divider}>
-                    <div className={styles.shadow}></div>
-                </div>
+                <Header_Div />
                 <div className={styles.row}>
-                    <Link href="NPCs">NPCs</Link>
+                    <Link href="World/NPCs">NPCs</Link>
                 </div>
                 <Spacer />
             </div>

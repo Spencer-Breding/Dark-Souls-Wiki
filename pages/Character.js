@@ -1,7 +1,10 @@
 import React from 'react';
 import Link from 'next/link';
+import Header_Div from "../components/header_div";
+import Title_Div from "../components/title_div";
 import Grad from "../components/grad";
 import Spacer from "../components/spacer";
+import Title from "../components/title";
 import styles from "../styles/Information.module.css";
 
 const desc = "Character information covers things relating to the player's character like classes and stats.";
@@ -11,40 +14,28 @@ const Character = () => {
         <React.Fragment>
             <Grad/>
             <div className={styles.container}>
-                <h2 className={styles.title}>Character Information</h2>
-                <div className={styles.title_divider}>
-                    <div className={styles.shadow}></div>
-                </div>
+                <Title title="Character Information"/>
+                <Title_Div/>
                 <text className={styles.description}>{desc}</text>
-                <div className={styles.h_divider}>
-                    <div className={styles.shadow}></div>
-                </div>
+                <Header_Div/>
                 <div className={styles.row}>
-                    <Link href="Builds">Builds</Link>
+                    <Link href="Character/Builds">Builds</Link>
                 </div>
-                <div className={styles.h_divider}>
-                    <div className={styles.shadow}></div>
-                </div>
+                <Header_Div />
                 <div className={styles.row}>
-                    <Link href="Classes">Classes</Link>
+                    <Link href="Character/Classes">Classes</Link>
                 </div>
-                <div className={styles.h_divider}>
-                    <div className={styles.shadow}></div>
-                </div>
+                <Header_Div />
                 <div className={styles.row}>
-                    <Link href="Gestures">Gestures</Link>
+                    <Link href="Character/Gestures">Gestures</Link>
                 </div>
-                <div className={styles.h_divider}>
-                    <div className={styles.shadow}></div>
-                </div>
+                <Header_Div />
                 <div className={styles.row}>
-                    <Link href="Gifts">Gifts</Link>
+                    <Link href="Character/Gifts">Gifts</Link>
                 </div>
-                <div className={styles.h_divider}>
-                    <div className={styles.shadow}></div>
-                </div>
+                <Header_Div />
                 <div className={styles.row}>
-                    <Link href="Stats">Stats</Link>
+                    <Link href="Character/Stats">Stats</Link>
                 </div>
                 <Spacer/>
             </div>

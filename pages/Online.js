@@ -1,7 +1,10 @@
 import React from 'react';
 import Link from 'next/link';
+import Header_Div from "../components/header_div";
+import Title_Div from "../components/title_div";
 import Grad from "../components/grad";
 import Spacer from "../components/spacer";
+import Title from "../components/title";
 import styles from "../styles/Information.module.css";
 
 const desc = "Online information covers information relating to the game's online systems.";
@@ -11,29 +14,24 @@ const Character = () => {
         <React.Fragment>
             <Grad/>
             <div className={styles.container}>
-                <h1 className={styles.title}>Online Information</h1>
-                <div className={styles.title_divider}>
-                    <div className={styles.shadow}></div>
-                </div>
+                <Title title="Online Information" />
+                <Title_Div/>
                 <text className={styles.description}>{desc}</text>
-                <div className={styles.h_divider}>
-                    <div className={styles.shadow}></div>
-                </div>
+                <Header_Div/>
                 <div className={styles.row}>
-                    <Link href="Features">Features</Link>
+                    <Link href="Online/Features">Features</Link>
                 </div>
-                <div className={styles.h_divider}>
-                    <div className={styles.shadow}></div>
-                </div>
+                <Header_Div />
                 <div className={styles.row}>
-                    <Link href="Invasions">Invasions</Link>
+                    <Link href="Online/Invasions">Invasions</Link>
                 </div>
-                <div className={styles.h_divider}>
-                    <div className={styles.shadow}></div>
-                </div>
+                <Header_Div />
                 <div className={styles.row}>
-                    <Link href="Summoning">Summoning</Link>
+                    <Link href="Online/Summoning">Summoning</Link>
                 </div>
+                <Spacer />
+                <Spacer />
+                <Spacer />
                 <Spacer />
             </div>
         </React.Fragment>

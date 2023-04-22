@@ -1,7 +1,10 @@
 import React from 'react';
 import Link from 'next/link';
+import Header_Div from "../components/header_div";
+import Title_Div from "../components/title_div";
 import Grad from "../components/grad";
 import Spacer from "../components/spacer";
+import Title from "../components/title";
 import styles from "../styles/Information.module.css";
 
 const desc = "Guides provide assistance to players looking to overcome the challenges of Dark Souls.";
@@ -11,34 +14,24 @@ const Character = () => {
         <React.Fragment>
             <Grad/>
             <div className={styles.container}>
-                <h1 className={styles.title}>Guides</h1>
-                <div className={styles.title_divider}>
-                    <div className={styles.shadow}></div>
-                </div>
+                <Title title="Guides" />
+                <Title_Div/>
                 <text className={styles.description}>{desc}</text>
-                <div className={styles.h_divider}>
-                    <div className={styles.shadow}></div>
-                </div>
+                <Header_Div/>
                 <div className={styles.row}>
-                    <Link href="Achievements">Achievements</Link>
+                    <Link href="Guides/Achievements">Achievements</Link>
                 </div>
-                <div className={styles.h_divider}>
-                    <div className={styles.shadow}></div>
-                </div>
+                <Header_Div />
                 <div className={styles.row}>
-                    <Link href="New_Game_Plus">New Game +</Link>
+                    <Link href="Guides/New_Game_Plus">New Game +</Link>
                 </div>
-                <div className={styles.h_divider}>
-                    <div className={styles.shadow}></div>
-                </div>
+                <Header_Div />
                 <div className={styles.row}>
-                    <Link href="New_Player_Help">New Player Help</Link>
+                    <Link href="Guides/New_Player_Help">New Player Help</Link>
                 </div>
-                <div className={styles.h_divider}>
-                    <div className={styles.shadow}></div>
-                </div>
+                <Header_Div />
                 <div className={styles.row}>
-                    <Link href="Walkthrough">Walkthrough</Link>
+                    <Link href="Guides/Walkthrough">Walkthrough</Link>
                 </div>
                 <Spacer/>
             </div>

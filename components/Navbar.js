@@ -43,35 +43,35 @@ export default function Navbar(props) {
 
                         <div className={styles.nav_dropdown}>
                             <ul>
-                                <li className={styles.dropdown_item} onClick={() => router.push('General_Information/About_Dark_Souls')}>
+                                <li className={styles.dropdown_item} onClick={() => router.push('/General/About_Dark_Souls')}>
                                     <Image src="https://darksouls.wiki.fextralife.com/file/Dark-Souls/2051.png" width={25} height={25}></Image>
                                     <text>About Dark Souls</text>
                                 </li>
-                                <li className={styles.dropdown_item} onClick={() => router.push('/Dark_Souls_Remastered')}>
+                                <li className={styles.dropdown_item} onClick={() => router.push('/General/Dark_Souls_Remastered')}>
                                     <Image src="https://darksouls.wiki.fextralife.com/file/Dark-Souls/2051.png" width={25} height={25}></Image>
                                     <text>About the Remaster</text>
                                 </li>
-                                <li className={styles.dropdown_item} onClick={() => router.push('/Combat')}>
+                                <li className={styles.dropdown_item} onClick={() => router.push('/General/Combat')}>
                                     <Image src="https://darksouls.wiki.fextralife.com/file/Dark-Souls/2051.png" width={25} height={25}></Image>
                                     <text>Combat</text>
                                 </li>
-                                <li className={styles.dropdown_item} onClick={() => router.push('/Controls')}>
+                                <li className={styles.dropdown_item} onClick={() => router.push('/General/Controls')}>
                                     <Image src="https://darksouls.wiki.fextralife.com/file/Dark-Souls/2051.png" width={25} height={25}></Image>
                                     <text>Controls</text>
                                 </li>
-                                <li className={styles.dropdown_item} onClick={() => router.push('/Game_Mechanics')}>
+                                <li className={styles.dropdown_item} onClick={() => router.push('/General/Mechanics')}>
                                     <Image src="https://darksouls.wiki.fextralife.com/file/Dark-Souls/2051.png" width={25} height={25}></Image>
                                     <text>Game Mechanics</text>
                                 </li>
-                                <li className={styles.sub_item} onClick={() => router.push('/Bonfires')}>
+                                <li className={styles.sub_item} onClick={() => router.push('/General/Bonfires')}>
                                     <Image src="https://darksouls.wiki.fextralife.com/file/Dark-Souls/2047.png" width={25} height={25} />
                                     <text>Bonfires</text>
                                 </li>
-                                <li className={styles.sub_item} onClick={() => router.push('/Humanity')}>
+                                <li className={styles.sub_item} onClick={() => router.push('/General/Humanity')}>
                                     <Image src="https://darksouls.wiki.fextralife.com/file/Dark-Souls/2047.png" width={25} height={25} />
                                     <text>Humanity</text>
                                 </li>
-                                <li className={styles.sub_item} onClick={() => router.push('/Weapon_Scaling')}>
+                                <li className={styles.sub_item} onClick={() => router.push('/General/Weapon_Scaling')}>
                                     <Image src="https://darksouls.wiki.fextralife.com/file/Dark-Souls/2047.png" width={25} height={25 }/>
                                     <text>Weapon Scaling</text>
                                 </li>
@@ -84,31 +84,31 @@ export default function Navbar(props) {
                     
                     <div className={styles.nav_dropdown}>
                         <ul>
-                            <li className={styles.dropdown_item} onClick={() => router.push('/Builds')}>
+                            <li className={styles.dropdown_item} onClick={() => router.push('/Character/Builds')}>
                                 <Image src="https://darksouls.wiki.fextralife.com/file/Dark-Souls/2051.png" width={25} height={25}></Image>
                                 <text href="/Builds">Builds</text>
                             </li>
-                            <li className={styles.sub_item} onClick={() => router.push('/PVE_Builds')}>
+                            <li className={styles.sub_item} onClick={() => router.push('/Character/PVE_Builds')}>
                                 <Image src="https://darksouls.wiki.fextralife.com/file/Dark-Souls/2047.png" width={25} height={25} />
                                 <text>PVE Builds</text>
                             </li>
-                            <li className={styles.sub_item} onClick={() => router.push('/PVP_Builds')}>
+                            <li className={styles.sub_item} onClick={() => router.push('/Character/PVP_Builds')}>
                                 <Image src="https://darksouls.wiki.fextralife.com/file/Dark-Souls/2047.png" width={25} height={25} />
                                 <text>PVP Builds</text>
                             </li>
-                            <li className={styles.dropdown_item} onClick={() => router.push('/Classes')}>
+                            <li className={styles.dropdown_item} onClick={() => router.push('/Character/Classes')}>
                                 <Image src="https://darksouls.wiki.fextralife.com/file/Dark-Souls/2051.png" width={25} height={25}></Image>
                                 <text>Classes</text>
                             </li>
-                            <li className={styles.dropdown_item} onClick={() => router.push('/Gestures')}>
+                            <li className={styles.dropdown_item} onClick={() => router.push('/Character/Gestures')}>
                                 <Image src="https://darksouls.wiki.fextralife.com/file/Dark-Souls/2051.png" width={25} height={25}></Image>
                                 <text>Gestures</text>
                             </li>
-                            <li className={styles.dropdown_item} onClick={() => router.push('/Gifts')}>
+                            <li className={styles.dropdown_item} onClick={() => router.push('/Character/Gifts')}>
                                 <Image src="https://darksouls.wiki.fextralife.com/file/Dark-Souls/2051.png" width={25} height={25}></Image>
                                 <text>Gifts</text>
                             </li>
-                            <li className={styles.dropdown_item} onClick={() => router.push('/Stats')}>
+                            <li className={styles.dropdown_item} onClick={() => router.push('/Character/Stats')}>
                                 <Image src="https://darksouls.wiki.fextralife.com/file/Dark-Souls/2051.png" width={25} height={25}></Image>
                                 <text>Stats</text>
                             </li>
@@ -119,59 +119,59 @@ export default function Navbar(props) {
                 <NavItem className="equipment" icon="https://darksouls.wiki.fextralife.com/file/Dark-Souls/elite_knight_helm.png" text="Equipment">
                     <div className={styles.nav_dropdown}>
                         <ul>
-                            <li className={styles.dropdown_item} onClick={() => router.push('/Armor')}>
+                            <li className={styles.dropdown_item} onClick={() => router.replace('/Equipment/Armor')}>
                                 <Image src="https://darksouls.wiki.fextralife.com/file/Dark-Souls/2051.png" width={25} height={25}></Image>
                                 <text>Armor</text>
                             </li>
-                            <li className={styles.sub_item} onClick={() => router.push('/Chest_Pieces')}>
+                            <li className={styles.sub_item} onClick={() => router.push('/Equipment/Chest_Pieces')}>
                                 <Image src="https://darksouls.wiki.fextralife.com/file/Dark-Souls/2047.png" width={25} height={25} />
                                 <text>Chest Pieces</text>
                             </li>
-                            <li className={styles.sub_item} onClick={() => router.push('/Gauntlets')}>
+                            <li className={styles.sub_item} onClick={() => router.push('/Equipment/Gauntlets')}>
                                 <Image src="https://darksouls.wiki.fextralife.com/file/Dark-Souls/2047.png" width={25} height={25} />
                                 <text>Gauntlets</text>
                             </li>
-                            <li className={styles.sub_item} onClick={() => router.push('/Helms')}>
+                            <li className={styles.sub_item} onClick={() => router.push('/Equipment/Helms')}>
                                 <Image src="https://darksouls.wiki.fextralife.com/file/Dark-Souls/2047.png" width={25} height={25} />
                                 <text>Helms</text>
                             </li>
-                            <li className={styles.sub_item} onClick={() => router.push('/Leg_Pieces')}>
+                            <li className={styles.sub_item} onClick={() => router.push('/Equipment/Leg_Pieces')}>
                                 <Image src="https://darksouls.wiki.fextralife.com/file/Dark-Souls/2047.png" width={25} height={25} />
                                 <text>Leg Pieces</text>
                             </li>
-                            <li className={styles.dropdown_item} onClick={() => router.push('/Items')}>
+                            <li className={styles.dropdown_item} onClick={() => router.push('/Equipment/Items')}>
                                 <Image src="https://darksouls.wiki.fextralife.com/file/Dark-Souls/2051.png" width={25} height={25}></Image>
                                 <text>Items</text>
                             </li>
-                            <li className={styles.dropdown_item} onClick={() => router.push('/Rings')}>
+                            <li className={styles.dropdown_item} onClick={() => router.push('/Equipment/Rings')}>
                                 <Image src="https://darksouls.wiki.fextralife.com/file/Dark-Souls/2051.png" width={25} height={25}></Image>
                                 <text>Rings</text>
                             </li>
-                            <li className={styles.dropdown_item} onClick={() => router.push('/Shields')}>
+                            <li className={styles.dropdown_item} onClick={() => router.push('/Equipment/Shields')}>
                                 <Image src="https://darksouls.wiki.fextralife.com/file/Dark-Souls/2051.png" width={25} height={25}></Image>
                                 <text>Shields</text>
                             </li>
-                            <li className={styles.dropdown_item} onClick={() => router.push('/Spells')}>
+                            <li className={styles.dropdown_item} onClick={() => router.push('/Equipment/Spells')}>
                                 <Image src="https://darksouls.wiki.fextralife.com/file/Dark-Souls/2051.png" width={25} height={25}></Image>
                                 <text>Spells</text>
                             </li>
-                            <li className={styles.sub_item} onClick={() => router.push('/Miracles')}>
+                            <li className={styles.sub_item} onClick={() => router.push('/Equipment/Spells/Miracles')}>
                                 <Image src="https://darksouls.wiki.fextralife.com/file/Dark-Souls/2047.png" width={25} height={25} />
                                 <text>Miracles</text>
                             </li>
-                            <li className={styles.sub_item} onClick={() => router.push('/Pyromancies')}>
+                            <li className={styles.sub_item} onClick={() => router.push('/Equipment/Spells/Pyromancies')}>
                                 <Image src="https://darksouls.wiki.fextralife.com/file/Dark-Souls/2047.png" width={25} height={25} />
                                 <text>Pyromancies</text>
                             </li>
-                            <li className={styles.sub_item} onClick={() => router.push('/Sorceries')}>
+                            <li className={styles.sub_item} onClick={() => router.push('/Equipment/Spells/Sorceries')}>
                                 <Image src="https://darksouls.wiki.fextralife.com/file/Dark-Souls/2047.png" width={25} height={25} />
                                 <text>Sorceries</text>
                             </li>
-                            <li className={styles.dropdown_item} onClick={() => router.push('/Upgrades')}>
+                            <li className={styles.dropdown_item} onClick={() => router.push('/Equipment/Upgrades')}>
                                 <Image src="https://darksouls.wiki.fextralife.com/file/Dark-Souls/2051.png" width={25} height={25}></Image>
                                 <text>Upgrades</text>
                             </li>
-                            <li className={styles.dropdown_item} onClick={() => router.push('/Weapons')}>
+                            <li className={styles.dropdown_item} onClick={() => router.push('/Equipment/Weapons')}>
                                 <Image src="https://darksouls.wiki.fextralife.com/file/Dark-Souls/2051.png" width={25} height={25}></Image>
                                 <text>Weapons</text>
                             </li>
@@ -181,15 +181,15 @@ export default function Navbar(props) {
                 <NavItem className="online" icon="https://darksouls.wiki.fextralife.com/file/Dark-Souls/2082.png" text="Online">
                     <div className={styles.nav_dropdown}>
                         <ul>
-                            <li className={styles.dropdown_item} onClick={() => router.push('/Features')}>
+                            <li className={styles.dropdown_item} onClick={() => router.push('/Online/Features')}>
                                 <Image src="https://darksouls.wiki.fextralife.com/file/Dark-Souls/2051.png" width={25} height={25}></Image>
                                 <text>Features</text>
                             </li>
-                            <li className={styles.dropdown_item} onClick={() => router.push('/Invasions')}>
+                            <li className={styles.dropdown_item} onClick={() => router.push('/Online/Invasions')}>
                                 <Image src="https://darksouls.wiki.fextralife.com/file/Dark-Souls/2051.png" width={25} height={25}></Image>
                                 <text>Invasions</text>
                             </li>
-                            <li className={styles.dropdown_item} onClick={() => router.push('/Summoning')}>
+                            <li className={styles.dropdown_item} onClick={() => router.push('/Online/Summoning')}>
                                 <Image src="https://darksouls.wiki.fextralife.com/file/Dark-Souls/2051.png" width={25} height={25}></Image>
                                 <text>Summoning</text>
                             </li>
@@ -199,39 +199,39 @@ export default function Navbar(props) {
                 <NavItem className="world" icon="https://darksouls.wiki.fextralife.com/file/Dark-Souls/2035.png" text="World">
                     <div className={styles.nav_dropdown}>
                         <ul>
-                            <li className={styles.dropdown_item} onClick={() => router.push('/Covenants')}>
+                            <li className={styles.dropdown_item} onClick={() => router.push('/World/Covenants')}>
                                 <Image src="https://darksouls.wiki.fextralife.com/file/Dark-Souls/2051.png" width={25} height={25}></Image>
                                 <text>Covenants</text>
                             </li>
-                            <li className={styles.dropdown_item} onClick={() => router.push('/Enemies')}>
+                            <li className={styles.dropdown_item} onClick={() => router.push('/World/Enemies')}>
                                 <Image src="https://darksouls.wiki.fextralife.com/file/Dark-Souls/2051.png" width={25} height={25}></Image>
                                 <text>Enemies</text>
                             </li>
-                            <li className={styles.sub_item} onClick={() => router.push('/Bosses')}>
+                            <li className={styles.sub_item} onClick={() => router.push('/World/Bosses')}>
                                 <Image src="https://darksouls.wiki.fextralife.com/file/Dark-Souls/2047.png" width={25} height={25}></Image>
                                 <text>Bosses</text>
                             </li>
-                            <li className={styles.sub_item} onClick={() => router.push('/NPC_Invader')}>
+                            <li className={styles.sub_item} onClick={() => router.push('/World/NPC_Invader')}>
                                 <Image src="https://darksouls.wiki.fextralife.com/file/Dark-Souls/2047.png" width={25} height={25}></Image>
                                 <text>NPC Invaders</text>
                             </li>
-                            <li className={styles.dropdown_item} onClick={() => router.push('/Illusory_Walls')} >
+                            <li className={styles.dropdown_item} onClick={() => router.push('/World/Illusory_Walls')} >
                                 <Image src="https://darksouls.wiki.fextralife.com/file/Dark-Souls/2051.png" width={25} height={25}></Image>
                                 <text>Illusory Walls</text>
                             </li>
-                            <li className={styles.dropdown_item} onClick={() => router.push('/Locales')}>
+                            <li className={styles.dropdown_item} onClick={() => router.push('/World/Locales')}>
                                 <Image src="https://darksouls.wiki.fextralife.com/file/Dark-Souls/2051.png" width={25} height={25}></Image>
                                 <text>Locales</text>
                             </li>
-                            <li className={styles.sub_item} onClick={() => router.push('/Maps')}>
+                            <li className={styles.sub_item} onClick={() => router.push('/World/Maps')}>
                                 <Image src="https://darksouls.wiki.fextralife.com/file/Dark-Souls/2047.png" width={25} height={25} />
                                 <text>Maps</text>
                             </li>
-                            <li className={styles.dropdown_item} onClick={() => router.push('/Lore')}>
+                            <li className={styles.dropdown_item} onClick={() => router.push('/World/Lore')}>
                                 <Image src="https://darksouls.wiki.fextralife.com/file/Dark-Souls/2051.png" width={25} height={25}></Image>
                                 <text>Lore</text>
                             </li>
-                            <li className={styles.dropdown_item} onClick={() => router.push('/NPCs')}>
+                            <li className={styles.dropdown_item} onClick={() => router.push('/World/NPCs')}>
                                 <Image src="https://darksouls.wiki.fextralife.com/file/Dark-Souls/2051.png" width={25} height={25}></Image>
                                 <text>NPCs</text>
                             </li>
@@ -241,19 +241,19 @@ export default function Navbar(props) {
                 <NavItem className="guides" icon="https://darksouls.wiki.fextralife.com/file/Dark-Souls/Seek_Guidance.png" text="Guides">
                     <div className={styles.nav_dropdown}>
                         <ul>
-                            <li className={styles.dropdown_item} onClick={() => router.push('/Achievements')}>
+                            <li className={styles.dropdown_item} onClick={() => router.push('/Guides/Achievements')}>
                                 <Image src="https://darksouls.wiki.fextralife.com/file/Dark-Souls/2051.png" width={25} height={25}></Image>
                                 <text>Achievements</text>
                             </li>
-                            <li className={styles.dropdown_item} onClick={() => router.push('/New_Game_Plus')}>
+                            <li className={styles.dropdown_item} onClick={() => router.push('/Guides/New_Game_Plus')}>
                                 <Image src="https://darksouls.wiki.fextralife.com/file/Dark-Souls/2051.png" width={25} height={25}></Image>
                                 <text>New Game +</text>
                             </li>
-                            <li className={styles.dropdown_item} onClick={() => router.push('/New_Player_Help')}>
+                            <li className={styles.dropdown_item} onClick={() => router.push('/Guides/New_Player_Help')}>
                                 <Image src="https://darksouls.wiki.fextralife.com/file/Dark-Souls/2051.png" width={25} height={25}></Image>
                                 <text>New Player Help</text>
                             </li>
-                            <li className={styles.dropdown_item} onClick={() => router.push('/Walkthrough')}>
+                            <li className={styles.dropdown_item} onClick={() => router.push('/Guides/Walkthrough')}>
                                 <Image src="https://darksouls.wiki.fextralife.com/file/Dark-Souls/2051.png" width={25} height={25}></Image>
                                 <text>Walkthrough</text>
                             </li>

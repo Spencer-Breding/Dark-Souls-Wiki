@@ -3,6 +3,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import Grad from "../components/grad";
 import Spacer from "../components/spacer";
+import Title from "../components/title";
 import styles from '../styles/index.module.css';
 const Home = () => {
 
@@ -10,7 +11,7 @@ const Home = () => {
         <React.Fragment>
             <Grad/>
             <div className={styles.home}>
-                <h1 className={styles.title}>Wiki Home</h1>
+                <Title title="Wiki Home" />
                 <div className={styles.title_divider}>
                     <div className={styles.shadow}></div>
                 </div>
@@ -28,12 +29,11 @@ const Home = () => {
                         <div>
                             <Link href="General">General Information</Link>
                             <ul>
-                                <li><Link href="/General_Information/About_Dark_Souls">About Dark Souls</Link></li>
-                                <li><Link href="Dark_Souls_Remastered">About the Remaster</Link></li>
-                                <li><Link href="Combat">Combat</Link></li>
-                                <li><Link href="Controls">Controls</Link></li>
-                                <li><Link href="Game_Mechanics">Game Mechanics</Link></li>
-                                <li><Link href="Secrets">Secrets</Link></li>
+                                <li><Link href="General/About_Dark_Souls">About Dark Souls</Link></li>
+                                <li><Link href="General/Dark_Souls_Remastered">About the Remaster</Link></li>
+                                <li><Link href="General/Combat">Combat</Link></li>
+                                <li><Link href="General/Controls">Controls</Link></li>
+                                <li><Link href="General/Game_Mechanics">Game Mechanics</Link></li>
                             </ul>
                         </div>
                     </div>
@@ -42,11 +42,11 @@ const Home = () => {
                         <div>
                             <Link href="/Character">Character Information</Link>
                             <ul>
-                                <li><Link href="Builds">Builds</Link></li>
-                                <li><Link href="Classes">Classes</Link></li>
-                                <li><Link href="Gestures">Gestures</Link></li>
-                                <li><Link href="Gifts">Gifts</Link></li>
-                                <li><Link href="Stats">Stats</Link></li>
+                                <li><Link href="Character/Builds">Builds</Link></li>
+                                <li><Link href="Character/Classes">Classes</Link></li>
+                                <li><Link href="Character/Gestures">Gestures</Link></li>
+                                <li><Link href="Character/Gifts">Gifts</Link></li>
+                                <li><Link href="Character/Stats">Stats</Link></li>
                             </ul>
                         </div>
                     </div>
@@ -55,13 +55,13 @@ const Home = () => {
                         <div>
                             <Link href="Equipment">Equipment Information</Link>
                             <ul>
-                                <li><Link href="Armor">Armor</Link></li>
-                                <li><Link href="Items">Items</Link></li>
-                                <li><Link href="Rings">Rings</Link></li>
-                                <li><Link href="Shields">Shields</Link></li>
-                                <li><Link href="Spells">Spells</Link></li>
-                                <li><Link href="Upgrades">Upgrades</Link></li>
-                                <li><Link href="Weapons">Weapons</Link></li>
+                                <li><Link href="Equipment/Armor">Armor</Link></li>
+                                <li><Link href="Equipment/Items">Items</Link></li>
+                                <li><Link href="Equipment/Rings">Rings</Link></li>
+                                <li><Link href="Equipment/Shields">Shields</Link></li>
+                                <li><Link href="Equipment/Spells">Spells</Link></li>
+                                <li><Link href="Equipment/Upgrades">Upgrades</Link></li>
+                                <li><Link href="Equipment/Weapons">Weapons</Link></li>
                             </ul>
                         </div>
                     </div>

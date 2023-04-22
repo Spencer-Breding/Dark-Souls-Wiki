@@ -1,0 +1,35 @@
+.table {
+    display: flex;
+    border: 3px solid red;
+    flex-direction: column;
+    height: fit-content;
+}
+
+    .table:nth-child(2n) {
+        background-color: #222226;
+    }
+
+    .table text {
+        color: white;
+        text-align: center;
+    }
+
+    .table a{
+        
+    }
+
+.table_item {
+    display: flex;
+    flex-direction: row;
+    height: 8em;
+    align-items: center;
+}
+
+    .table_item:not(:last-child) {
+        border-bottom: 3px solid blue;
+    }
+
+    .table_item img {
+        height: 90px;
+        width: 80px;
+    }
