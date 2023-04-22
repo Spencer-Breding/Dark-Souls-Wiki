@@ -1,0 +1,103 @@
+{
+  "polyfillFiles": [
+    "static/chunks/polyfills-c67a75d1b6f99dc8.js"
+  ],
+  "devFiles": [],
+  "ampDevFiles": [],
+  "lowPriorityFiles": [
+    "static/M4G0Vwd_9L7bBbGprkWno/_buildManifest.js",
+    "static/M4G0Vwd_9L7bBbGprkWno/_ssgManifest.js"
+  ],
+  "rootMainFiles": [],
+  "pages": {
+    "/": [
+      "static/chunks/webpack-ed4a82b508806425.js",
+      "static/chunks/framework-2c79e2a64abdb08b.js",
+      "static/chunks/main-f721423175791d6e.js",
+      "static/css/bb3bd6df2bf320b5.css",
+      "static/chunks/pages/index-0c68fe44212e9817.js"
+    ],
+    "/Character": [
+      "static/chunks/webpack-ed4a82b508806425.js",
+      "static/chunks/framework-2c79e2a64abdb08b.js",
+      "static/chunks/main-f721423175791d6e.js",
+      "static/css/147a031b43ee7574.css",
+      "static/chunks/pages/Character-43224c280fa52acb.js"
+    ],
+    "/Equipment": [
+      "static/chunks/webpack-ed4a82b508806425.js",
+      "static/chunks/framework-2c79e2a64abdb08b.js",
+      "static/chunks/main-f721423175791d6e.js",
+      "static/css/147a031b43ee7574.css",
+      "static/chunks/pages/Equipment-6ee32bef709b570d.js"
+    ],
+    "/Equipment/Armor": [
+      "static/chunks/webpack-ed4a82b508806425.js",
+      "static/chunks/framework-2c79e2a64abdb08b.js",
+      "static/chunks/main-f721423175791d6e.js",
+      "static/css/623aa70d6d28e8b9.css",
+      "static/chunks/pages/Equipment/Armor-54a3f9588cad26ff.js"
+    ],
+    "/General": [
+      "static/chunks/webpack-ed4a82b508806425.js",
+      "static/chunks/framework-2c79e2a64abdb08b.js",
+      "static/chunks/main-f721423175791d6e.js",
+      "static/css/147a031b43ee7574.css",
+      "static/chunks/pages/General-c48543026c1ac143.js"
+    ],
+    "/General/About_Dark_Souls": [
+      "static/chunks/webpack-ed4a82b508806425.js",
+      "static/chunks/framework-2c79e2a64abdb08b.js",
+      "static/chunks/main-f721423175791d6e.js",
+      "static/css/ccc8f71c4dc7931e.css",
+      "static/chunks/pages/General/About_Dark_Souls-d0a098fe98c56ab2.js"
+    ],
+    "/General/Mechanics": [
+      "static/chunks/webpack-ed4a82b508806425.js",
+      "static/chunks/framework-2c79e2a64abdb08b.js",
+      "static/chunks/main-f721423175791d6e.js",
+      "static/chunks/pages/General/Mechanics-f778439b739f10ca.js"
+    ],
+    "/General/Mechanics/physical_damage": [
+      "static/chunks/webpack-ed4a82b508806425.js",
+      "static/chunks/framework-2c79e2a64abdb08b.js",
+      "static/chunks/main-f721423175791d6e.js",
+      "static/chunks/pages/General/Mechanics/physical_damage-c9a24385329199cf.js"
+    ],
+    "/Guides": [
+      "static/chunks/webpack-ed4a82b508806425.js",
+      "static/chunks/framework-2c79e2a64abdb08b.js",
+      "static/chunks/main-f721423175791d6e.js",
+      "static/css/147a031b43ee7574.css",
+      "static/chunks/pages/Guides-5ef50fb863692e1a.js"
+    ],
+    "/Online": [
+      "static/chunks/webpack-ed4a82b508806425.js",
+      "static/chunks/framework-2c79e2a64abdb08b.js",
+      "static/chunks/main-f721423175791d6e.js",
+      "static/css/147a031b43ee7574.css",
+      "static/chunks/pages/Online-c3102dfb89f780ea.js"
+    ],
+    "/World": [
+      "static/chunks/webpack-ed4a82b508806425.js",
+      "static/chunks/framework-2c79e2a64abdb08b.js",
+      "static/chunks/main-f721423175791d6e.js",
+      "static/css/147a031b43ee7574.css",
+      "static/chunks/pages/World-630ecadbfaa6fe9e.js"
+    ],
+    "/_app": [
+      "static/chunks/webpack-ed4a82b508806425.js",
+      "static/chunks/framework-2c79e2a64abdb08b.js",
+      "static/chunks/main-f721423175791d6e.js",
+      "static/css/280631aa08f4f5c5.css",
+      "static/chunks/pages/_app-9c94916dd44aba3d.js"
+    ],
+    "/_error": [
+      "static/chunks/webpack-ed4a82b508806425.js",
+      "static/chunks/framework-2c79e2a64abdb08b.js",
+      "static/chunks/main-f721423175791d6e.js",
+      "static/chunks/pages/_error-54de1933a164a1ff.js"
+    ]
+  },
+  "ampFirstPages": []
+}

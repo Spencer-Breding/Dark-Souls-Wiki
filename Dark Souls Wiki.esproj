@@ -17,4 +17,7 @@
   <ItemGroup>
     <None Remove="src\**" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="pages\General\Mechanics\Damage\" />
+  </ItemGroup>
 </Project>

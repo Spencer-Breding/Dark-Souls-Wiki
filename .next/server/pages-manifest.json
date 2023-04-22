@@ -1,0 +1,16 @@
+{
+  "/_app": "pages/_app.js",
+  "/_error": "pages/_error.js",
+  "/_document": "pages/_document.js",
+  "/Character": "pages/Character.js",
+  "/Equipment": "pages/Equipment.js",
+  "/Equipment/Armor": "pages/Equipment/Armor.js",
+  "/General/Mechanics": "pages/General/Mechanics.js",
+  "/General/About_Dark_Souls": "pages/General/About_Dark_Souls.js",
+  "/General/Mechanics/physical_damage": "pages/General/Mechanics/physical_damage.js",
+  "/General": "pages/General.js",
+  "/Guides": "pages/Guides.js",
+  "/Online": "pages/Online.js",
+  "/World": "pages/World.js",
+  "/": "pages/index.js"
+}
