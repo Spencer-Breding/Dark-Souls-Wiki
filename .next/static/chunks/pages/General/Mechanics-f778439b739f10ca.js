@@ -1,1 +1,0 @@
-(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[903],{8438:function(n,o,_){(window.__NEXT_P=window.__NEXT_P||[]).push(["/General/Mechanics",function(){return _(114)}])},114:function(){console.log("Hello World!")}},function(n){n.O(0,[774,888,179],function(){return n(n.s=8438)}),_N_E=n.O()}]);

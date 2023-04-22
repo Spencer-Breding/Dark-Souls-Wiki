@@ -5,8 +5,8 @@
   "devFiles": [],
   "ampDevFiles": [],
   "lowPriorityFiles": [
-    "static/M4G0Vwd_9L7bBbGprkWno/_buildManifest.js",
-    "static/M4G0Vwd_9L7bBbGprkWno/_ssgManifest.js"
+    "static/tnRqQCIRbGks8KgJLHclA/_buildManifest.js",
+    "static/tnRqQCIRbGks8KgJLHclA/_ssgManifest.js"
   ],
   "rootMainFiles": [],
   "pages": {
@@ -56,13 +56,13 @@
       "static/chunks/webpack-ed4a82b508806425.js",
       "static/chunks/framework-2c79e2a64abdb08b.js",
       "static/chunks/main-f721423175791d6e.js",
-      "static/chunks/pages/General/Mechanics-f778439b739f10ca.js"
+      "static/chunks/pages/General/Mechanics-5cfc62a250374f9f.js"
     ],
     "/General/Mechanics/physical_damage": [
       "static/chunks/webpack-ed4a82b508806425.js",
       "static/chunks/framework-2c79e2a64abdb08b.js",
       "static/chunks/main-f721423175791d6e.js",
-      "static/chunks/pages/General/Mechanics/physical_damage-c9a24385329199cf.js"
+      "static/chunks/pages/General/Mechanics/physical_damage-a3ad229dd844c3a8.js"
     ],
     "/Guides": [
       "static/chunks/webpack-ed4a82b508806425.js",
