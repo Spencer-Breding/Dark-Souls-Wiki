@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'OptimusPrinceps';
-    src: url('/public/fonts/OptimusPrinceps.woff2') format('woff2'), url('/public/fonts/OptimusPrinceps.woff') format('woff');
+    src: url('../public/fonts/OptimusPrinceps.woff2') format('woff2'), url('/public/fonts/OptimusPrinceps.woff') format('woff');
     font-weight: 500;
     font-style: normal;
     font-display: swap;
@@ -8,7 +8,7 @@
 
 @font-face {
     font-family: 'OptimusPrincepsSemiBold';
-    src: url('/public/fonts/OptimusPrincepsSemiBold.woff2') format('woff2'), url('/public/fonts/OptimusPrincepsSemiBold.woff') format('woff');
+    src: url('../public/fonts/OptimusPrincepsSemiBold.woff2') format('woff2'), url('/public/fonts/OptimusPrincepsSemiBold.woff') format('woff');
     font-weight: 600;
     font-style: normal;
     font-display: swap;
