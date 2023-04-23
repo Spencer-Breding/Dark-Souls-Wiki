@@ -123,6 +123,10 @@ export default function Navbar(props) {
                                 <Image src="https://darksouls.wiki.fextralife.com/file/Dark-Souls/2051.png" width={25} height={25}></Image>
                                 <text>Armor</text>
                             </li>
+                            <li className={styles.sub_item} onClick={() => router.push('/Equipment/Helms')}>
+                                <Image src="https://darksouls.wiki.fextralife.com/file/Dark-Souls/2047.png" width={25} height={25} />
+                                <text>Helms</text>
+                            </li>
                             <li className={styles.sub_item} onClick={() => router.push('/Equipment/Chest_Pieces')}>
                                 <Image src="https://darksouls.wiki.fextralife.com/file/Dark-Souls/2047.png" width={25} height={25} />
                                 <text>Chest Pieces</text>
@@ -130,10 +134,6 @@ export default function Navbar(props) {
                             <li className={styles.sub_item} onClick={() => router.push('/Equipment/Gauntlets')}>
                                 <Image src="https://darksouls.wiki.fextralife.com/file/Dark-Souls/2047.png" width={25} height={25} />
                                 <text>Gauntlets</text>
-                            </li>
-                            <li className={styles.sub_item} onClick={() => router.push('/Equipment/Helms')}>
-                                <Image src="https://darksouls.wiki.fextralife.com/file/Dark-Souls/2047.png" width={25} height={25} />
-                                <text>Helms</text>
                             </li>
                             <li className={styles.sub_item} onClick={() => router.push('/Equipment/Leg_Pieces')}>
                                 <Image src="https://darksouls.wiki.fextralife.com/file/Dark-Souls/2047.png" width={25} height={25} />

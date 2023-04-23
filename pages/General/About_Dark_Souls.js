@@ -4,7 +4,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
 import Contents from "../../components/contents";
-import Title_Div from "../../components/title_div";
+import Title_Div from "../../components/TitleDiv";
 import Grad from "../../components/grad";
 import Spacer from "../../components/spacer";
 import Title from "../../components/title";

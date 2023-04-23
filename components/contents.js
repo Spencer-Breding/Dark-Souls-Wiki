@@ -1,9 +1,13 @@
-﻿import React, { useState, useRef } from 'react';
+﻿import React, { useState, useEffect } from 'react';
 import styles from "../styles/contents.module.css";
 
 export default function Contents(props) {
-    const ref = useRef(null);
-    const [openDropdown, setOpenDropdown] = useState(false)
+    const [openDropdown, setOpenDropdown] = useState(localStorage.getItem('openDropdown'));
+
+    useEffect(() => {
+        localStorage.setItem('openDropdown', openDropdown);
+    }, [openDropdown]);
+
     let dropdownText;
 
     if (openDropdown) {
