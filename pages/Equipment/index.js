@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
-import Header_Div from "../../components/header_div";
-import Title_Div from "../../components/title_div";
+import HeaderDiv from "../../components/HeaderDiv";
+import TitleDiv from "../../components/TitleDiv";
 import Grad from "../../components/grad";
 import Spacer from "../../components/spacer";
 import Title from "../../components/title";
@@ -15,33 +15,33 @@ const Equipment = () => {
             <Grad/>
             <div className={styles.container}>
                 <Title title="Equipment Information"/>
-                <Title_Div/>
+                <TitleDiv/>
                 <text className={styles.description}>{desc}</text>
-                <Header_Div />
+                <HeaderDiv />
                 <div className={styles.row}>
                     <Link href="Equipment/Armor">Armor</Link>
                 </div>
-                <Header_Div />
+                <HeaderDiv />
                 <div className={styles.row}>
                     <Link href="Equipment/Items">Items</Link>
                 </div>
-                <Header_Div />
+                <HeaderDiv />
                 <div className={styles.row}>
                     <Link href="Equipment/Rings">Rings</Link>
                 </div>
-                <Header_Div />
+                <HeaderDiv />
                 <div className={styles.row}>
                     <Link href="Equipment/Shields">Shields</Link>
                 </div>
-                <Header_Div />
+                <HeaderDiv />
                 <div className={styles.row}>
                     <Link href="Equipment/Spells">Spells</Link>
                 </div>
-                <Header_Div />
+                <HeaderDiv />
                 <div className={styles.row}>
                     <Link href="Equipment/Upgrades">Upgrades</Link>
                 </div>
-                <Header_Div />
+                <HeaderDiv />
                 <div className={styles.row}>
                     <Link href="Equipment/Weapons">Weapons</Link>
                 </div>

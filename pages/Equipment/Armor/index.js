@@ -4,7 +4,7 @@ import Contents from "../../../components/contents";
 import Grad from "../../../components/grad";
 import ArmorTableRow from "../../../components/ArmorTableRow";
 import Spacer from "../../../components/spacer";
-import Title_Div from "../../../components/TitleDiv";
+import TitleDiv from "../../../components/TitleDiv";
 import Title from "../../../components/title";
 import styles from "../../../styles/armor.module.css";
 
@@ -22,7 +22,7 @@ export default function Armor() {
             <Grad/>
             <div className={styles.container }>
                 <Title title="Armor" />
-                <Title_Div />
+                <TitleDiv />
                 <div className={styles.info}>
                     <text className={styles.description}>{desc}</text>
                 </div>
@@ -43,7 +43,7 @@ export default function Armor() {
                         <button>Individual Pieces</button>
                     </div>
                     <h2 className={styles.body_header} id="Helms">Helms</h2>
-                    <Title_Div />
+                    <TitleDiv />
                     <div className={styles.table}>
                         <ArmorTableRow link="Brigand_Hood" image="brigand_hood" title="Brigand Hood" durability="200" weight="1.2" regular="9" strike="10"
                             slash="10" thrust="9" magic="8" fire="5" lightning="6" bleed="8" poison="8" curse="0" poise="0" />
@@ -57,7 +57,7 @@ export default function Armor() {
                     <br />
                     <br />
                     <h2 className={styles.body_header} id="Chest">Chest Pieces</h2>
-                    <Title_Div />
+                    <TitleDiv />
                     <div className={styles.table}>
                         <ArmorTableRow link="Brigand_Armor" image="brigand_armor" title="Brigand Armor" durability="200" weight="3.1" regular="23" strike="25.3"
                             slash="23" thrust="20.7" magic="20" fire="13" lightning="17" bleed="20" poison="20" curse="0" poise="0" />
@@ -71,7 +71,7 @@ export default function Armor() {
                     <br />
                     <br />
                     <h2 className={styles.body_header} id="Gauntlets">Gauntlets</h2>
-                    <Title_Div />
+                    <TitleDiv />
                     <div className={styles.table}>
                         <ArmorTableRow link="Brigand_Gauntlets" image="brigand_gauntlets" title="Brigand Gauntlets" durability="200" weight="1.8" regular="14" strike="15.4"
                             slash="14" thrust="12.6" magic="12" fire="8" lightning="10" bleed="12" poison="12" curse="0" poise="0" />
@@ -85,7 +85,7 @@ export default function Armor() {
                     <br />
                     <br />
                     <h2 className={styles.body_header} id="Legs">Leg Pieces</h2>
-                    <Title_Div />
+                    <TitleDiv />
                     <div className={styles.table}>
                         <ArmorTableRow link="Brigand_Trousers" image="brigand_trousers" title="Brigand Trousers" durability="200" weight="1.8" regular="14" strike="15.4"
                             slash="14" thrust="12.6" magic="12" fire="8" lightning="10" bleed="12" poison="12" curse="0" poise="0" />

@@ -23,7 +23,7 @@ export default function Contents(props) {
                 <text>
                     Contents
                 </text>
-                <text className={styles.dropdown_brackets} ref={ref} onClick={() => setOpenDropdown(!openDropdown)} >
+                <text className={styles.dropdown_brackets} onClick={() => setOpenDropdown(!openDropdown)} >
                     [ <text className={styles.dropdown_button }>{dropdownText}</text> ]
                 </text>
             </div>

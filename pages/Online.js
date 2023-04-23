@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
-import Header_Div from "../components/header_div";
-import Title_Div from "../components/title_div";
+import HeaderDiv from "../components/HeaderDiv";
+import TitleDiv from "../components/TitleDiv";
 import Grad from "../components/grad";
 import Spacer from "../components/spacer";
 import Title from "../components/title";
@@ -15,17 +15,17 @@ const Character = () => {
             <Grad/>
             <div className={styles.container}>
                 <Title title="Online Information" />
-                <Title_Div/>
+                <TitleDiv />
                 <text className={styles.description}>{desc}</text>
-                <Header_Div/>
+                <HeaderDiv/>
                 <div className={styles.row}>
                     <Link href="Online/Features">Features</Link>
                 </div>
-                <Header_Div />
+                <HeaderDiv />
                 <div className={styles.row}>
                     <Link href="Online/Invasions">Invasions</Link>
                 </div>
-                <Header_Div />
+                <HeaderDiv />
                 <div className={styles.row}>
                     <Link href="Online/Summoning">Summoning</Link>
                 </div>

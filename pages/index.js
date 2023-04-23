@@ -1,9 +1,11 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import HeaderDiv from "../components/HeaderDiv";
 import Grad from "../components/grad";
 import Spacer from "../components/spacer";
 import Title from "../components/title";
+import TitleDiv from "../components/TitleDiv";
 import styles from '../styles/index.module.css';
 const Home = () => {
 
@@ -12,17 +14,13 @@ const Home = () => {
             <Grad/>
             <div className={styles.home}>
                 <Title title="Wiki Home" />
-                <div className={styles.title_divider}>
-                    <div className={styles.shadow}></div>
-                </div>
+                <TitleDiv/>
                 <text className={styles.welcome}>Dark Souls Wiki</text>
                 <div className={styles.h_divider}>
                     <div className={styles.shadow}></div>
                 </div>
                 <text className={styles.description}>From weapons to enemies to lore, find out everything you need to know about Dark Souls here!</text>
-                <div className={styles.h_divider}>
-                    <div className={styles.shadow}></div>
-                </div>
+                <HeaderDiv/>
                 <div className={styles.row}>
                     <div className={styles.menu_item }>
                         <Image src="http://i.Imgur.com/841SOQU.gif" width={100} height={100} alt="" />
@@ -66,9 +64,7 @@ const Home = () => {
                         </div>
                     </div>
                 </div>
-                <div className={styles.h_divider}>
-                    <div className={styles.shadow}></div>
-                </div>
+                <HeaderDiv/>
                 <div className={styles.row }>
                     <div className={styles.menu_item}>
                         <Image src="https://darksouls.wiki.fextralife.com/file/Dark-Souls/2082.png" width={100} height={100} alt="" />

@@ -4,7 +4,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
 import Contents from "../../components/contents";
-import Title_Div from "../../components/TitleDiv";
+import TitleDiv from "../../components/TitleDiv";
 import Grad from "../../components/grad";
 import Spacer from "../../components/spacer";
 import Title from "../../components/title";
@@ -115,7 +115,7 @@ export default function About_ds() {
             <Grad />
             <div className={styles.container}>
                 <Title title="About Dark Souls" />
-                <Title_Div />
+                <TitleDiv />
                 <div className={styles.info}>
                     <div className={styles.info_table}>
                         <h2>Dark Souls</h2>
@@ -171,16 +171,16 @@ export default function About_ds() {
                     <br />
                     <br />
                     <h3 className={styles.body_header} id="Gameplay">Gameplay</h3>
-                    <Title_Div />
+                    <TitleDiv />
                     <text className={styles.body_text}>{gameplay}</text>
                     <h3 className={styles.body_header} id="Prepare_to_Die_Edition">Prepare to Die Edition</h3>
-                    <Title_Div />
+                    <TitleDiv />
                     <text className={styles.body_text}>{ptd}</text>
                     <br />
                     <h4 className={styles.body_sub_header} id="Minimum_System_Requirements_PTD">Minimum System Requirements</h4>
                     <text className={styles.body_text}>{prepare_min_reqs}</text>
                     <h3 className={styles.body_header} id="Dark_Souls_Remastered">Dark Souls Remastered</h3>
-                    <Title_Div />
+                    <TitleDiv />
                     <text className={styles.body_text}>{ds_remastered}</text>
                     <br />
                     <h4 className={styles.body_sub_header} id="Minimum_System_Requirements_Remaster">Minimum System Requirements</h4>
@@ -191,12 +191,12 @@ export default function About_ds() {
                     <br />
                     <br />
                     <h3 className={styles.body_header} id="Reception">Reception</h3>
-                    <Title_Div />
+                    <TitleDiv />
                     <text className={styles.body_text}>{reception}</text>
                     <br />
                     <br />
                     <h3 className={styles.body_header} id="Gallery">Gallery</h3>
-                    <Title_Div />
+                    <TitleDiv />
                     <div className={styles.gallery_container}>
                         <div className={styles.gallery_row}>
                             <div className={styles.gallery_item}>
@@ -263,7 +263,7 @@ export default function About_ds() {
                 <br />
                 <br />
                 <h3 className={styles.body_header} id="Trailers">Trailers</h3>
-                <Title_Div />
+                <TitleDiv />
                 <div className={styles.trailer_container}>
                     <div className={styles.trailer_row}>
                         <Iframe width="448" height="252" src="https://www.youtube.com/embed/9IbPrk-yuts" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></Iframe>
@@ -279,7 +279,7 @@ export default function About_ds() {
                 <br />
                 <br />
                 <h3 className={styles.body_header} id="External_Links">External Links</h3>
-                <Title_Div />
+                <TitleDiv />
                 <ul className={styles.external}>
                     <li><a href="https://web.archive.org/web/20111231103938/http://www.preparetodie.com/en/" target="blank">Official English Website</a><text> (Archived)</text></li>
                     <li><a href="https://www.darksouls.jp/" target="blank">Official Japanese Website</a></li>
