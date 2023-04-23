@@ -2,12 +2,7 @@
 import styles from "../styles/contents.module.css";
 
 export default function Contents(props) {
-    const [openDropdown, setOpenDropdown] = useState(localStorage.getItem('openDropdown'));
-
-    useEffect(() => {
-        localStorage.setItem('openDropdown', openDropdown);
-    }, [openDropdown]);
-
+    const [openDropdown, setOpenDropdown] = useState(false);
     let dropdownText;
 
     if (openDropdown) {
