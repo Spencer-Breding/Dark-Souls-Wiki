@@ -15,7 +15,7 @@ const Home = () => {
             <div className={styles.home}>
                 <Title title="Wiki Home" />
                 <TitleDiv/>
-                <text className={styles.welcome}>Dark Souls Wiki</text>
+                <text className={styles.welcome}>Dark Souls Wiki <br/>(Work In Progress)</text>
                 <div className={styles.h_divider}>
                     <div className={styles.shadow}></div>
                 </div>
