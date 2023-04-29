@@ -22,8 +22,7 @@ const desc = <text><em>Armor</em> is a type of equipment in <em>{dark}</em> that
     negative {status}, and an increase the player's {poise}.</text>
 
 export default function Armor() {
-    const initialState = getCookie('armor_state')
-    const [sortMode, setSortMode] = useState(1);
+    const [sortMode, setSortMode] = useState(0);
     useEffect(() => {
         setSortMode(getCookie('armor_state'));
         const listenCookieChange = () => {
@@ -37,7 +36,7 @@ export default function Armor() {
     const notSelectedColor = "#333333";
     const notSelectedHover = "#222226";
 
-    return(
+    return (
         <React.Fragment>
             <Grad />
             <div className={styles.container}>
