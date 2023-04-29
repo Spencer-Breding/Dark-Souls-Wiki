@@ -19,7 +19,7 @@
         .container a:hover {
             color: #e25022;
             text-decoration: underline;
-            filter: brightness(1.5) opacity(0.9);
+            filter: brightness(1.25) opacity(0.9);
         }
 
     .container h2 {
@@ -116,6 +116,7 @@
 .cover {
     border-top:3px solid #444444;
     padding: 0.5em;
+    filter: brightness(1.0);
 }
 
 .h_divider {
@@ -201,7 +202,7 @@
     }
 
     .gallery_item a:hover{
-        filter:brightness(1.1);
+        filter:brightness(1.2);
     }
 
 .gallery_item a img{

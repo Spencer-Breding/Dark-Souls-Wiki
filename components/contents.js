@@ -13,7 +13,7 @@ export default function Contents(props) {
     }
 
     return (
-        <div className={styles.contents_container }>
+        <div className={styles.contents_container}>
             <div className={styles.contents_head }>
                 <text>
                     Contents

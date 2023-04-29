@@ -1,9 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { setCookie, getCookie, hasCookie } from 'cookies-next';
 import Contents from "../../../components/contents";
 import Grad from "../../../components/grad";
 import Full from "../../../components/ArmorFull";
-import Individual from "../../../components/ArmorIndividual";
+import Helms from "../../../components/ArmorHelms";
+import Chests from "../../../components/ArmorChests";
+import Gauntlets from "../../../components/ArmorGauntlets";
+import Legs from "../../../components/ArmorLegs";
 import Spacer from "../../../components/spacer";
 import TitleDiv from "../../../components/TitleDiv";
 import Title from "../../../components/title";
@@ -15,32 +19,28 @@ const physical = <Link href="/General/Mechanics/Damage/Physical">physical</Link>
 const poise = <Link href="/General/Mechanics/Poise">poise</Link>
 const status = <Link href="/General/Mechanics/Status_Effects">status effects</Link>
 const desc = <text><em>Armor</em> is a type of equipment in <em>{dark}</em> that provides: protection against both {physical} and {elemental} damage, resistance against
-    negative {status}, and an increase the player's {poise }.</text>
+    negative {status}, and an increase the player's {poise}.</text>
 
 export default function Armor() {
-    const [sortMode, setSortMode] = useState(0);
-    var fullColor;
-    var fullHover;
-    var individualColor;
-    var individualHover;
+    const initialState = getCookie('armor_state')
+    const [sortMode, setSortMode] = useState(1);
+    useEffect(() => {
+        setSortMode(getCookie('armor_state'));
+        const listenCookieChange = () => {
+            setSortMode(getCookie('armor_state'));
+        }
+        window.addEventListener("cookie", listenCookieChange);
+        return () => window.removeEventListener("cookie", listenCookieChange);
+    }, [])
+    const selectedColor = "#AE9E69";
+    const selectedHover = "#907040";
+    const notSelectedColor = "#333333";
+    const notSelectedHover = "#222226";
 
-    if (sortMode == 0) {
-        fullColor = "#AE9E69";
-        fullHover = "#907040";
-        individualColor = "#333333";
-        individualHover = "#222226";
-    }
-    else {
-        fullColor = "#333333";
-        fullHover = "#222226";
-        individualColor = "#AE9E69";
-        individualHover = "#907040";
-    }
-
-    return (
+    return(
         <React.Fragment>
-            <Grad/>
-            <div className={styles.container }>
+            <Grad />
+            <div className={styles.container}>
                 <Title title="Armor" />
                 <TitleDiv />
                 <div className={styles.info}>
@@ -48,47 +48,52 @@ export default function Armor() {
                 </div>
                 <br />
                 <br />
-                <div className={styles.info }>
-                    <Contents>
-                        {(sortMode == 0) &&
-                            <>
-                                <Link href='#Brigand'><li><text>Brigand Set</text></li></Link>
-                                <Link href="#Channeler"><li><text>Channeler's Set</text></li></Link>
-                                <Link href='#Tattered'><li><text>Tattered Cloth Set</text></li></Link>
-                                <Link href="#Wanderer"><li><text>Wanderer Set</text></li></Link>
-                            </>
-                        }
-                        {(sortMode == 1) &&
-                        <>
-                            <Link href='#Helms'><li><text>Helms</text></li></Link>
-                            <Link href="#Chest"><li><text>Chest Pieces</text></li></Link>
-                            <Link href='#Gauntlets'><li><text>Gauntlets</text></li></Link>
-                            <Link href="#Legs"><li><text>Leg Pieces</text></li></Link>
-                        </>
-                        }
-                    </Contents>
+                <div className={styles.info}>
+                    {(sortMode == 1) && <Contents>
+                        <Link href='#Brigand'><li><text>Brigand Set</text></li></Link>
+                        <Link href="#Channeler"><li><text>Channeler's Set</text></li></Link>
+                        <Link href='#Tattered'><li><text>Tattered Cloth Set</text></li></Link>
+                        <Link href="#Wanderer"><li><text>Wanderer Set</text></li></Link>
+                    </Contents>}
                     <br />
                     <br />
-                    <text className={styles.sort}>Sort By</text>
+                    <h2 className={styles.sort}>Sort By</h2>
                     <div className={styles.sorting_buttons}>
-                        <button className={styles.button_full} style={{ '--button-full-color': fullColor, '--button-full-hover': fullHover }} onClick={() =>
-                            setSortMode(0)
-                        }>Full Sets</button>
-                        <button className={styles.button_individual} style={{ '--button-individual-color': individualColor, '--button-individual-hover': individualHover }} onClick={() =>
-                            setSortMode(1)
-                           
-                        }>Individual Pieces</button>
+                        <button className={styles.button_full} style={{ '--button-full-color': sortMode == 1 && selectedColor || notSelectedColor, '--button-full-hover': sortMode == 1 && selectedHover || notSelectedHover }}
+                            onClick={() => {
+                                setSortMode(1)
+                                setCookie('armor_state', 1);
+                            }}>Full Sets</button>
+                        <button className={styles.button_helm} style={{ '--button-helm-color': sortMode == 2 && selectedColor || notSelectedColor, '--button-helm-hover': sortMode == 2 && selectedHover || notSelectedHover }}
+                            onClick={() => {
+                                setSortMode(2)
+                                setCookie('armor_state', 2);
+                            }}>Helms</button>
+                        <button className={styles.button_chest} style={{ '--button-chest-color': sortMode == 3 && selectedColor || notSelectedColor, '--button-chest-hover': sortMode == 3 && selectedHover || notSelectedHover }}
+                            onClick={() => {
+                                setSortMode(3)
+                                setCookie('armor_state', 3);
+                            }}>Chest Pieces</button>
+                        <button className={styles.button_gauntlets} style={{ '--button-gauntlets-color': sortMode == 4 && selectedColor || notSelectedColor, '--button-gauntlets-hover': sortMode == 4 && selectedHover || notSelectedHover }}
+                            onClick={() => {
+                                setSortMode(4)
+                                setCookie('armor_state', 4);
+                            }}>Gauntlets</button>
+                        <button className={styles.button_legs} style={{ '--button-legs-color': sortMode == 5 && selectedColor || notSelectedColor, '--button-legs-hover': sortMode == 5 && selectedHover || notSelectedHover }}
+                            onClick={() => {
+                                setSortMode(5);
+                                setCookie('armor_state', 5);
+                            }}>Leggings</button>
                     </div>
-                    {
-                        (sortMode == 0) && < Full />
-                    }
-                    {
-                        (sortMode == 1) && < Individual />
-                    }
+                    {(sortMode == 1) && <Full />}
+                    {(sortMode == 2) && <Helms />}
+                    {(sortMode == 3) && <Chests />}
+                    {(sortMode == 4) && <Gauntlets />}
+                    {(sortMode == 5) && <Legs />}
                 </div>
-                <Spacer/>
+                <Spacer />
             </div>
         </React.Fragment>
-        
-        );
+
+    );
 }

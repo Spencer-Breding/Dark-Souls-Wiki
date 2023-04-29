@@ -19,7 +19,7 @@
         .container a:hover {
             color: #e25022;
             text-decoration: underline;
-            filter: brightness(1.5) opacity(0.9);
+            filter: brightness(1.25) opacity(0.9);
         }
 
     .container h2 {
@@ -94,7 +94,7 @@
     }
 
     .table_item_link:hover > img{
-        filter: brightness(0.75);
+        filter: brightness(0.9);
     }
 
 
@@ -450,8 +450,8 @@
 
 .sorting_buttons{
     display:flex;
-    margin-top: 0.5em;
-    padding-bottom: 1em;
+    margin-top: -1em;
+    padding-bottom: 3em;
     justify-content:center;
 }
 
@@ -473,16 +473,40 @@
         margin-right:0.5em;
     }
 
-.button_individual {
-    background-color: var(--button-individual-color, #333333);
+.button_helm {
+    background-color: var(--button-helm-color, #333333);
 }
 
-    .button_individual:hover {
-        background-color: var(--button-individual-hover, #222226);
+    .button_helm:hover {
+        background-color: var(--button-helm-hover, #222226);
+    }
+
+.button_chest {
+    background-color: var(--button-chest-color, #333333);
+}
+
+    .button_chest:hover {
+        background-color: var(--button-chest-hover, #222226);
+    }
+
+.button_gauntlets {
+    background-color: var(--button-gauntlets-color, #333333);
+}
+
+    .button_gauntlets:hover {
+        background-color: var(--button-gauntlets-hover, #222226);
+    }
+
+.button_legs {
+    background-color: var(--button-legs-color, #333333);
+}
+
+    .button_legs:hover {
+        background-color: var(--button-legs-hover, #222226);
     }
 
 .button_full {
-    background-color: var(--button-full-color, #333333);
+    background-color: var(--button-full-color, #333333) ;
 }
 
     .button_full:hover {

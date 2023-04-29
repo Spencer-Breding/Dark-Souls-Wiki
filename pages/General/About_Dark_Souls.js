@@ -119,7 +119,9 @@ export default function About_ds() {
                 <div className={styles.info}>
                     <div className={styles.info_table}>
                         <h2>Dark Souls</h2>
-                        <Image className={styles.cover} src="https://i.imgur.com/nvd5Nsj.jpg" width={379} height={440} alt="" />
+                        <a href="https://i.imgur.com/nvd5Nsj.jpeg" target="blank">
+                            <Image className={styles.cover} src="https://i.imgur.com/nvd5Nsj.jpg" width={379} height={440} alt="" />
+                        </a>
                         <div className={styles.info_table_item}>
                             <text className={styles.info_table_header}>Release Date</text>
                             <text className={styles.info_table_item_details}>September 22nd 2011 (JP)<br />October 4th 2011 (NA)<br />October 7th 2011 (EU)<br />August 24th 2012 (PC)</text>

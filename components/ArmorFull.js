@@ -6,7 +6,7 @@ import styles from "../styles/armor.module.css";
 export default function Full() {
     return (
         <React.Fragment>
-            <h2 className={styles.body_header} id="Brigand">Brigand Set</h2>
+            <h2 id="Brigand">Brigand Set</h2>
             <TitleDiv />
             <div className={styles.table}>
                 <ArmorTableRow link="Brigand_Hood" image="brigand_hood" title="Brigand Hood" durability="200" weight="1.2" regular="9" strike="10"
@@ -20,7 +20,7 @@ export default function Full() {
             </div>
             <br />
             <br />
-            <h2 className={styles.body_header} id="Channeler">Channeler's Set</h2>
+            <h2 id="Channeler">Channeler's Set</h2>
             <TitleDiv />
             <div className={styles.table}>
                 <ArmorTableRow link="Sixeyed_Helm_of_the_Channelers" image="sixeyed_helm_of_the_channelers" title="Six-Eyed Helm of the Channelers" durability="300" weight="3.9" regular="20" strike="19.2"
@@ -34,7 +34,7 @@ export default function Full() {
             </div>
             <br />
             <br />
-            <h2 className={styles.body_header} id="Tattered">Tattered Cloth Set</h2>
+            <h2 id="Tattered">Tattered Cloth Set</h2>
             <TitleDiv />
             <div className={styles.table}>
                 <ArmorTableRow link="Tattered_Cloth_Hood" image="tattered_cloth_hood" title="Tattered Cloth Hood" durability="400" weight="1.1" regular="8" strike="8.9"
@@ -48,7 +48,7 @@ export default function Full() {
             </div>
             <br />
             <br />
-            <h2 className={styles.body_header} id="Wanderer">Wanderer Set</h2>
+            <h2 id="Wanderer">Wanderer Set</h2>
             <TitleDiv />
             <div className={styles.table}>
                 <ArmorTableRow link="Wanderer_Hood" image="wanderer_hood" title="Wanderer Hood" durability="400" weight="1.4" regular="9" strike="10"
