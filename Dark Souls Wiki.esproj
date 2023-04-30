@@ -18,6 +18,7 @@
     <None Remove="src\**" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="pages\Character\Classes\" />
     <Folder Include="pages\General\Mechanics\Damage\" />
   </ItemGroup>
 </Project>

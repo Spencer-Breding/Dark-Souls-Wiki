@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { setCookie } from 'cookies-next';
 import HeaderDiv from "../components/HeaderDiv";
 import Grad from "../components/grad";
 import Spacer from "../components/spacer";
@@ -25,7 +26,7 @@ const Home = () => {
                     <div className={styles.menu_item }>
                         <Image src="http://i.Imgur.com/841SOQU.gif" width={100} height={100} alt="" />
                         <div>
-                            <Link href="General">General Information</Link>
+                            <Link href="/General">General Information</Link>
                             <ul>
                                 <li><Link href="General/About_Dark_Souls">About Dark Souls</Link></li>
                                 <li><Link href="General/Dark_Souls_Remastered">About the Remaster</Link></li>
@@ -51,9 +52,12 @@ const Home = () => {
                     <div className={styles.menu_item}>
                         <Image src="https://darksouls.wiki.fextralife.com/file/Dark-Souls/elite_knight_helm.png" width={100} height={100} alt="" />
                         <div>
-                            <Link href="Equipment">Equipment Information</Link>
+                            <Link href="/Equipment">Equipment Information</Link>
                             <ul>
-                                <li><Link href="Equipment/Armor">Armor</Link></li>
+                                <li onClick={() => {
+                                    setCookie('armor_state', 1);
+                                    window.dispatchEvent(new Event("cookie"));
+                                }}><Link href="Equipment/Armor">Armor</Link></li>
                                 <li><Link href="Equipment/Items">Items</Link></li>
                                 <li><Link href="Equipment/Rings">Rings</Link></li>
                                 <li><Link href="Equipment/Shields">Shields</Link></li>
@@ -69,7 +73,7 @@ const Home = () => {
                     <div className={styles.menu_item}>
                         <Image src="https://darksouls.wiki.fextralife.com/file/Dark-Souls/2082.png" width={100} height={100} alt="" />
                         <div>
-                            <Link href="Online">Online Information</Link>
+                            <Link href="/Online">Online Information</Link>
                             <ul>
                                 <li><Link href="Features">Features</Link></li>
                                 <li><Link href="Invasions">Invasions</Link></li>
@@ -80,7 +84,7 @@ const Home = () => {
                     <div className={styles.menu_item}>
                         <Image src="https://darksouls.wiki.fextralife.com/file/Dark-Souls/2035.png" width={100} height={100} alt="" />
                         <div>
-                            <Link href="World">World Information</Link>
+                            <Link href="/World">World Information</Link>
                             <ul>
                                 <li><Link href="Covenants">Covenants</Link></li>
                                 <li><Link href="Enemies">Enemies</Link></li>
@@ -93,7 +97,7 @@ const Home = () => {
                     <div className={styles.menu_item}>
                         <Image src="https://darksouls.wiki.fextralife.com/file/Dark-Souls/Seek_Guidance.png" width={100} height={100} alt="" />
                         <div>
-                            <Link href="Guides">Guides</Link>
+                            <Link href="/Guides">Guides</Link>
                             <ul>
                                 <li><Link href="Bosses">Bosses</Link></li>
                                 <li><Link href="New_Game_Plus">New Game +</Link></li>

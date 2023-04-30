@@ -18,7 +18,7 @@ const king = <a href="https://en.wikipedia.org/wiki/King's_Field" target="blank"
 const locale = <Link href="/Locales">locales</Link>;
 const namco = <a href="https://en.wikipedia.org/wiki/Bandai_Namco_Entertainment" target="blank">Namco Bandai</a>;
 const prepare = <Link href="/">Prepare to Die Edition</Link>;
-const prepare_min_reqs = <text><b>OS:</b> Windows XP, Windows Vista, Windows 7 or newer
+const prepare_min_reqs = <text className={styles.body_text}><b>OS:</b> Windows XP, Windows Vista, Windows 7 or newer
     <br />
     <b>CPU:</b> Intel Core 2 Duo E6850 GHz+ or AMD Phenom II X2 545 3.0 GHz+
     <br />
@@ -33,7 +33,7 @@ const prepare_min_reqs = <text><b>OS:</b> Windows XP, Windows Vista, Windows 7 o
     <b>Sound Card:</b> Direct Sound Compatible
 </text>;
 const remaster = <Link href="/General_Information/Dark_Souls_Remastered">Dark Souls Remastered</Link>;
-const remaster_min_reqs = <text><b>OS:</b> Windows 7 64-bit, Service Pack 1
+const remaster_min_reqs = <text className={styles.body_text}><b>OS:</b> Windows 7 64-bit, Service Pack 1
     <br />
     <b>CPU:</b> Intel Core I5-2300 2.8 GHz / AMD FX-6300 3.5 GHz
     <br />
@@ -47,7 +47,7 @@ const remaster_min_reqs = <text><b>OS:</b> Windows 7 64-bit, Service Pack 1
     <br />
     <b>Sound:</b> DirectX 11 sound device
 </text>
-const remaster_rec_reqs = <text><b>OS:</b> Windows 10 64-bit
+const remaster_rec_reqs = <text className={styles.body_text}><b>OS:</b> Windows 10 64-bit
     <br />
     <b>CPU:</b> Intel Core i5-4570 3.2 GHz / AMD FX-8350 4.2 GHz
     <br />
@@ -62,7 +62,7 @@ const remaster_rec_reqs = <text><b>OS:</b> Windows 10 64-bit
     <b>Sound:</b> DirectX 11 sound device
 </text>
 const weapon = <Link href="/Equipment/Weapons">weapons</Link>;
-const desc = <text><em><b>Dark Souls</b></em> is a video game developed by <em>{from}</em>. The game has been published on the PlayStation 3 and Xbox 360 by <em>{namco}</em>.
+const desc = <text className={styles.description }><em><b>Dark Souls</b></em> is a video game developed by <em>{from}</em>. The game has been published on the PlayStation 3 and Xbox 360 by <em>{namco}</em>.
     <br />
     <br />
     It was previously developed under the codename Project Dark and is the spiritual successor to <em>{demon}</em>. It also uses an updated variant of said game's engine.
@@ -70,7 +70,7 @@ const desc = <text><em><b>Dark Souls</b></em> is a video game developed by <em>{
     <br />
     Dark Souls was released in Japan for the PlayStation 3 on September 22nd, 2011, in North America for Xbox 360 and PlayStation 3 on October 4th, 2011 and in Europe on October 7th, 2011.
     The game was made available on PC with the <em>{prepare}</em> on August 24th, 2012. In 2018, <em>{remaster}</em> was released.</text>
-const gameplay = <text><em>Dark Souls</em> focuses on dungeon exploring and the tension and fear that arise when players encounter enemies in this setting. The game is a spiritual
+const gameplay = <text className={styles.body_text}><em>Dark Souls</em> focuses on dungeon exploring and the tension and fear that arise when players encounter enemies in this setting. The game is a spiritual
     successor to <em>Demon's Souls</em>, which in turn is considered a spiritual successor to the <em>{king}</em> games. The game takes place in an open world environment and
     uses a third-person perspective. The player battles using various weapons and strategies to survive in a dark fantasy world. Online features allow players to share the play
     experience without need for direct communication.
@@ -80,13 +80,13 @@ const gameplay = <text><em>Dark Souls</em> focuses on dungeon exploring and the 
     difficult encounters. It includes leaving messages to other players, seeing others' deaths, and player versus player (as well as a new co-op system); similar to the online functions
     in <em>Demon's Souls</em>. The items the player uses in these games are significantly different.
 </text>
-const ptd = <text>Dark Souls: Prepare to Die Edition is the first Release of <em>Dark Souls</em> for the PC as well as a re-release for the PS3 and Xbox 360.
+const ptd = <text className={styles.body_text}>Dark Souls: Prepare to Die Edition is the first Release of <em>Dark Souls</em> for the PC as well as a re-release for the PS3 and Xbox 360.
     <br />
     <br />
     This edition of the game was released on August 24th, 2012 for PC and in October 2012 for PS3 and Xbox 360 and includes the {artorias} expansion which introduced
     new {boss}, weapons, and {locale}. The Artorias of the Abyss DLC is also available as a separate download for Xbox 360 and PS3 owners.
 </text>
-const ds_remastered = <text>In a surprise Nintendo Direct conference on January 11, 2018, it was announced that <em>Dark Souls</em> would be remastered and ported to the
+const ds_remastered = <text className={styles.body_text}>In a surprise Nintendo Direct conference on January 11, 2018, it was announced that <em>Dark Souls</em> would be remastered and ported to the
     Nintendo Switch, Xbox One, PlayStation 4, and PC. The remaster released on PlayStation 4, Xbox One, and PC on May 24 and 25, 2018.
     <br />
     <br />
@@ -97,7 +97,7 @@ const ds_remastered = <text>In a surprise Nintendo Direct conference on January 
     The remaster includes the <em>Artorias of the Abyss</em> expansion and improved graphics, lightning, shading, and sound effects and runs at 60 frames per second on both consoles and PC.
     The multiplayer component received dedicated servers for all four platforms, with up to 6 players.
 </text>
-const reception = <text><em>Dark Souls</em> received critical acclaim, earning an 89 on Metacritic.IGN gave the game a 9/10, whilst GameSpot gave the game a 9.5/10. Many players had divided
+const reception = <text className={styles.body_text}><em>Dark Souls</em> received critical acclaim, earning an 89 on Metacritic.IGN gave the game a 9/10, whilst GameSpot gave the game a 9.5/10. Many players had divided
     opinions, saying that the game was too hard, too boring, and uninteresting; others claimed Dark Souls to be one of the best RPGs of all time.
     <br />
     <br />
@@ -151,7 +151,7 @@ export default function About_ds() {
                             <text className={styles.info_table_item_details}>Miyazaki Hidetaka</text>
                         </div>
                     </div>
-                    <text className={styles.description}>{desc}</text>
+                    {desc}
                     <br />
                     <br />
                     <Contents>
@@ -174,27 +174,27 @@ export default function About_ds() {
                     <br />
                     <h3 className={styles.body_header} id="Gameplay">Gameplay</h3>
                     <TitleDiv />
-                    <text className={styles.body_text}>{gameplay}</text>
+                    {gameplay}
                     <h3 className={styles.body_header} id="Prepare_to_Die_Edition">Prepare to Die Edition</h3>
                     <TitleDiv />
                     <text className={styles.body_text}>{ptd}</text>
                     <br />
                     <h4 className={styles.body_sub_header} id="Minimum_System_Requirements_PTD">Minimum System Requirements</h4>
-                    <text className={styles.body_text}>{prepare_min_reqs}</text>
+                    {prepare_min_reqs}
                     <h3 className={styles.body_header} id="Dark_Souls_Remastered">Dark Souls Remastered</h3>
                     <TitleDiv />
-                    <text className={styles.body_text}>{ds_remastered}</text>
+                    {ds_remastered}
                     <br />
                     <h4 className={styles.body_sub_header} id="Minimum_System_Requirements_Remaster">Minimum System Requirements</h4>
-                    <text className={styles.body_text}>{remaster_min_reqs}</text>
+                    {remaster_min_reqs}
                     <br />
                     <h4 className={styles.body_sub_header} id="Recommended_System_Requirements">Recommended System Requirements</h4>
-                    <text className={styles.body_text}>{remaster_rec_reqs}</text>
+                    {remaster_rec_reqs}
                     <br />
                     <br />
                     <h3 className={styles.body_header} id="Reception">Reception</h3>
                     <TitleDiv />
-                    <text className={styles.body_text}>{reception}</text>
+                    {reception}
                     <br />
                     <br />
                     <h3 className={styles.body_header} id="Gallery">Gallery</h3>

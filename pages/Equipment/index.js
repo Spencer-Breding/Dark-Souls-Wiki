@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import { setCookie } from 'cookies-next';
 import HeaderDiv from "../../components/HeaderDiv";
 import TitleDiv from "../../components/TitleDiv";
 import Grad from "../../components/grad";
@@ -19,7 +20,10 @@ const Equipment = () => {
                 <text className={styles.description}>{desc}</text>
                 <HeaderDiv />
                 <div className={styles.row}>
-                    <Link href="Equipment/Armor">Armor</Link>
+                    <Link href="Equipment/Armor"><text onClick={() => {
+                        setCookie('armor_state', 1);
+                        window.dispatchEvent(new Event("cookie"));
+                    }}>Armor</text></Link>
                 </div>
                 <HeaderDiv />
                 <div className={styles.row}>

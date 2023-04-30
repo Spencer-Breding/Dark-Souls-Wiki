@@ -1,11 +1,11 @@
 import React from 'react';
 import Link from 'next/link';
-import HeaderDiv from "../components/HeaderDiv";
-import TitleDiv from "../components/TitleDiv";
-import Grad from "../components/grad";
-import Spacer from "../components/spacer";
-import Title from "../components/title";
-import styles from "../styles/Information.module.css";
+import HeaderDiv from "../../components/HeaderDiv";
+import TitleDiv from "../../components/TitleDiv";
+import Grad from "../../components/grad";
+import Spacer from "../../components/spacer";
+import Title from "../../components/title";
+import styles from "../../styles/Information.module.css";
 
 const desc = "Character information covers things relating to the player's character like classes and stats.";
 
