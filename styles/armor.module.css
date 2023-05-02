@@ -513,7 +513,7 @@
         background-color: var(--button-full-hover, #222226);
     }
 
-@media (max-width: 1600px) {
+@media (max-width: 1024px) {
     .container {
         width: 100%;
     }

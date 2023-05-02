@@ -37,64 +37,64 @@ export default function Navbar(props) {
                             alt="title" width={100} height={100} />
                     </Link>
                 </li>
-                <div className={styles.test}>
-                    <NavItem className="general" icon="http://i.imgur.com/841SOQU.gif" text="General">
 
-                        <div className={styles.nav_dropdown}>
-                            <ul>
-                                <li className={styles.dropdown_item}>
-                                    <Link href="/General/About_Dark_Souls">
-                                        <Image src="https://darksouls.wiki.fextralife.com/file/Dark-Souls/2051.png" width={25} height={25}></Image>
-                                        <text>About Dark Souls</text>
-                                    </Link>
-                                </li>
-                                <li className={styles.dropdown_item}>
-                                    <Link href="/General/Dark_Souls_Remastered">
-                                        <Image src="https://darksouls.wiki.fextralife.com/file/Dark-Souls/2051.png" width={25} height={25}></Image>
-                                        <text>About the Remaster</text>
-                                    </Link>
-                                </li>
-                                <li className={styles.dropdown_item}>
-                                    <Link href="/General/Combat">
-                                        <Image src="https://darksouls.wiki.fextralife.com/file/Dark-Souls/2051.png" width={25} height={25}></Image>
-                                        <text>Combat</text>
-                                    </Link>
-                                </li>
-                                <li className={styles.dropdown_item}>
-                                    <Link href="/General/Controls">
-                                        <Image src="https://darksouls.wiki.fextralife.com/file/Dark-Souls/2051.png" width={25} height={25}></Image>
-                                        <text>Controls</text>
-                                    </Link>
-                                </li>
-                                <li className={styles.dropdown_item}>
-                                    <Link href="/General/Mechanics">
-                                        <Image src="https://darksouls.wiki.fextralife.com/file/Dark-Souls/2051.png" width={25} height={25}></Image>
-                                        <text>Game Mechanics</text>
-                                    </Link>
-                                </li>
-                                <li className={styles.sub_item}>
-                                    <Link href="/General/Mechanics/Bonfires">
-                                        <Image src="https://darksouls.wiki.fextralife.com/file/Dark-Souls/2047.png" width={25} height={25} />
-                                        <text>Bonfires</text>
-                                    </Link>
-                                </li>
-                                <li className={styles.sub_item}>
-                                    <Link href="/General/Mechanics/Humanity">
-                                        <Image src="https://darksouls.wiki.fextralife.com/file/Dark-Souls/2047.png" width={25} height={25} />
-                                        <text>Humanity</text>
-                                    </Link>
-                                </li>
-                                <li className={styles.sub_item}>
-                                    <Link href="/General/Mechanics/Weapon_Scaling">
-                                        <Image src="https://darksouls.wiki.fextralife.com/file/Dark-Souls/2047.png" width={25} height={25} />
-                                        <text>Weapon Scaling</text>
-                                    </Link>
-                                </li>
-                            </ul>
-                        </div>
+                <NavItem className="general" icon="http://i.imgur.com/841SOQU.gif" text="General">
 
-                    </NavItem>
-                </div>
+                    <div className={styles.nav_dropdown}>
+                        <ul>
+                            <li className={styles.dropdown_item}>
+                                <Link href="/General/About_Dark_Souls">
+                                    <Image src="https://darksouls.wiki.fextralife.com/file/Dark-Souls/2051.png" width={25} height={25}></Image>
+                                    <text>About Dark Souls</text>
+                                </Link>
+                            </li>
+                            <li className={styles.dropdown_item}>
+                                <Link href="/General/Dark_Souls_Remastered">
+                                    <Image src="https://darksouls.wiki.fextralife.com/file/Dark-Souls/2051.png" width={25} height={25}></Image>
+                                    <text>About the Remaster</text>
+                                </Link>
+                            </li>
+                            <li className={styles.dropdown_item}>
+                                <Link href="/General/Combat">
+                                    <Image src="https://darksouls.wiki.fextralife.com/file/Dark-Souls/2051.png" width={25} height={25}></Image>
+                                    <text>Combat</text>
+                                </Link>
+                            </li>
+                            <li className={styles.dropdown_item}>
+                                <Link href="/General/Controls">
+                                    <Image src="https://darksouls.wiki.fextralife.com/file/Dark-Souls/2051.png" width={25} height={25}></Image>
+                                    <text>Controls</text>
+                                </Link>
+                            </li>
+                            <li className={styles.dropdown_item}>
+                                <Link href="/General/Mechanics">
+                                    <Image src="https://darksouls.wiki.fextralife.com/file/Dark-Souls/2051.png" width={25} height={25}></Image>
+                                    <text>Game Mechanics</text>
+                                </Link>
+                            </li>
+                            <li className={styles.sub_item}>
+                                <Link href="/General/Mechanics/Bonfires">
+                                    <Image src="https://darksouls.wiki.fextralife.com/file/Dark-Souls/2047.png" width={25} height={25} />
+                                    <text>Bonfires</text>
+                                </Link>
+                            </li>
+                            <li className={styles.sub_item}>
+                                <Link href="/General/Mechanics/Humanity">
+                                    <Image src="https://darksouls.wiki.fextralife.com/file/Dark-Souls/2047.png" width={25} height={25} />
+                                    <text>Humanity</text>
+                                </Link>
+                            </li>
+                            <li className={styles.sub_item}>
+                                <Link href="/General/Mechanics/Weapon_Scaling">
+                                    <Image src="https://darksouls.wiki.fextralife.com/file/Dark-Souls/2047.png" width={25} height={25} />
+                                    <text>Weapon Scaling</text>
+                                </Link>
+                            </li>
+                        </ul>
+                    </div>
+
+                </NavItem>
+
                 <NavItem className="character" icon="https://darksouls.wiki.fextralife.com/file/Dark-Souls/2146.png" text="Character">
 
                     <div className={styles.nav_dropdown}>

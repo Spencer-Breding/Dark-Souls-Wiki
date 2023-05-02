@@ -119,9 +119,11 @@ export default function About_ds() {
                 <div className={styles.info}>
                     <div className={styles.info_table}>
                         <h2>Dark Souls</h2>
-                        <a href="https://i.imgur.com/nvd5Nsj.jpeg" target="blank">
-                            <Image className={styles.cover} src="https://i.imgur.com/nvd5Nsj.jpg" width={379} height={440} alt="" />
-                        </a>
+                        <div className={styles.cover_container }>
+                            <a href="https://i.imgur.com/nvd5Nsj.jpeg" target="blank">
+                                <Image className={styles.cover} src="https://i.imgur.com/nvd5Nsj.jpg" width={379} height={440} alt="" />
+                            </a>
+                        </div>
                         <div className={styles.info_table_item}>
                             <text className={styles.info_table_header}>Release Date</text>
                             <text className={styles.info_table_item_details}>September 22nd 2011 (JP)<br />October 4th 2011 (NA)<br />October 7th 2011 (EU)<br />August 24th 2012 (PC)</text>
@@ -177,7 +179,7 @@ export default function About_ds() {
                     {gameplay}
                     <h3 className={styles.body_header} id="Prepare_to_Die_Edition">Prepare to Die Edition</h3>
                     <TitleDiv />
-                    <text className={styles.body_text}>{ptd}</text>
+                    {ptd}
                     <br />
                     <h4 className={styles.body_sub_header} id="Minimum_System_Requirements_PTD">Minimum System Requirements</h4>
                     {prepare_min_reqs}
@@ -268,14 +270,14 @@ export default function About_ds() {
                 <TitleDiv />
                 <div className={styles.trailer_container}>
                     <div className={styles.trailer_row}>
-                        <Iframe width="448" height="252" src="https://www.youtube.com/embed/9IbPrk-yuts" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></Iframe>
-                        <Iframe width="448" height="252" src="https://www.youtube.com/embed/WlVBVKAFFg4" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></Iframe>
-                        <Iframe width="448" height="252" src="https://www.youtube.com/embed/KfjG9ZLGBHE" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></Iframe>
+                        <Iframe src="https://www.youtube.com/embed/9IbPrk-yuts" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></Iframe>
+                        <Iframe src="https://www.youtube.com/embed/WlVBVKAFFg4" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></Iframe>
+                        <Iframe src="https://www.youtube.com/embed/KfjG9ZLGBHE" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></Iframe>
                     </div>
                     <div className={styles.trailer_row}>
-                        <Iframe width="448" height="252" src="https://www.youtube.com/embed/o1780AqAa20" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></Iframe>
-                        <Iframe width="448" height="252" src="https://www.youtube.com/embed/QNpLhv21BS0" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></Iframe>
-                        <Iframe width="448" height="252" src="https://www.youtube.com/embed/93LFz_j5fQA" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></Iframe>
+                        <Iframe src="https://www.youtube.com/embed/o1780AqAa20" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></Iframe>
+                        <Iframe src="https://www.youtube.com/embed/QNpLhv21BS0" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></Iframe>
+                        <Iframe src="https://www.youtube.com/embed/93LFz_j5fQA" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></Iframe>
                     </div>
                 </div>
                 <br />
