@@ -1,6 +1,5 @@
 import React from 'react';
 import ArmorTableRow from "/components/ArmorTableRow";
-import TitleDiv from "/components/TitleDiv";
 import styles from "../styles/armor.module.css";
 
 export default function Helms() {

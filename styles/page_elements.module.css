@@ -72,9 +72,13 @@
             box-shadow: 0 0 8px white;
         }
 
-@media(max-width: 1200px) {
+@media(max-width: 1280px) {
     .grad {
         margin-left:auto;
         width: 100vw;
+    }
+
+    .title_divider{
+    
     }
 }

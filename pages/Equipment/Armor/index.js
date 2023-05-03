@@ -18,7 +18,7 @@ const elemental = <Link href="/General/Mechanics/Damage/Elemental">elemental</Li
 const physical = <Link href="/General/Mechanics/Damage/Physical">physical</Link>
 const poise = <Link href="/General/Mechanics/Poise">poise</Link>
 const status = <Link href="/General/Mechanics/Status_Effects">status effects</Link>
-const desc = <text><em>Armor</em> is a type of equipment in <em>{dark}</em> that provides: protection against both {physical} and {elemental} damage, resistance against
+const desc = <text className={styles.description}><em>Armor</em> is a type of equipment in <em>{dark}</em> that provides: protection against both {physical} and {elemental} damage, resistance against
     negative {status}, and an increase the player's {poise}.</text>
 
 export default function Armor() {
@@ -43,17 +43,17 @@ export default function Armor() {
                 <Title title="Armor" />
                 <TitleDiv />
                 <div className={styles.info}>
-                    <text className={styles.description}>{desc}</text>
-                </div>
-                <br />
-                <br />
-                <div className={styles.info}>
+                    {desc}
+                    <br />
+                    <br />
+                    <br />
                     {(sortMode == 1) && <Contents>
                         <Link href='#Brigand'><li><text>Brigand Set</text></li></Link>
                         <Link href="#Channeler"><li><text>Channeler's Set</text></li></Link>
                         <Link href='#Tattered'><li><text>Tattered Cloth Set</text></li></Link>
                         <Link href="#Wanderer"><li><text>Wanderer Set</text></li></Link>
                     </Contents>}
+                    <br />
                     <br />
                     <br />
                     <h2 className={styles.sort}>Sort By</h2>

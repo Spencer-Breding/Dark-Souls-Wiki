@@ -202,7 +202,7 @@ export default function About_ds() {
                     <h3 className={styles.body_header} id="Gallery">Gallery</h3>
                     <TitleDiv />
                     <div className={styles.gallery_container}>
-                        <div className={styles.gallery_row}>
+                       
                             <div className={styles.gallery_item}>
                                 <a href="https://www.gematsu.com/wp-content/uploads/2011/05/Dark-Souls-Jap-Box-Art.jpg" target="blank">
                                     <img src="https://www.gematsu.com/wp-content/uploads/2011/05/Dark-Souls-Jap-Box-Art.jpg" alt="" />
@@ -221,8 +221,8 @@ export default function About_ds() {
                                 </a>
                                 <text>Prepare to Die Edition Box Art</text>
                             </div>
-                        </div>
-                        <div className={styles.gallery_row}>
+                      
+                        
                             <div className={styles.gallery_item}>
                                 <a href="https://image.api.playstation.com/cdn/EP0700/CUSA08495_00/COYF3JBI46ftkG7tIdTjQg0v9aZ2378N.png" target="blank">
                                     <img src="https://image.api.playstation.com/cdn/EP0700/CUSA08495_00/COYF3JBI46ftkG7tIdTjQg0v9aZ2378N.png" alt="" />
@@ -241,8 +241,7 @@ export default function About_ds() {
                                 </a>
                                 <text>Knight Concept Art</text>
                             </div>
-                        </div>
-                        <div className={styles.gallery_row}>
+                      
                             <div className={styles.gallery_item}>
                                 <a href="https://cdn.cloudflare.steamstatic.com/steam/apps/570940/ss_3a71463e4ccaf28c5c27f6cf8d32a3a125f45404.1920x1080.jpg?t=1668145065" target="blank">
                                     <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/570940/ss_3a71463e4ccaf28c5c27f6cf8d32a3a125f45404.1920x1080.jpg?t=1668145065" alt="" />
@@ -261,7 +260,7 @@ export default function About_ds() {
                                 </a>
                                 <text>Enemy Encounter Promotional Image</text>
                             </div>
-                        </div>
+                        
                     </div>
                 </div>
                 <br />

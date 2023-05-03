@@ -30,12 +30,13 @@
     display: flex;
     gap: 3%;
     justify-content: flex-start;
-    list-style:none;
+    list-style: none;
     margin: 0;
     padding: 0;
     background-color: #333333;
     width: 100vw;
-    justify-content:space-evenly;
+    justify-content: space-evenly;
+    padding-bottom: 0.25em
 }
 
     .navbar_nav:last-child::after {
@@ -282,13 +283,13 @@
     }
 
         .nav_dropdown ul li {
-            transform: translateX(-3.5em);
+            transform: translateX(-4.25em);
             height: auto;
             width: 11.5em;
             white-space: nowrap;
         }
     .logo{
-        margin-left: 0em;
+        margin-left: 1em;
         width: 7.2em;
         height: 3em;
         left: 0;
@@ -297,5 +298,31 @@
         .dropdown_item a text {
             font-size: 16px;
             margin-left: 0.25em;
+        }
+}
+
+@media (max-width: 1280px) {
+    .navbar_nav{
+        padding-bottom:1em;
+        justify-content:space-evenly;
+        padding-left:2em;
+        gap: 2em;
+    }
+    
+    .navbar_nav li:first-child{
+        display:none;
+    }
+
+    .navbar_nav li{
+        width: 9%;
+    }
+
+    .nav_dropdown {
+        top: 3.8em;
+    }
+
+        .nav_dropdown ul li:first-child {
+            display:flex;
+            border-top: 2px solid dimgray;
         }
 }
