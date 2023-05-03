@@ -121,7 +121,7 @@ export default function About_ds() {
                         <h2>Dark Souls</h2>
                         <div className={styles.cover_container }>
                             <a href="https://i.imgur.com/nvd5Nsj.jpeg" target="blank">
-                                <Image className={styles.cover} src="https://i.imgur.com/nvd5Nsj.jpg" width={379} height={440} alt="" />
+                                <img className={styles.cover} src="https://i.imgur.com/nvd5Nsj.jpg" width={379} height={440} alt="" />
                             </a>
                         </div>
                         <div className={styles.info_table_item}>
