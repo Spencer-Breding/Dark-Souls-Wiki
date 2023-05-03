@@ -248,8 +248,7 @@
         border-top:none;
         align-self:center;
         margin:auto;
-        width:fit-content;
-        height:fit-content;
+        
     }
     .gallery_item {
         width: 45%
