@@ -147,14 +147,15 @@
         text-align:center;
     }
 
-    .table_item_info div img{
-        height:25px;
-        width: 25px;
-        margin-left:auto;
-        margin-right:auto;
-    }
+.table_item_info div img {
+    height: 25px;
+    width: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0.25em;
+}
 
-div .durability_container {
+.table_dropdown {
     margin:auto;
     position: absolute;
     background-color: #333333;
@@ -166,309 +167,75 @@ div .durability_container {
     width: fit-content;
 }
 
-   div .durability_container text {
-        font-size: 18px;
-    }
-
-.durability_icon {
-    margin-top: 0.25em;
-}
-
-.durability_icon:hover + .durability_container {
+#durability_icon:hover + #durability_container {
     visibility:visible;
     opacity:1;
 }
 
-div .weight_container {
-    position: absolute;
-    background-color: #333333;
-    border: 1px solid white;
-    transform: translateY(2.75em) translateX(1.5em);
-    visibility: hidden;
-    padding: 0.25em;
-    z-index: 2;
-    width: fit-content;
+#weight_icon:hover + #weight_container {
+    visibility: visible;
+    opacity: 1;
 }
 
-    div .weight_container text {
-        font-size: 18px;
-    }
-
-.weight_icon {
-    margin-top: 0.25em;
+#regular_icon:hover + #regular_container {
+    visibility: visible;
+    opacity: 1;
 }
 
-    .weight_icon:hover + .weight_container {
-        visibility: visible;
-        opacity: 1;
-    }
-
-div .regular_container {
-    position: absolute;
-    background-color: #333333;
-    border: 1px solid white;
-    transform: translateY(2.75em) translateX(1.5em);
-    visibility: hidden;
-    padding: 0.25em;
-    z-index: 2;
-    width: fit-content;
+#strike_icon:hover + #strike_container {
+    visibility: visible;
+    opacity: 1;
 }
 
-    div .regular_container text {
-        font-size: 18px;
-    }
-
-.regular_icon {
-    margin-top: 0.25em;
+#slash_icon:hover + #slash_container {
+    visibility: visible;
+    opacity: 1;
 }
 
-    .regular_icon:hover + .regular_container {
-        visibility: visible;
-        opacity: 1;
-    }
-
-div .strike_container {
-    position: absolute;
-    background-color: #333333;
-    border: 1px solid white;
-    transform: translateY(2.75em) translateX(1.5em);
-    visibility: hidden;
-    padding: 0.25em;
-    z-index: 2;
-    width: fit-content;
+#thrust_icon:hover + #thrust_container {
+    visibility: visible;
+    opacity: 1;
 }
 
-    div .strike_container text {
-        font-size: 18px;
-    }
-
-.strike_icon {
-    margin-top: 0.25em;
+#magic_icon:hover + #magic_container {
+    visibility: visible;
+    opacity: 1;
 }
 
-    .strike_icon:hover + .strike_container {
-        visibility: visible;
-        opacity: 1;
-    }
-
-div .slash_container {
-    position: absolute;
-    background-color: #333333;
-    border: 1px solid white;
-    transform: translateY(2.75em) translateX(1.5em);
-    visibility: hidden;
-    padding: 0.25em;
-    z-index: 2;
-    width: fit-content;
+#fire_icon:hover + #fire_container {
+    visibility: visible;
+    opacity: 1;
 }
 
-    div.slash_container text {
-        font-size: 18px;
-    }
-
-.slash_icon {
-    margin-top: 0.25em;
+#regular_icon:hover + #regular_container {
+    visibility: visible;
+    opacity: 1;
 }
 
-    .slash_icon:hover + .slash_container {
-        visibility: visible;
-        opacity: 1;
-    }
-
-div .thrust_container {
-    position: absolute;
-    background-color: #333333;
-    border: 1px solid white;
-    transform: translateY(2.75em) translateX(1.5em);
-    visibility: hidden;
-    padding: 0.25em;
-    z-index: 2;
-    width: fit-content;
+#lightning_icon:hover + #lightning_container {
+    visibility: visible;
+    opacity: 1;
 }
 
-    div .thrust_container text {
-        font-size: 18px;
-    }
-
-.thrust_icon {
-    margin-top: 0.25em;
+#bleed_icon:hover + #bleed_container {
+    visibility: visible;
+    opacity: 1;
 }
 
-    .thrust_icon:hover + .thrust_container {
-        visibility: visible;
-        opacity: 1;
-    }
-
-div .magic_container {
-    position: absolute;
-    background-color: #333333;
-    border: 1px solid white;
-    transform: translateY(2.75em) translateX(1.5em);
-    visibility: hidden;
-    padding: 0.25em;
-    z-index: 2;
-    width: fit-content;
+#poison_icon:hover + #poison_container {
+    visibility: visible;
+    opacity: 1;
 }
 
-    div .magic_container text {
-        font-size: 18px;
-    }
-
-.magic_icon {
-    margin-top: 0.25em;
+#curse_icon:hover + #curse_container {
+    visibility: visible;
+    opacity: 1;
 }
 
-    .magic_icon:hover + .magic_container {
-        visibility: visible;
-        opacity: 1;
-    }
-
-div .fire_container {
-    position: absolute;
-    background-color: #333333;
-    border: 1px solid white;
-    transform: translateY(2.75em) translateX(1.5em);
-    visibility: hidden;
-    padding: 0.25em;
-    z-index: 2;
-    width: fit-content;
+#poise_icon:hover + #poise_container {
+    visibility: visible;
+    opacity: 1;
 }
-
-    div .fire_container text {
-        font-size: 18px;
-    }
-
-.fire_icon {
-    margin-top: 0.25em;
-}
-
-    .fire_icon:hover + .fire_container {
-        visibility: visible;
-        opacity: 1;
-    }
-
-div .lightning_container {
-    position: absolute;
-    background-color: #333333;
-    border: 1px solid white;
-    transform: translateY(2.75em) translateX(1.5em);
-    visibility: hidden;
-    padding: 0.25em;
-    z-index: 2;
-    width: fit-content;
-}
-
-    div .lightning_container text {
-        font-size: 18px;
-    }
-
-.lightning_icon {
-    margin-top: 0.25em;
-}
-
-    .lightning_icon:hover + .lightning_container {
-        visibility: visible;
-        opacity: 1;
-    }
-
-div .bleed_container {
-    position: absolute;
-    background-color: #333333;
-    border: 1px solid white;
-    transform: translateY(2.75em) translateX(1.5em);
-    visibility: hidden;
-    padding: 0.25em;
-    z-index: 2;
-    width: fit-content;
-}
-
-    div.bleed_container text {
-        font-size: 18px;
-    }
-
-.bleed_icon {
-    margin-top: 0.25em;
-}
-
-    .bleed_icon:hover + .bleed_container {
-        visibility: visible;
-        opacity: 1;
-    }
-
-div .poison_container {
-    position: absolute;
-    background-color: #333333;
-    border: 1px solid white;
-    transform: translateY(2.75em) translateX(1.5em);
-    visibility: hidden;
-    padding: 0.25em;
-    z-index: 2;
-    width: fit-content;
-}
-
-    div .poison_container text {
-        font-size: 18px;
-    }
-
-.poison_icon {
-    margin-top: 0.25em;
-}
-
-    .poison_icon:hover + .poison_container {
-        visibility: visible;
-        opacity: 1;
-    }
-
-div .curse_container {
-    position: absolute;
- 
-    background-color: #333333;
-    border: 1px solid white;
-    transform: translateY(2.75em) translateX(1.5em);
-    visibility: hidden;
-    padding: 0.25em;
-    z-index: 2;
-    width: fit-content;
-    
-}
-
-    div .curse_container text {
-        font-size: 18px;
-    }
-
-.curse_icon {
-    margin-top: 0.25em;
-}
-
-    .curse_icon:hover + .curse_container {
-        visibility: visible;
-        opacity: 1;
-    }
-
-div .poise_container {
-    position: absolute;
-    background-color: #333333;
-    border: 1px solid white;
-    transform: translateY(2.75em) translateX(1.5em);
-    visibility: hidden;
-    padding: 0.25em;
-    z-index: 2;
-    width: fit-content;
-    overflow:visible;
-}
-
-    div .poise_container text {
-        font-size: 18px;
-    }
-
-.poise_icon {
-    margin-top: 0.25em;
-}
-
-    .poise_icon:hover + .poise_container {
-        visibility: visible;
-        opacity: 1;
-    }
 
 .sort{
     display:flex;
