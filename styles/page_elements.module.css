@@ -5,6 +5,7 @@
     width: 90%;
     position: relative;
     margin: auto;
+    margin-top:40px;
 }
 
 
@@ -71,6 +72,50 @@
             border-radius: 125px/12px;
             box-shadow: 0 0 8px white;
         }
+
+.burger {
+    position:absolute;
+    top: 1em;
+    left: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 2rem;
+    height: 2rem;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 10;
+}
+
+    .burger:focus{
+        outline:none;
+    }
+
+        .burger div{
+            width: 2rem;
+            height: 0.25rem;
+            background: white;
+            border-radius: 10px;
+            transition: all 0.3s linear;
+            position: relative;
+            transform-origin: 1px;
+        }
+
+@keyframes rotateMenu {
+    0% {
+        transform: rotateX(-90deg)
+    }
+
+    70% {
+        transform: rotateX(20deg)
+    }
+
+    100% {
+        transform: rotateX(0deg)
+    }
+}
 
 @media(max-width: 1280px) {
     .grad {
