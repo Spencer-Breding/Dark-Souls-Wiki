@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { setCookie, getCookie, hasCookie } from 'cookies-next';
+import { setCookie, getCookie } from 'cookies-next';
 import Contents from "../../../components/contents";
 import Grad from "../../../components/grad";
 import Full from "../../../components/ArmorFull";

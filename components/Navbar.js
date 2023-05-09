@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+﻿import React, { useState, useRef } from 'react';
 import Link from 'next/link';
 import { setCookie } from 'cookies-next';
 import Image from 'next/image';
@@ -41,6 +41,14 @@ function BurgerCategory(props) {
     const [hover, setHover] = useState(false)
     const hoverColor = "#333338"
     const notHoverColor = "#222226"
+    let arrow;
+
+    if (openDropdown) {
+        arrow = "Ʌ";
+    }
+    else {
+        arrow = "V";
+    }
 
     return (
         <div className={styles.burger_category} >
@@ -48,7 +56,7 @@ function BurgerCategory(props) {
                 onMouseLeave={() => { setHover(false); }} onClick={(e) => { e.stopPropagation(); setOpenDropdown(!openDropdown) }}>
                 <Image className={styles.burger_icon} src={props.icon} alt="icon" width={100} height={100} onClick={() => setOpenDropdown(!openDropdown)} />
                 <text className={styles.burger_text} onClick={() => setOpenDropdown(!openDropdown)}>{props.text}</text>
-                <Image className={styles.arrow} src={props.arrow} onClick={() => setOpenDropdown(!openDropdown)} />
+                <text className={styles.arrow} onClick={() => setOpenDropdown(!openDropdown)}>{arrow}</text>
             </div>
             {openDropdown && props.children}
         </div>
@@ -61,6 +69,14 @@ function BurgerItem(props) {
     const [hover, setHover] = useState(false)
     const hoverColor = "#333338"
     const notHoverColor = "#222226"
+    let arrow;
+
+    if (openDropdown) {
+        arrow = "Ʌ";
+    }
+    else {
+        arrow = "V";
+    }
 
     return (
         <div className={styles.burger_item}>
@@ -68,7 +84,7 @@ function BurgerItem(props) {
                 onMouseLeave={() => { setHover(false); }} onClick={(e) => { e.stopPropagation(); setOpenDropdown(!openDropdown) }}>
                 <Image className={styles.burger_icon} src={props.icon} alt="icon" width={100} height={100} onClick={() => setOpenDropdown(!openDropdown)} />
                 <text className={styles.burger_text} onClick={() => setOpenDropdown(!openDropdown)}>{props.text}</text>
-                <Image className={styles.arrow} src={props.arrow} onClick={() => setOpenDropdown(!openDropdown)} />
+                <text style={(props.hasArrow == true) && { visibility:'visible' } || { visibility:'hidden' }} className={styles.arrow} onClick={() => setOpenDropdown(!openDropdown)}>{arrow}</text>
             </div>
             {openDropdown && props.children}
         </div>
@@ -121,12 +137,153 @@ export default function Navbar(props) {
             <Burger>
                 <div className={styles.burger_dropdown}>
                     <BurgerCategory icon="http://i.imgur.com/841SOQU.gif" text="General Information">
-                        <BurgerItem icon="https://darksouls.wiki.fextralife.com/file/Dark-Souls/2051.png" text="About Dark Souls" />
-                        <BurgerItem icon="https://darksouls.wiki.fextralife.com/file/Dark-Souls/2051.png" text="Mechanics">
-                            <BurgerSubItem icon="https://darksouls.wiki.fextralife.com/file/Dark-Souls/2047.png" text="Bonfires" />
+                        <Link href="/General/About_Dark_Souls">
+                            <BurgerItem icon="https://darksouls.wiki.fextralife.com/file/Dark-Souls/2051.png" text="About Dark Souls" hasArrow={false} />
+                        </Link>
+                        <Link href="/General/Dark_Souls_Remastered">
+                            <BurgerItem icon="https://darksouls.wiki.fextralife.com/file/Dark-Souls/2051.png" text="About the Remaster" hasArrow={false} />
+                        </Link>
+                        <Link href="/General/Combat">
+                            <BurgerItem icon="https://darksouls.wiki.fextralife.com/file/Dark-Souls/2051.png" text="Combat" hasArrow={false} />
+                        </Link>
+                        <Link href="/General/Controls">
+                            <BurgerItem icon="https://darksouls.wiki.fextralife.com/file/Dark-Souls/2051.png" text="Controls" hasArrow={false} />
+                        </Link>
+                        <BurgerItem icon="https://darksouls.wiki.fextralife.com/file/Dark-Souls/2051.png" text="Game Mechanics" hasArrow={true}>
+                            <Link href="/General/Mechanics/Bonfires">
+                                <BurgerSubItem icon="https://darksouls.wiki.fextralife.com/file/Dark-Souls/2047.png" text="Bonfires" />
+                            </Link>
+                            <Link href="/General/Mechanics/Humanity">
+                                <BurgerSubItem icon="https://darksouls.wiki.fextralife.com/file/Dark-Souls/2047.png" text="Humanity" />
+                            </Link>
+                            <Link href="/General/Mechanics/Weapon_Scaling">
+                                <BurgerSubItem icon="https://darksouls.wiki.fextralife.com/file/Dark-Souls/2047.png" text="Weapon Scaling" />
+                            </Link>
                         </BurgerItem>
                     </BurgerCategory>
                     <BurgerCategory icon="https://darksouls.wiki.fextralife.com/file/Dark-Souls/2146.png" text="Character">
+                        
+                            <BurgerItem icon="https://darksouls.wiki.fextralife.com/file/Dark-Souls/2051.png" text="Builds" hasArrow={true}>
+                                <Link href="/Character/Builds/PVE">
+                                    <BurgerSubItem icon="https://darksouls.wiki.fextralife.com/file/Dark-Souls/2047.png" text="PVE Builds" />
+                                </Link>
+                                <Link href="/Character/Builds/PVP">
+                                    <BurgerSubItem icon="https://darksouls.wiki.fextralife.com/file/Dark-Souls/2047.png" text="PVP Builds" />
+                                </Link>
+                        </BurgerItem>
+                        <Link href="/Character/Classes">
+                            <BurgerItem icon="https://darksouls.wiki.fextralife.com/file/Dark-Souls/2051.png" text="Classes" hasArrow={false} />
+                        </Link>
+                        <Link href="/Character/Gestures">
+                            <BurgerItem icon="https://darksouls.wiki.fextralife.com/file/Dark-Souls/2051.png" text="Gestures" hasArrow={false} />
+                        </Link>
+                        <Link href="/Character/Gifts">
+                            <BurgerItem icon="https://darksouls.wiki.fextralife.com/file/Dark-Souls/2051.png" text="Gifts" hasArrow={false} />
+                        </Link>
+                        <Link href="/Character/Stats">
+                            <BurgerItem icon="https://darksouls.wiki.fextralife.com/file/Dark-Souls/2051.png" text="Stats" hasArrow={false} />
+                        </Link>
+                    </BurgerCategory>
+                    <BurgerCategory icon="https://darksouls.wiki.fextralife.com/file/Dark-Souls/elite_knight_helm.png" text="Equipment">
+                        <BurgerItem icon="https://darksouls.wiki.fextralife.com/file/Dark-Souls/2051.png" text="Armor" hasArrow={true}>
+                            <Link href='/Equipment/Armor' onClick={() => {
+                                setCookie('armor_state', 1);
+                                window.dispatchEvent(new Event("cookie"));
+                            }}>
+                                <BurgerSubItem icon="https://darksouls.wiki.fextralife.com/file/Dark-Souls/2047.png" text="Full Sets"/>
+                            </Link>
+                            <Link href='/Equipment/Armor' onClick={() => {
+                                setCookie('armor_state', 2);
+                                window.dispatchEvent(new Event("cookie"));
+                            }}>
+                                <BurgerSubItem icon="https://darksouls.wiki.fextralife.com/file/Dark-Souls/2047.png" text="Helms" />
+                            </Link>
+                            <Link href='/Equipment/Armor' onClick={() => {
+                                setCookie('armor_state', 3);
+                                window.dispatchEvent(new Event("cookie"));
+                            }}>
+                                <BurgerSubItem icon="https://darksouls.wiki.fextralife.com/file/Dark-Souls/2047.png" text="Chest Pieces" />
+                            </Link>
+                            <Link href='/Equipment/Armor' onClick={() => {
+                                setCookie('armor_state', 4);
+                                window.dispatchEvent(new Event("cookie"));
+                            }}>
+                                <BurgerSubItem icon="https://darksouls.wiki.fextralife.com/file/Dark-Souls/2047.png" text="Gauntlets" />
+                            </Link>
+                            <Link href='/Equipment/Armor' onClick={() => {
+                                setCookie('armor_state', 5);
+                                window.dispatchEvent(new Event("cookie"));
+                            }}>
+                                <BurgerSubItem icon="https://darksouls.wiki.fextralife.com/file/Dark-Souls/2047.png" text="Leggings" />
+                            </Link>
+                        </BurgerItem>
+                        <Link href="/Equipment/Items">
+                            <BurgerItem icon="https://darksouls.wiki.fextralife.com/file/Dark-Souls/2051.png" text="Items" hasArrow={false} />
+                        </Link>
+                        <Link href="/Equipment/Rings">
+                            <BurgerItem icon="https://darksouls.wiki.fextralife.com/file/Dark-Souls/2051.png" text="Rings" hasArrow={false} />
+                        </Link>
+                        <Link href="/Equipment/Rings">
+                            <BurgerItem icon="https://darksouls.wiki.fextralife.com/file/Dark-Souls/2051.png" text="Rings" hasArrow={false} />
+                        </Link>
+                    </BurgerCategory>
+                    <BurgerCategory icon="https://darksouls.wiki.fextralife.com/file/Dark-Souls/2082.png" text="Online">
+                        <Link href="/Online/Features">
+                            <BurgerItem icon="https://darksouls.wiki.fextralife.com/file/Dark-Souls/2051.png" text="Features" hasArrow={false} />
+                        </Link>
+                        <Link href="/Online/Invasions">
+                            <BurgerItem icon="https://darksouls.wiki.fextralife.com/file/Dark-Souls/2051.png" text="Invasions" hasArrow={false} />
+                        </Link>
+                        <Link href="/Online/Summoning">
+                            <BurgerItem icon="https://darksouls.wiki.fextralife.com/file/Dark-Souls/2051.png" text="Summoning" hasArrow={false} />
+                        </Link>
+                    </BurgerCategory>
+                    <BurgerCategory icon="https://darksouls.wiki.fextralife.com/file/Dark-Souls/2035.png" text="World">
+                        <Link href="/World/Covenants">
+                            <BurgerItem icon="https://darksouls.wiki.fextralife.com/file/Dark-Souls/2051.png" text="Covenants" hasArrow={false} />
+                        </Link>
+                        <BurgerItem icon="https://darksouls.wiki.fextralife.com/file/Dark-Souls/2051.png" text="Enemies" hasArrow={true}>
+                            <Link href="/World/Enemies/Bosses">
+                                <BurgerSubItem icon="https://darksouls.wiki.fextralife.com/file/Dark-Souls/2047.png" text="Bosses" />
+                            </Link>
+                            <Link href="/World/Enemies">
+                                <BurgerSubItem icon="https://darksouls.wiki.fextralife.com/file/Dark-Souls/2047.png" text="Common" />
+                            </Link>
+                            <Link href="/World/Enemies/NPC_Invaders">
+                                <BurgerSubItem icon="https://darksouls.wiki.fextralife.com/file/Dark-Souls/2047.png" text="NPC Invaders" />
+                            </Link>
+                        </BurgerItem>
+                        <Link href="/World/Illusory_Walls">
+                            <BurgerItem icon="https://darksouls.wiki.fextralife.com/file/Dark-Souls/2051.png" text="Illusory Walls" hasArrow={false} />
+                        </Link>
+                        <BurgerItem icon="https://darksouls.wiki.fextralife.com/file/Dark-Souls/2051.png" text="Locales" hasArrow={true}>
+                            <Link href="/World/Locales">
+                                <BurgerSubItem icon="https://darksouls.wiki.fextralife.com/file/Dark-Souls/2047.png" text="All Locales" />
+                            </Link>
+                            <Link href="/World/Locales/Maps">
+                                <BurgerSubItem icon="https://darksouls.wiki.fextralife.com/file/Dark-Souls/2047.png" text="Maps" />
+                            </Link>
+                        </BurgerItem>
+                        <Link href="/World/Lore">
+                            <BurgerItem icon="https://darksouls.wiki.fextralife.com/file/Dark-Souls/2051.png" text="Lore" hasArrow={false} />
+                        </Link>
+                        <Link href="/World/NPCs">
+                            <BurgerItem icon="https://darksouls.wiki.fextralife.com/file/Dark-Souls/2051.png" text="NPCs" hasArrow={false} />
+                        </Link>
+                    </BurgerCategory>
+                    <BurgerCategory icon="https://darksouls.wiki.fextralife.com/file/Dark-Souls/Seek_Guidance.png" text="Guides">
+                        <Link href="/Guides/Achievements">
+                            <BurgerItem icon="https://darksouls.wiki.fextralife.com/file/Dark-Souls/2051.png" text="Achievements" hasArrow={false} />
+                        </Link>
+                        <Link href="/Guides/New_Game_Plus">
+                            <BurgerItem icon="https://darksouls.wiki.fextralife.com/file/Dark-Souls/2051.png" text="New Game +" hasArrow={false} />
+                        </Link>
+                        <Link href="/Guides/New_Player_Help">
+                            <BurgerItem icon="https://darksouls.wiki.fextralife.com/file/Dark-Souls/2051.png" text="New Player Help" hasArrow={false} />
+                        </Link>
+                        <Link href="/Guides/Walkthrough">
+                            <BurgerItem icon="https://darksouls.wiki.fextralife.com/file/Dark-Souls/2051.png" text="Walkthrough" hasArrow={false} />
+                        </Link>
                     </BurgerCategory>
                 </div>
             </Burger>
@@ -424,7 +581,7 @@ export default function Navbar(props) {
                     </div>
                 </div>
             </NavItem>
-            <NavItem className={styles.guides} icon="https://darksouls.wiki.fextralife.com/file/Dark-Souls/Seek_Guidance.png" text="Guides">
+            <NavItem id={styles.guides} icon="https://darksouls.wiki.fextralife.com/file/Dark-Souls/Seek_Guidance.png" text="Guides">
                 <div id={styles.guides_dropdown} className={styles.nav_dropdown}>
                     <div className={styles.dropdown_item}>
                         <Link href="/Guides/Achievements">
