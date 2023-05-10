@@ -507,12 +507,14 @@
 
     .navbar{
         justify-content:center;
-        align-content:center;
-        text-align:end;
+        align-items:center;
+        text-align:center;
     }
-   .logo_link{
-       margin-left: 55%;
-   }
+    .logo_link {
+        position:fixed;
+        left: 50%;
+        transform: translateX(-50%);
+    }
     .logo {
         height: 3.4em;
         width: 8.7em;
@@ -528,6 +530,7 @@
         height: 85vh;
     }
 }
+
 @media(max-height: 720px) {
     #equipment_dropdown {
         height: 50vh;
@@ -537,35 +540,37 @@
     }
 }
 
-@media(max-height: 480px) {
-    .nav_dropdown {
-        display: flex;
-        overflow-y: auto;
-        overflow-x: hidden;
-        overscroll-behavior: contain;
-        height: 52vh;
-        width: 100%;
-        right: 0.25em;
-    }
-    #guides_dropdown{
-        margin-right:2em;
-    }
-    .nav_dropdown div{
-        padding-right: 2em;
-        right:0;
-    }
-}
+    @media(max-height: 480px) {
+        .nav_dropdown {
+            display: flex;
+            overflow-y: auto;
+            overflow-x: hidden;
+            overscroll-behavior: contain;
+            height: 52vh;
+            width: 100%;
+            right: 0.25em;
+        }
 
-@keyframes rotateMenu {
-    0% {
-        transform: rotateX(-90deg)
+        #guides_dropdown {
+            margin-right: 2em;
+        }
+
+        .nav_dropdown div {
+            padding-right: 2em;
+            right: 0;
+        }
     }
 
-    70% {
-        transform: rotateX(20deg)
-    }
+    @keyframes rotateMenu {
+        0% {
+            transform: rotateX(-90deg)
+        }
 
-    100% {
-        transform: rotateX(0deg)
+        70% {
+            transform: rotateX(20deg)
+        }
+
+        100% {
+            transform: rotateX(0deg)
+        }
     }
-}

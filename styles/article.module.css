@@ -118,6 +118,7 @@
     border-top: 3px solid #444444;
     padding: 0.5em;
     filter: brightness(1.0);
+    max-width:100%;
 }
 
 .gallery_container {
@@ -181,6 +182,7 @@
         border: 3px solid #333333;
         height: 252px;
         width: 448px;
+        max-width: 85%;
     }
 
 .external {
