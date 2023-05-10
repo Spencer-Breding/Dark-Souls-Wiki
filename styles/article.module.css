@@ -9,6 +9,7 @@
     padding-bottom: 2em;
     overflow: visible;
     z-index: 0;
+    padding-right: 3em;
 }
 
     .container a {
@@ -87,11 +88,6 @@
     width:fit-content;
 }
 
-.info_table_title {
-    color: white;
-    text-align: center;
-}
-
 .info_table_item {
     display: flex;
     flex-direction: row;
@@ -115,11 +111,15 @@
     width: 12em;
 }
 
-.cover {
+.cover_container{
     border-top: 3px solid #444444;
+    width: 100%;
+}
+
+.cover {
     padding: 0.5em;
     filter: brightness(1.0);
-    max-width:100%;
+    max-width:80vw;
 }
 
 .gallery_container {
@@ -243,12 +243,11 @@
     }
     .cover_container{
         border-top:3px solid #444444;
-        width:90%;
+        width:100%;
         justify-content:center;
     }
     .cover{
         display:flex;
-        border-top:none;
         align-self:center;
         margin:auto;
         

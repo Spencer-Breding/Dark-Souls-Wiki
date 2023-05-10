@@ -172,6 +172,7 @@
     .home {
         width: 100%;
         right:0.25em;
+        padding-right:1em;
     }
     .row{
         flex-direction:column;
