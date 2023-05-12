@@ -123,6 +123,7 @@
     padding: 0.5em;
     filter: brightness(1.0);
     width: 95%;
+    object-fit: contain;
 }
 
 .gallery_container {
