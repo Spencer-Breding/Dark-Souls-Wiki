@@ -241,6 +241,7 @@
         display: flex;
         float: none;
         margin: auto;
+        margin-left: auto;
         margin-bottom: 2em;
     }
     .cover_container{

@@ -15,11 +15,6 @@
   ],
   "rootMainFiles": [],
   "pages": {
-    "/Equipment/Armor": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/Equipment/Armor.js"
-    ],
     "/General/About_Dark_Souls": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
