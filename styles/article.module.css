@@ -101,14 +101,15 @@
     padding-top: 0.75em;
     padding-bottom: 0.75em;
     border-right: 3px solid #444444;
-    width: 5em;
+    width: 30%;
+    max-width: 90vw;
 }
 
 .info_table_item_details {
     margin-left: 1em;
     margin-top: 0.75em;
     margin-bottom: 0.5em;
-    width: 12em;
+    width: 70%;
 }
 
 .cover_container{
