@@ -112,6 +112,7 @@
 }
 
 .cover_container{
+    display:flex;
     border-top: 3px solid #444444;
     width: 100%;
 }
@@ -119,7 +120,8 @@
 .cover {
     padding: 0.5em;
     filter: brightness(1.0);
-    max-width:80vw;
+    width:fit-content;
+    object-fit: contain;
 }
 
 .gallery_container {
@@ -248,7 +250,7 @@
     .cover_container{
         border-top:3px solid #444444;
         width:100%;
-        justify-content:center;
+        justify-content:flex-start;
     }
     .cover{
         display:flex;
