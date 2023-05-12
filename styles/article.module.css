@@ -115,13 +115,13 @@
     display:flex;
     border-top: 3px solid #444444;
     width: 100%;
+    max-width:90vw;
 }
 
 .cover {
     padding: 0.5em;
     filter: brightness(1.0);
-    width:fit-content;
-    object-fit: contain;
+    max-width: 100%;
 }
 
 .gallery_container {
