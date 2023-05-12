@@ -214,7 +214,8 @@
 @media(max-width: 1280px) {
     .container {
         width: 100%;
-        padding-right: 3em;
+        padding-right: 0.25em;
+        right: 0.25em;
     }
 
     .trailer_container {
