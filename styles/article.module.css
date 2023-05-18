@@ -72,7 +72,7 @@
     padding-left: 1em;
     padding-bottom: 2em;
     text-align: start;
-    justify-content: start;
+    justify-content: space-evenly;
 }
 
 .info_table {
@@ -80,19 +80,26 @@
     flex-direction: column;
     border: 3px solid #444444;
     font-size: 18px;
-    height: fit-content;
+    height: 100%;
     float: right;
     margin-left: 3em;
     margin-bottom: 2em;
-    width:fit-content;
+    width: fit-content;
     max-width: 90vw;
+    overflow-y:hidden;
+    justify-content:flex-start;
+    flex-wrap: wrap;
 }
 
 .info_table_item {
     display: flex;
     flex-direction: row;
+    height:fit-content;
     color: white;
     border-top: 3px solid #444444;
+}
+
+.info_table_item:last-child{
 }
 
 .info_table_header {
@@ -109,7 +116,7 @@
     margin-left: 1em;
     margin-top: 0.75em;
     margin-bottom: 0.5em;
-    width: 70%;
+    width: 50%;
 }
 
 .cover_container{
@@ -220,6 +227,15 @@
         width: 100%;
         padding-right: 0.25em;
         right: 0.25em;
+    }
+
+    .info_table {
+        display: flex;
+        float: none;
+        margin: auto;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 2em;
     }
 
     .trailer_container {

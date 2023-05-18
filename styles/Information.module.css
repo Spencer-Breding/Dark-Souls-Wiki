@@ -2,6 +2,7 @@
     position: relative;
     background-color: rgba(0,0,0,0.93);
     width: 90%;
+    min-height: 90vh;
     margin: auto;
     padding-bottom: 2em;
     height: 100%;
@@ -80,52 +81,6 @@
                 margin-left: 0.25em;
                 margin-right: 0.5em;
             }
-
-.h_divider {
-    margin: auto;
-    margin-top: 40px;
-    width: 80%;
-    position: relative;
-}
-
-    .h_divider .shadow {
-        color: red;
-        overflow: hidden;
-        height: 20px;
-    }
-
-        .h_divider .shadow:after {
-            content: '';
-            display: block;
-            margin: -25px auto 0;
-            width: 100%;
-            height: 25px;
-            border-radius: 125px/12px;
-            box-shadow: 0 0 8px white;
-        }
-
-.title_divider {
-    margin: auto;
-    margin-top: -20px;
-    width: 100%;
-    position: relative;
-}
-
-    .title_divider .shadow {
-        color: red;
-        overflow: hidden;
-        height: 20px;
-    }
-
-        .title_divider .shadow:after {
-            content: '';
-            display: block;
-            margin: -25px auto 0;
-            width: 100%;
-            height: 25px;
-            border-radius: 125px/12px;
-            box-shadow: 0px 0px 8px white;
-        }
 
 .spacer{
     height:4em;
