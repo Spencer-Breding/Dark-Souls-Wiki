@@ -6,13 +6,6 @@ This project was made in order to enhance both my frontend and backend developme
 
 The frontend of this site is being built with Next.js, HTML, and CSS.
 
-## Backend
+## TBD
 
-The backend of this site is not built yet but will use Node.js and Express.js.
-
-## Database
-
-The database this website will use is MongoDB.
-
-## Note
-This website is currently not being hosted and you must use npm install and npm run dev to view the website.
+Backend and Database
