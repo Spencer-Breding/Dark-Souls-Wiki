@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { setCookie, getCookie } from 'cookies-next';
+import {hasCookie, setCookie, getCookie } from 'cookies-next';
 import Contents from "../../../components/contents";
 import Grad from "../../../components/grad";
 import Full from "../../../components/ArmorFull";
@@ -24,7 +24,13 @@ const desc = <text className={styles.description}><em>Armor</em> is a type of eq
 export default function Armor() {
     const [sortMode, setSortMode] = useState(0);
     useEffect(() => {
-        setSortMode(getCookie('armor_state'));
+        if (hasCookie('armor_state')) {
+            setSortMode(getCookie('armor_state'));
+        }
+        else {
+            setSortMode(1);
+            setCookie('armor_state', 1);
+        }
         const listenCookieChange = () => {
             setSortMode(getCookie('armor_state'));
         }

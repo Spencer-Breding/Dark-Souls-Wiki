@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import Head from "next/head";
 import HeaderDiv from "../../components/HeaderDiv";
 import TitleDiv from "../../components/TitleDiv";
 import Grad from "../../components/grad";
@@ -12,6 +13,9 @@ const desc = "General information covers the basics of Dark Souls and its system
 const General = () => {
     return (
         <React.Fragment>
+            <Head>
+                <title>General Info | Dark Souls Wiki</title>
+            </Head>
             <Grad/>
             <div className={styles.container}>
                 <Title title="General Information" />

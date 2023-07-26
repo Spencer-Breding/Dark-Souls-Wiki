@@ -1,4 +1,5 @@
 import React from 'react';
+import Head from "next/head";
 import Link from 'next/link';
 import Image from 'next/image';
 import { setCookie } from 'cookies-next';
@@ -12,6 +13,9 @@ const Home = () => {
 
     return (
         <React.Fragment>
+            <Head>
+                <title>Dark Souls Wiki</title>
+            </Head>
             <Grad/>
             <div className={styles.home}>
                 <Title title="Wiki Home" />

@@ -1,0 +1,80 @@
+﻿.container {
+    width: 16em;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    border: 4px solid #333333;
+    padding:1em;
+}
+
+    .container a {
+        text-decoration: none;
+        display: flex;
+        color: #AE9E69;
+        filter: opacity(0.9);
+        width: fit-content;
+        font-weight: 500;
+        font-size: 24px;
+        font-family: "OptimusPrinceps";
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+        .container a:hover {
+            color: #e25022;
+            text-decoration: underline;
+            filter: brightness(1.25) opacity(0.9);
+        }
+
+    .container span{
+        display:flex;
+        color:white;
+        margin-top:1em;
+        font-size:16px;
+    }
+
+.portrait{
+    margin-bottom: 1em;
+}
+
+.stat_table_row {
+    display: flex;
+    width: 100%;
+    border: 1px solid #333333;
+    background: black;
+}
+
+    .stat_table_row:nth-child(odd) {
+        background: #222226;
+    }
+
+
+.stat_table_entry{
+    display:flex;
+    flex: 1 0 0;
+    margin-left:0.25em;
+    padding-top: 0.25em;
+    padding-bottom: 0.25em;
+}
+
+    .stat_table_entry:first-child {
+        border-right: 2px solid #333333;
+    }
+
+.stat_table_entry span{
+    color:white;
+    margin:auto;
+}
+
+#equipment{
+    width: 100%;
+    display:flex;
+    font-size: 18px;
+}
+
+#equipment a{
+    font-size:18px;
+    font-family: 'Times New Roman';
+    display:inline-flex;
+}
