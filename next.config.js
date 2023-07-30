@@ -48,6 +48,10 @@ module.exports = {
                 protocol: 'https',
                 hostname: "darksouls.wiki.fextralife.com"
             },
+            {
+                protocol: 'https',
+                hostname: "static.wikia.nocookie.net"
+            },
         ],
     },
 }
