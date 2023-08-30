@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Head from "next/head";
 import {hasCookie, setCookie, getCookie } from 'cookies-next';
 import Contents from "../../../components/contents";
 import Grad from "../../../components/grad";
@@ -44,6 +45,9 @@ export default function Armor() {
 
     return (
         <React.Fragment>
+            <Head>
+            <title>Armor | Dark Souls Wiki</title>
+            </Head>
             <Grad />
             <div className={styles.container}>
                 <Title title="Armor" />
