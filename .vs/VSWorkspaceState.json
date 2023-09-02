@@ -1,16 +1,16 @@
 {
   "ExpandedNodes": [
     "",
-    "\\components",
     "\\pages",
     "\\pages\\Character",
     "\\pages\\Character\\Classes",
     "\\pages\\Equipment",
     "\\pages\\Equipment\\Armor",
     "\\pages\\General",
+    "\\pages\\General\\Mechanics",
     "\\public",
     "\\styles"
   ],
-  "SelectedNode": "\\pages\\Equipment\\Armor\\index.js",
+  "SelectedNode": "\\styles\\article.module.css",
   "PreviewInSolutionExplorer": false
 }

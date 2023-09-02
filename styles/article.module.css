@@ -133,70 +133,6 @@
     object-fit: contain;
 }
 
-.gallery_container {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    height: fit-content;
-    gap: 3em;
-    justify-content: space-evenly;
-}
-
-.gallery_item {
-    display: flex;
-    flex-direction: column;
-    width: 31%;
-    height: auto;
-}
-
-    .gallery_item a {
-        margin: auto;
-        max-height: 100%;
-        max-width: 100%;
-        filter: brightness(1);
-    }
-
-        .gallery_item a:hover {
-            filter: brightness(1.2);
-        }
-
-        .gallery_item a img {
-            margin: auto;
-            max-height: 100%;
-            max-width: 100%;
-            object-fit: contain;
-            vertical-align: middle;
-        }
-
-    .gallery_item text {
-        color: white;
-        font-size: 20px;
-        text-align: center;
-   
-    }
-
-.trailer_container {
-    display: flex;
-    flex-direction: column;
-    gap: 2em;
-}
-
-.trailer_row {
-    display: flex;
-    gap: 3em;
-    margin: auto;
-    margin-top: 1em;
-    width: 100%;
-    justify-content: space-evenly;
-}
-
-    .trailer_row iframe {
-        border: 3px solid #333333;
-        height: 252px;
-        width: 448px;
-        max-width: 85%;
-    }
-
 .external {
     margin-left: 3em;
     line-height: 2.5em;
@@ -216,12 +152,6 @@
         font-size: 24px;
     }
 
-@media(max-width: 1600px) {
-    .gallery_item{
-        width: 40%
-    }
-}
-
 @media(max-width: 1280px) {
     .container {
         width: 100%;
@@ -238,22 +168,6 @@
         margin-bottom: 2em;
     }
 
-    .trailer_container {
-        gap: 2em;
-    }
-
-    .trailer_row {
-        position: relative;
-        flex-direction: column;
-        width: 100%;
-        margin: auto;
-        margin-right: auto;
-        gap: 2em;
-    }
-
-        .trailer_row iframe {
-            align-self: center;
-        }
 }
 
 @media(max-width: 1024px) {
@@ -276,19 +190,5 @@
         margin:auto;
         
     }
-    .gallery_item {
-        width: 45%
-    }
 
-}
-
-@media(max-width: 800px){
-    .gallery_row{
-        height:150vh;
-        flex-direction: column;
-    }
-    .gallery_item{
-        width:60%;
-        flex-direction: column;
-    }
 }

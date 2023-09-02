@@ -1,14 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
+import Head from "next/head";
 import Iframe from 'react-iframe';
 import Link from 'next/link';
-import Image from 'next/image';
-import { useRouter } from 'next/router';
 import Contents from "../../components/contents";
 import TitleDiv from "../../components/TitleDiv";
 import Grad from "../../components/grad";
 import Spacer from "../../components/spacer";
 import Title from "../../components/title";
 import styles from "../../styles/article.module.css";
+import ImageGallery from '../../components/ImageGallery';
+import VideoGallery from '../../components/VideoGallery';
 
 const artorias = <Link href="/General_Information/Artorias_of_the_Abyss">Artorias of the Abyss</Link>;
 const boss = <Link href="/World/Enemies/Bosses">bosses</Link>
@@ -62,7 +63,7 @@ const remaster_rec_reqs = <text className={styles.body_text}><b>OS:</b> Windows 
     <b>Sound:</b> DirectX 11 sound device
 </text>
 const weapon = <Link href="/Equipment/Weapons">weapons</Link>;
-const desc = <text className={styles.description }><em><b>Dark Souls</b></em> is a video game developed by <em>{from}</em>. The game has been published on the PlayStation 3 and Xbox 360 by <em>{namco}</em>.
+const desc = <text className={styles.description}><em><b>Dark Souls</b></em> is a video game developed by <em>{from}</em>. The game has been published on the PlayStation 3 and Xbox 360 by <em>{namco}</em>.
     <br />
     <br />
     It was previously developed under the codename Project Dark and is the spiritual successor to <em>{demon}</em>. It also uses an updated variant of said game's engine.
@@ -109,9 +110,32 @@ const reception = <text className={styles.body_text}><em>Dark Souls</em> receive
     magazine's special issue "The 100 Greatest Videogames".</text>
 
 export default function About_ds() {
-    const router = useRouter();
+    const [currentIndex, setCurrentIndex] = useState(null);
+    const imageItems = [
+        { source: "https://www.gematsu.com/wp-content/uploads/2011/05/Dark-Souls-Jap-Box-Art.jpg", description: "Japanese Box Art" },
+        { source: "https://conceptartworld.com/wp-content/uploads/2014/01/Dark_Souls_Design_Works_01.jpg", description: "Western Box Art" },
+        { source: "https://m.media-amazon.com/images/I/71sXzLCahJL.jpg", description: "Prepare to Die Edition Box Art" },
+        { source: "https://image.api.playstation.com/cdn/EP0700/CUSA08495_00/COYF3JBI46ftkG7tIdTjQg0v9aZ2378N.png", description: "Dark Souls Remastered Box Art" },
+        { source: "https://www.creativeuncut.com/social/dark-souls.jpg", description: "Enemy Concept Art" },
+        { source: "https://i.pinimg.com/736x/aa/13/5d/aa135d573e8eff6d968841c298428dac--videogame-art-dark-souls.jpg", description: "Knight Concept Art" },
+        { source: "https://cdn.cloudflare.steamstatic.com/steam/apps/570940/ss_3a71463e4ccaf28c5c27f6cf8d32a3a125f45404.1920x1080.jpg?t=1668145065", description: "Boss Fight Promotional Image" },
+        { source: "https://cdn.cloudflare.steamstatic.com/steam/apps/570940/ss_f1617a419eb3b0cd877ec71230c59aa2672b62dc.1920x1080.jpg?t=1668145065", description: "Player Promotional Image" },
+        { source: "https://cdn.cloudflare.steamstatic.com/steam/apps/570940/ss_f60f54e58b13d0744853672ccd35810397e3fa26.1920x1080.jpg?t=1668145065", description: "Enemy Encounter Promotional Image" }
+    ]
+
+    const videoItems = [
+        { source: "https://www.youtube.com/embed/9IbPrk-yuts", description: "Dark Souls E3 2011 - Official Trailer" },
+        { source: "https://www.youtube.com/embed/WlVBVKAFFg4", description: "Dark Souls Prepare to Die Edition Trailer - GGD" },
+        { source: "https://www.youtube.com/embed/KfjG9ZLGBHE", description: "Dark Souls: Remastered Launch Trailer" },
+        { source: "https://www.youtube.com/embed/o1780AqAa20", description: "Dark Souls - Official Trailer #1" },
+        { source: "https://www.youtube.com/embed/QNpLhv21BS0", description: "Darl Souls: All Saints' Day Trailer" },
+        { source: "https://www.youtube.com/embed/93LFz_j5fQA", description: "Dark Souls: Bartholomew Trailer" }
+    ]
     return (
         <React.Fragment>
+            <Head>
+                <title>About Dark Souls | Dark Souls Wiki</title>
+            </Head>
             <Grad />
             <div className={styles.container}>
                 <Title title="About Dark Souls" />
@@ -119,7 +143,7 @@ export default function About_ds() {
                 <div className={styles.info}>
                     <div className={styles.info_table}>
                         <h2>Dark Souls</h2>
-                        <div className={styles.cover_container }>
+                        <div className={styles.cover_container}>
                             <a href="https://i.imgur.com/nvd5Nsj.jpeg" target="blank">
                                 <img className={styles.cover} src="https://i.imgur.com/nvd5Nsj.jpg" width={379} height={440} alt="" />
                             </a>
@@ -201,84 +225,13 @@ export default function About_ds() {
                     <br />
                     <h3 className={styles.body_header} id="Gallery">Gallery</h3>
                     <TitleDiv />
-                    <div className={styles.gallery_container}>
-                       
-                            <div className={styles.gallery_item}>
-                                <a href="https://www.gematsu.com/wp-content/uploads/2011/05/Dark-Souls-Jap-Box-Art.jpg" target="blank">
-                                    <img src="https://www.gematsu.com/wp-content/uploads/2011/05/Dark-Souls-Jap-Box-Art.jpg" alt="" />
-                                </a>
-                                <text>Japanese Box Art</text>
-                            </div>
-                            <div className={styles.gallery_item}>
-                                <a href="https://conceptartworld.com/wp-content/uploads/2014/01/Dark_Souls_Design_Works_01.jpg" target="blank">
-                                    <img src="https://conceptartworld.com/wp-content/uploads/2014/01/Dark_Souls_Design_Works_01.jpg" alt="" />
-                                </a>
-                                <text>Western Box Art</text>
-                            </div>
-                            <div className={styles.gallery_item}>
-                                <a href="https://m.media-amazon.com/images/I/71sXzLCahJL.jpg" target="blank">
-                                    <img src="https://m.media-amazon.com/images/I/71sXzLCahJL.jpg" alt="" />
-                                </a>
-                                <text>Prepare to Die Edition Box Art</text>
-                            </div>
-                      
-                        
-                            <div className={styles.gallery_item}>
-                                <a href="https://image.api.playstation.com/cdn/EP0700/CUSA08495_00/COYF3JBI46ftkG7tIdTjQg0v9aZ2378N.png" target="blank">
-                                    <img src="https://image.api.playstation.com/cdn/EP0700/CUSA08495_00/COYF3JBI46ftkG7tIdTjQg0v9aZ2378N.png" alt="" />
-                                </a>
-                                <text>Dark Souls Remastered Box Art</text>
-                            </div>
-                            <div className={styles.gallery_item}>
-                                <a href="https://www.creativeuncut.com/social/dark-souls.jpg" target="blank">
-                                    <img src="https://www.creativeuncut.com/social/dark-souls.jpg" alt="" />
-                                </a>
-                                <text>Enemy Concept Art</text>
-                            </div>
-                            <div className={styles.gallery_item}>
-                                <a href="https://i.pinimg.com/736x/aa/13/5d/aa135d573e8eff6d968841c298428dac--videogame-art-dark-souls.jpg" target="blank">
-                                    <img src="https://i.pinimg.com/736x/aa/13/5d/aa135d573e8eff6d968841c298428dac--videogame-art-dark-souls.jpg" alt="" />
-                                </a>
-                                <text>Knight Concept Art</text>
-                            </div>
-                      
-                            <div className={styles.gallery_item}>
-                                <a href="https://cdn.cloudflare.steamstatic.com/steam/apps/570940/ss_3a71463e4ccaf28c5c27f6cf8d32a3a125f45404.1920x1080.jpg?t=1668145065" target="blank">
-                                    <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/570940/ss_3a71463e4ccaf28c5c27f6cf8d32a3a125f45404.1920x1080.jpg?t=1668145065" alt="" />
-                                </a>
-                                <text>Boss Fight Promotional Image</text>
-                            </div>
-                            <div className={styles.gallery_item}>
-                                <a href="https://cdn.cloudflare.steamstatic.com/steam/apps/570940/ss_f1617a419eb3b0cd877ec71230c59aa2672b62dc.1920x1080.jpg?t=1668145065" target="blank">
-                                    <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/570940/ss_f1617a419eb3b0cd877ec71230c59aa2672b62dc.1920x1080.jpg?t=1668145065" alt="" />
-                                </a>
-                                <text>Player Promotional Image</text>
-                            </div>
-                            <div className={styles.gallery_item}>
-                                <a href="https://cdn.cloudflare.steamstatic.com/steam/apps/570940/ss_f60f54e58b13d0744853672ccd35810397e3fa26.1920x1080.jpg?t=1668145065" target="blank">
-                                    <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/570940/ss_f60f54e58b13d0744853672ccd35810397e3fa26.1920x1080.jpg?t=1668145065" alt="" />
-                                </a>
-                                <text>Enemy Encounter Promotional Image</text>
-                            </div>
-                        
-                    </div>
+                    <ImageGallery items={imageItems} setCurrentIndex={(index) => setCurrentIndex(index)} />
                 </div>
                 <br />
                 <br />
                 <h3 className={styles.body_header} id="Trailers">Trailers</h3>
                 <TitleDiv />
-                <div className={styles.trailer_container}>
-                    <div className={styles.trailer_row}>
-                        <Iframe src="https://www.youtube.com/embed/9IbPrk-yuts" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></Iframe>
-                        <Iframe src="https://www.youtube.com/embed/WlVBVKAFFg4" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></Iframe>
-                        <Iframe src="https://www.youtube.com/embed/KfjG9ZLGBHE" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></Iframe>
-                    </div>
-                    <div className={styles.trailer_row}>
-                        <Iframe src="https://www.youtube.com/embed/o1780AqAa20" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></Iframe>
-                        <Iframe src="https://www.youtube.com/embed/QNpLhv21BS0" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></Iframe>
-                        <Iframe src="https://www.youtube.com/embed/93LFz_j5fQA" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></Iframe>
-                    </div>
-                </div>
+                <VideoGallery items={videoItems} setCurrentIndex={(index) => setCurrentIndex(imageItems.length + index)} />
                 <br />
                 <br />
                 <h3 className={styles.body_header} id="External_Links">External Links</h3>

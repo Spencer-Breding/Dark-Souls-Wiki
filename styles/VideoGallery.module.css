@@ -1,0 +1,28 @@
+﻿.gallery {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 2em;
+    justify-content: space-evenly;
+}
+
+.gallery_item iframe {
+    border: 3px solid #333333;
+    height: 252px;
+    width: 448px;
+    max-width: 80vw;
+    max-height: 50vh;
+}
+
+.gallery_item p {
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 0.5em;
+}
+
+@media(max-width: 1024px) {
+        .gallery_item p {
+            font-size: 18px;
+        }
+}

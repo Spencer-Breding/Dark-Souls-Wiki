@@ -22,10 +22,10 @@ function Burger(props) {
     return (
         <React.Fragment>
             <div className={styles.burger} onClick={() => setOpenBurger(!openBurger)}>
-                {(openBurger == false) &&
+                {(openBurger === false) &&
                     <><div className={styles.burger_line} /><div className={styles.burger_line} /><div className={styles.burger_line} /></>
                 }
-                {(openBurger == true) &&
+                {(openBurger === true) &&
                     <><div className={styles.x_left} /><div className={styles.x_right} />
                         {props.children}
                     </>
@@ -52,7 +52,7 @@ function BurgerCategory(props) {
 
     return (
         <div className={styles.burger_category} >
-            <div id={styles.burger_header} style={{ '--category-color': hover == true && hoverColor || notHoverColor }} ref={ref} onMouseEnter={() => { setHover(true); }}
+            <div id={styles.burger_header} style={{ '--category-color': (hover === true && hoverColor) || notHoverColor }} ref={ref} onMouseEnter={() => { setHover(true); }}
                 onMouseLeave={() => { setHover(false); }} onClick={(e) => { e.stopPropagation(); setOpenDropdown(!openDropdown) }}>
                 <Image className={styles.burger_icon} src={props.icon} alt="icon" width={100} height={100} onClick={() => setOpenDropdown(!openDropdown)} />
                 <text className={styles.burger_text} onClick={() => setOpenDropdown(!openDropdown)}>{props.text}</text>
@@ -80,11 +80,11 @@ function BurgerItem(props) {
 
     return (
         <div className={styles.burger_item}>
-            <div id={styles.burger_header} style={{ '--category-color': hover == true && hoverColor || notHoverColor }} ref={ref} onMouseEnter={() => { setHover(true); }}
+            <div id={styles.burger_header} style={{ '--category-color': (hover === true && hoverColor) || notHoverColor }} ref={ref} onMouseEnter={() => { setHover(true); }}
                 onMouseLeave={() => { setHover(false); }} onClick={(e) => { e.stopPropagation(); setOpenDropdown(!openDropdown) }}>
                 <Image className={styles.burger_icon} src={props.icon} alt="icon" width={100} height={100} onClick={() => setOpenDropdown(!openDropdown)} />
                 <text className={styles.burger_text} onClick={() => setOpenDropdown(!openDropdown)}>{props.text}</text>
-                <text style={(props.hasArrow == true) && { visibility:'visible' } || { visibility:'hidden' }} className={styles.arrow} onClick={() => setOpenDropdown(!openDropdown)}>{arrow}</text>
+                <text style={((props.hasArrow === true) && { visibility:'visible' }) || { visibility:'hidden' }} className={styles.arrow} onClick={() => setOpenDropdown(!openDropdown)}>{arrow}</text>
             </div>
             {openDropdown && props.children}
         </div>
@@ -98,7 +98,7 @@ function BurgerSubItem(props) {
     const notHoverColor = "#222226"
 
     return (
-        <div id={styles.burger_header} className={styles.burger_sub_item} ref={ref} style={{ '--category-color': hover == true && hoverColor || notHoverColor }} ref={ref} onMouseEnter={() => {setHover(true); }}
+        <div id={styles.burger_header} className={styles.burger_sub_item} style={{ '--category-color': (hover === true && hoverColor) || notHoverColor }} ref={ref} onMouseEnter={() => {setHover(true); }}
             onMouseLeave={() => { setHover(false); }}>
             <Image className={styles.burger_icon} src={props.icon} alt="icon" width={100} height={100} />
             <text className={styles.burger_text}>{props.text}</text>
