@@ -19,18 +19,12 @@
         max-height: 100%;
         max-width: 100%;
         filter: brightness(1);
+        transition:all 0.3s ease-in-out;
     }
 
         .gallery_item img:hover {
-            filter: brightness(1.2);
-        }
-
-        .gallery_item a img {
-            margin: auto;
-            max-height: 100%;
-            max-width: 100%;
-            object-fit: contain;
-            vertical-align: middle;
+            transform:scale(1.025);
+            cursor:pointer;
         }
 
     .gallery_item p {
