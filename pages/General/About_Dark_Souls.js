@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import Head from "next/head";
-import Iframe from 'react-iframe';
 import Link from 'next/link';
 import Contents from "../../components/contents";
 import TitleDiv from "../../components/TitleDiv";
@@ -10,6 +9,7 @@ import Title from "../../components/title";
 import styles from "../../styles/article.module.css";
 import ImageGallery from '../../components/ImageGallery';
 import VideoGallery from '../../components/VideoGallery';
+import Lightbox from '../../components/Lightbox';
 
 const artorias = <Link href="/General_Information/Artorias_of_the_Abyss">Artorias of the Abyss</Link>;
 const boss = <Link href="/World/Enemies/Bosses">bosses</Link>
@@ -131,6 +131,19 @@ export default function About_ds() {
         { source: "https://www.youtube.com/embed/QNpLhv21BS0", description: "Darl Souls: All Saints' Day Trailer" },
         { source: "https://www.youtube.com/embed/93LFz_j5fQA", description: "Dark Souls: Bartholomew Trailer" }
     ]
+
+    const allItems = [...imageItems, ...videoItems];
+
+    const closeLightbox = () => setCurrentIndex(null);
+
+    const showPrev = () => setCurrentIndex((prevIndex) => (prevIndex - 1 + imageItems.length) % imageItems.length);
+
+    const showNext = () => setCurrentIndex((prevIndex) => (prevIndex + 1) % imageItems.length);
+
+    const onThumbnailClick = (index) => {
+        setCurrentIndex(index);
+    }
+
     return (
         <React.Fragment>
             <Head>
@@ -242,6 +255,17 @@ export default function About_ds() {
                 </ul>
                 <Spacer />
             </div>
+            {currentIndex !== null && (
+                <Lightbox
+                    item={imageItems[currentIndex]}
+                    items={imageItems}
+                    currentIndex={currentIndex}
+                    onClose={closeLightbox}
+                    onPrev={showPrev}
+                    onNext={showNext}
+                    onThumbnailClick={onThumbnailClick}
+                />
+            )}
         </React.Fragment>
     );
 }

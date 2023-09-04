@@ -1,6 +1,7 @@
 {
   "ExpandedNodes": [
     "",
+    "\\components",
     "\\pages",
     "\\pages\\Character",
     "\\pages\\Character\\Classes",
@@ -11,6 +12,6 @@
     "\\public",
     "\\styles"
   ],
-  "SelectedNode": "\\styles\\article.module.css",
+  "SelectedNode": "\\styles\\Lightbox.module.css",
   "PreviewInSolutionExplorer": false
 }
