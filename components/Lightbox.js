@@ -63,20 +63,24 @@ export default function Lightbox({ item, items, currentIndex, onClose, onPrev, o
     return (
         <div className={`${styles.lightbox} ${isVisible ? styles.fadeIn : styles.fadeOut}`}>
             <button className={styles.closeButton} onClick={handleClose}>X</button>
-            <button
-                className={`${styles.arrowButton} ${styles.left}`}
-                disabled={transitioning}
-                onClick={() => handleAnimation(currentIndex - 1, onPrev)}
-            >
-                &#10094;
-            </button>
-            <button
-                className={`${styles.arrowButton} ${styles.right}`}
-                disabled={transitioning}
-                onClick={() => handleAnimation(currentIndex + 1, onNext)}
-            >
-                &#10095;
-            </button>
+            {currentIndex !== 0 && ( // Left arrow will not appear if currentIndex is 0
+                <button
+                    className={`${styles.arrowButton} ${styles.left}`}
+                    disabled={transitioning}
+                    onClick={() => handleAnimation(currentIndex - 1, onPrev)}
+                >
+                    &#10094;
+                </button>
+            )}
+            {currentIndex !== (items.length - 1) && ( // Right arrow will not appear if currentIndex is at the end
+                <button
+                    className={`${styles.arrowButton} ${styles.right}`}
+                    disabled={transitioning}
+                    onClick={() => handleAnimation(currentIndex + 1, onNext)}
+                >
+                    &#10095;
+                </button>
+            )}
             <div className={styles.imageContainer}>
                 <div className={`${styles.mainImageContainer} ${imageAnimation}`}>
                     <div className={styles.mainImageWrapper}>
