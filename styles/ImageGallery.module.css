@@ -12,15 +12,13 @@
     display: flex;
     flex-direction: column;
     width: 30%;
-    height: fit-content;
+    height: auto;
     max-height: 60vh;
-    margin-bottom: 1em;
 }
 
     .gallery_item img {
         margin:auto;
         display:block;
-        height:fit-content;
         max-height: 85%;
         width:100%;
         max-width:fit-content;
@@ -28,7 +26,7 @@
         filter: brightness(1);
         transition: all 0.3s ease-in-out;
         border: 2px solid #e25022;
-        object-fit:contain;
+        object-position:center;
     }
 
         .gallery_item img:hover {
