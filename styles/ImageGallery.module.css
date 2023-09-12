@@ -14,11 +14,13 @@
     width: 30%;
     height: auto;
     max-height: 60vh;
+    margin-bottom: 1em;
 }
 
     .gallery_item img {
         margin:auto;
         display:block;
+        height:fit-content;
         max-height: 85%;
         width:100%;
         max-width:fit-content;
