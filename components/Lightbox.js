@@ -38,15 +38,9 @@ export default function Lightbox({ item, items, currentIndex, onClose, onPrev, o
     const [isVisible, setIsVisible] = useState(false);
     const [imageAnimation, setImageAnimation] = useState('');
     const [transitioning, setTransitioning] = useState(false);
-    const [touchStartX, setTouchStartX] = useState(0);
-    const [touchEndX, setTouchEndX] = useState(0);
-    const handleTouchStart = (e) => {
-        setTouchStartX(e.changedTouches[0].screenX);
-    };
-
-    const handleTouchEnd = (e) => {
-        setTouchEndX(e.changedTouches[0].screenX);
-    };
+    let touchStartX = 0;
+    let touchEndX = 0;
+    const MIN_SWIPE_DISTANCE = 75;
 
     var previewIdx
     if (window.matchMedia("(max-width: 37.5em)").matches) {
@@ -59,40 +53,37 @@ export default function Lightbox({ item, items, currentIndex, onClose, onPrev, o
         return () => clearTimeout(timer);
     }, []);
 
-    const handleAnimation = useCallback((nextIndex, callback) => {
+    const handleAnimation = useCallback(async (nextIndex, callback) => {
         const direction = nextIndex > currentIndex ? 'left' : 'right';
         const exitAnimation = direction === 'left' ? styles.animateOutToLeft : styles.animateOutToRight;
         const enterAnimation = styles[`animateInFrom${direction === 'left' ? 'Right' : 'Left'}`];
 
+        // Phase 1: Animate out the current image.
         setImageAnimation(exitAnimation);
         setTransitioning(true);
 
-        setTimeout(() => {
-            callback();
+        await new Promise(resolve => setTimeout(resolve, 400)); // Wait for the exit animation to complete
+
+        // Phase 2: Update the image.
+        callback();
+
+        // Phase 3: Trigger the reflow and setup the entering animation
+        requestAnimationFrame(() => {
+            // Force reflow
+
+            // Apply the enter animation
             setImageAnimation(enterAnimation);
 
-            setTimeout(() => {
-                setImageAnimation('');
-                setTransitioning(false);
-            }, 400);
-        }, 400);
+            requestAnimationFrame(() => {
+                // Wait for the browser to apply the above styles, then:
+                setTimeout(() => {
+                    // Phase 4: Reset all states.
+                    setImageAnimation('');
+                    setTransitioning(false);
+                }, 400);
+            });
+        });
     }, [currentIndex]);
-
-    useEffect(() => {
-        if (touchStartX - touchEndX > 75) {
-            // Swipe left (go to next)
-            if (currentIndex < items.length - 1 && !transitioning) {
-                handleAnimation(currentIndex + 1, onNext);
-            }
-        }
-
-        if (touchEndX - touchStartX > 75) {
-            // Swipe right (go to previous)
-            if (currentIndex > 0 && !transitioning) {
-                handleAnimation(currentIndex - 1, onPrev);
-            }
-        }
-    }, [currentIndex, handleAnimation, items.length, onNext, onPrev, touchEndX, touchStartX, transitioning]);
 
     const previewItems = getPreviewItems(currentIndex, items);
 
@@ -119,6 +110,40 @@ export default function Lightbox({ item, items, currentIndex, onClose, onPrev, o
         }
     }, [handleClose, currentIndex, items.length, transitioning, handleAnimation, onNext, onPrev]);
 
+    const handleTouchStart = (e) => {
+        touchStartX = e.touches[0].clientX;
+    };
+
+    const handleTouchEnd = (e) => {
+        if (transitioning) return;  // Disable touch events while transitioning
+
+        touchEndX = e.changedTouches[0].clientX;
+
+        // Calculate swipe distance
+        const swipeDistance = Math.abs(touchEndX - touchStartX);
+
+        // Check if the swipe distance is too small
+        if (swipeDistance < MIN_SWIPE_DISTANCE) {
+            return;
+        }
+
+        setTransitioning(true);  // Enable the transitioning flag
+
+        if (touchEndX < touchStartX && currentIndex < items.length - 1) {
+            // For swiping to the next image
+            handleAnimation(currentIndex + 1, onNext);
+        } else if (touchEndX > touchStartX && currentIndex > 0) {
+            // For swiping to the previous image
+            handleAnimation(currentIndex - 1, onPrev);
+        }
+
+        // Reset the animation class after the transition duration
+        setTimeout(() => {
+            setImageAnimation('');
+            setTransitioning(false);  // Disable the transitioning flag
+        }, 400);  // Assuming 0.4s duration for your animation
+    };
+
     useEffect(() => {
         // Adding the event listener when the component mounts
         document.addEventListener('keydown', handleKeyPress);
@@ -131,7 +156,7 @@ export default function Lightbox({ item, items, currentIndex, onClose, onPrev, o
             document.removeEventListener('touchstart', handleTouchStart);
             document.removeEventListener('touchend', handleTouchEnd);
         };
-    }, [handleKeyPress]);
+    }, [handleKeyPress, handleTouchEnd, handleTouchStart]);
 
     return (
         <div className={`${styles.lightbox} ${isVisible ? styles.fadeIn : styles.fadeOut}`}>
@@ -154,7 +179,8 @@ export default function Lightbox({ item, items, currentIndex, onClose, onPrev, o
                     &#10095;
                 </button>
             )}
-            <div className={styles.imageContainer}>
+            <div className={styles.imageContainer} onTouchStart={handleTouchStart}
+                onTouchEnd={handleTouchEnd}>
                 <div className={`${styles.mainImageContainer} ${imageAnimation}`}>
                     <div className={styles.mainImageWrapper}>
                         <img className={styles.mainImage} src={item.source} alt={item.description} />

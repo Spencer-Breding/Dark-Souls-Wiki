@@ -2,7 +2,6 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/Character/Classes": "pages/Character/Classes.js",
   "/General/About_Dark_Souls": "pages/General/About_Dark_Souls.js",
   "/": "pages/index.js"
 }
