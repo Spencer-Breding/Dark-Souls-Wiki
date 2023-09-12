@@ -31,7 +31,7 @@
         filter: brightness(1);
         transition: all 0.3s ease-in-out;
         border: 2px solid #e25022;
-        object-fit: contain;
+        object-position:center;
     }
 
         .gallery_item img:hover {

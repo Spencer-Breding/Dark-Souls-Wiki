@@ -6,15 +6,17 @@ export default function ImageGallery({ items, setCurrentIndex }) {
         <div className={styles.gallery}>
             {items.map((item, index) => (
                 <div key={index} className={styles.gallery_item} onClick={() => setCurrentIndex(index)}>
-                    <Image
-                        src={item.source}
-                        alt={item.description}
-                        width={0}
-                        height={0}
-                        sizes="100vw"
-                        style={{ width: '100%', height: 'auto' }}
-                        loading="lazy"
-                    />
+                    <div className={styles.image_wrapper}>
+                        <Image
+                            src={item.source}
+                            alt={item.description}
+                            width={0}
+                            height={0}
+                            sizes="100vw"
+                            style={{ width: '100%', height: 'auto' }}
+                            loading="lazy"
+                        />
+                    </div>
                     <p>{item.description}</p>
                 </div>
             ))}
