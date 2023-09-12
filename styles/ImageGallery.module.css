@@ -24,7 +24,6 @@
     max-height:85%;
     width: auto;
     margin:auto;
-    border: 1px solid #e25022;
 }
 
     .image_wrapper hover {
@@ -35,14 +34,15 @@
 .gallery_item img {
     margin: auto;
     display: block;
-    height:fit-content;
+    height: fit-content;
     max-height: 100%;
-    width:fit-content;
-    max-width:100%;
+    width: fit-content;
+    max-width: 100%;
     filter: brightness(1);
     transition: all 0.3s ease-in-out;
     object-fit: contain;
-    margin:0;
+    margin: 0;
+    border: 1px solid #e25022;
 }
 
     .gallery_item p {
