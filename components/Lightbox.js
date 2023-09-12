@@ -58,26 +58,18 @@ export default function Lightbox({ item, items, currentIndex, onClose, onPrev, o
         const exitAnimation = direction === 'left' ? styles.animateOutToLeft : styles.animateOutToRight;
         const enterAnimation = styles[`animateInFrom${direction === 'left' ? 'Right' : 'Left'}`];
 
-        // Phase 1: Animate out the current image.
         setImageAnimation(exitAnimation);
         setTransitioning(true);
 
-        await new Promise(resolve => setTimeout(resolve, 400)); // Wait for the exit animation to complete
+        await new Promise(resolve => setTimeout(resolve, 400));
 
-        // Phase 2: Update the image.
         callback();
 
-        // Phase 3: Trigger the reflow and setup the entering animation
         requestAnimationFrame(() => {
-            // Force reflow
-
-            // Apply the enter animation
             setImageAnimation(enterAnimation);
 
             requestAnimationFrame(() => {
-                // Wait for the browser to apply the above styles, then:
                 setTimeout(() => {
-                    // Phase 4: Reset all states.
                     setImageAnimation('');
                     setTransitioning(false);
                 }, 400);
@@ -115,42 +107,27 @@ export default function Lightbox({ item, items, currentIndex, onClose, onPrev, o
     };
 
     const handleTouchEnd = (e) => {
-        if (transitioning) return;  // Disable touch events while transitioning
+        if (transitioning) return;
 
         touchEndX = e.changedTouches[0].clientX;
 
-        // Calculate swipe distance
         const swipeDistance = Math.abs(touchEndX - touchStartX);
 
-        // Check if the swipe distance is too small
         if (swipeDistance < MIN_SWIPE_DISTANCE) {
             return;
         }
 
-        setTransitioning(true);  // Enable the transitioning flag
-
         if (touchEndX < touchStartX && currentIndex < items.length - 1) {
-            // For swiping to the next image
             handleAnimation(currentIndex + 1, onNext);
         } else if (touchEndX > touchStartX && currentIndex > 0) {
-            // For swiping to the previous image
             handleAnimation(currentIndex - 1, onPrev);
         }
-
-        // Reset the animation class after the transition duration
-        setTimeout(() => {
-            setImageAnimation('');
-            setTransitioning(false);  // Disable the transitioning flag
-        }, 400);  // Assuming 0.4s duration for your animation
     };
 
     useEffect(() => {
-        // Adding the event listener when the component mounts
         document.addEventListener('keydown', handleKeyPress);
         document.addEventListener('touchstart', handleTouchStart);
         document.addEventListener('touchend', handleTouchEnd);
-
-        // Removing the event listener when the component unmounts
         return () => {
             document.removeEventListener('keydown', handleKeyPress);
             document.removeEventListener('touchstart', handleTouchStart);
