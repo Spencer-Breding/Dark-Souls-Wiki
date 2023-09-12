@@ -20,7 +20,6 @@
     .gallery_item img {
         position: relative;
         margin: auto;
-        height:auto;
         max-height: 85%;
         width:100%;
         max-width:fit-content;
