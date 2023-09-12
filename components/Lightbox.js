@@ -40,7 +40,7 @@ export default function Lightbox({ item, items, currentIndex, onClose, onPrev, o
     const [transitioning, setTransitioning] = useState(false);
     let touchStartX = 0;
     let touchEndX = 0;
-    const MIN_SWIPE_DISTANCE = 75;
+    const MIN_SWIPE_DISTANCE = 50;
 
     var previewIdx
     if (window.matchMedia("(max-width: 37.5em)").matches) {
@@ -49,7 +49,7 @@ export default function Lightbox({ item, items, currentIndex, onClose, onPrev, o
         previewIdx = 3
     }
     useEffect(() => {
-        const timer = setTimeout(() => setIsVisible(true), 50);
+        const timer = setTimeout(() => setIsVisible(true), 25);
         return () => clearTimeout(timer);
     }, []);
 
