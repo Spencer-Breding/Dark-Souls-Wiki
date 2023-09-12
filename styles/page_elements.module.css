@@ -117,13 +117,15 @@
     }
 }
 
-@media(max-width: 1280px) {
+@media(max-width: 85.375em) {
     .grad {
         margin-left:auto;
         width: 100vw;
     }
+}
 
-    .title_divider{
-    
+@media(max-width: 37.5em) {
+    .grad {
+        height: 4em;
     }
 }

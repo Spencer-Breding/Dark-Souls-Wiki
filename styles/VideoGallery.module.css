@@ -2,27 +2,51 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    height: fit-content;
+    width:100%;
     gap: 2em;
     justify-content: space-evenly;
+    margin-top: 1em;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.gallery_item{
+    width: 448px;
 }
 
 .gallery_item iframe {
-    border: 3px solid #333333;
+    display:flex;
+    border: 2px solid #e25022;
     height: 252px;
     width: 448px;
-    max-width: 80vw;
-    max-height: 50vh;
+    max-width:100%;
+    justify-content:center;
+    margin-left:auto;
+    margin-right:auto;
 }
 
-.gallery_item p {
+.gallery_item p {  
     color: white;
     font-size: 20px;
     text-align: center;
     margin-top: 0.5em;
+    width:100%;
+    white-space:normal;
+    justify-content:center;
 }
 
-@media(max-width: 1024px) {
-        .gallery_item p {
-            font-size: 18px;
-        }
+@media(max-width: 40em) {
+    .gallery{
+        gap:1em;
+        margin-left:auto;
+        margin-right:auto;
+        width:90%;
+    }
+    .gallery_item p {
+        font-size: 18px;
+    }
+}
+
+@media(max-width: 25em) {
 }

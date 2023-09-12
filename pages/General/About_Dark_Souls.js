@@ -142,7 +142,7 @@ export default function About_ds() {
 
     const onThumbnailClick = (index) => {
         if (currentIndex === index) {
-            return; // Do nothing if the current index is already equal to the clicked index
+            return;
         }
         setCurrentIndex(index);
     }

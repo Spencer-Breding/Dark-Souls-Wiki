@@ -40,7 +40,6 @@
     color: white;
     font-family: 'OptimusPrinceps';
     font-size: 24px;
-    padding-left: 1em;
     padding-top: 4em;
     margin-top: -4em;
     margin-bottom: 1em;
@@ -152,7 +151,7 @@
         font-size: 24px;
     }
 
-@media(max-width: 1280px) {
+@media(max-width: 80em) {
     .container {
         width: 100%;
         padding-right: 0.25em;
@@ -167,10 +166,14 @@
         margin-right: auto;
         margin-bottom: 2em;
     }
+    .info_table_item_details {
+        width: 50%;
+    }
+
 
 }
 
-@media(max-width: 1024px) {
+@media(max-width: 56.25em) {
     .info_table {
         display: flex;
         float: none;
@@ -190,5 +193,16 @@
         margin:auto;
         
     }
+
+}
+
+@media(max-width: 25.875em){
+    .info_table{
+        font-size:1rem;
+    }
+    .info_table_item_details {
+        width: 40%;
+    }
+
 
 }

@@ -24,7 +24,7 @@
     justify-content: center;
     top: 0;
     left: 0;
-    z-index: 50;
+    z-index: 1;
     margin: 0;
     white-space: nowrap;
     margin-right: 3em;
@@ -142,7 +142,8 @@
         white-space: nowrap;
         transition: all 0.3s linear;
         width: 100%;
-        right: 1.5em;
+        right: 0.75em;
+        padding-right:1em;
     }
 
 .nav_dropdown div:first-child{
@@ -384,7 +385,7 @@
     color: #bbbbbb;
     display: flex;
     user-select: none;
-    font-size: 20px;
+    font-size: 1.25rem;
     font-family: OptimusPrincepsSemiBold;
     margin-top: auto;
     margin-bottom: auto;
@@ -414,7 +415,7 @@
     }
 
 .burger_item .burger_text{
-    font-size: 18px;
+    font-size: 1.125rem;
 }
 
 .burger_sub_item {
@@ -438,7 +439,7 @@
     }
 
     .burger_sub_item .burger_text {
-        font-size: 16px;
+        font-size: 1rem;
     }
 
 .arrow {
@@ -451,7 +452,7 @@
     transition: all 0.3s linear;
 }
 
-@media (max-width: 1600px) {
+@media (max-width: 100em) {
     .navbar {
         right: 40px;
         padding-right: 20px;
@@ -499,7 +500,7 @@
 
 
 
-@media (max-width: 1280px) {
+@media (max-width: 80em) {
 
     .burger{
         display: flex;
@@ -524,7 +525,7 @@
     }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 50em) {
     .burger_dropdown{
         width: 98vw;
         height: 85vh;
@@ -540,7 +541,36 @@
     }
 }
 
-    @media(max-height: 480px) {
+@media (max-width: 25em) {
+    .burger_icon{
+        width: 2.5em;
+        height: 2.5em;
+    }
+    .burger_text{
+        font-size:1rem;
+    }
+    .burger_item .burger_text {
+        font-size: 0.875rem;
+    }
+    .burger_item .burger_icon {
+        margin-left: 4em;
+        height: 2em;
+        width: 2em;
+    }
+    .burger_sub_item .burger_text{
+        font-size: 0.75rem;
+    }
+    .burger_sub_item .burger_icon {
+        margin-left: 6em;
+        height: 2.5em;
+        width: 2.5em;
+    }
+    .arrow{
+        font-size: 0.75rem;
+    }
+}
+
+    @media(max-height: 30em) {
         .nav_dropdown {
             display: flex;
             overflow-y: auto;
