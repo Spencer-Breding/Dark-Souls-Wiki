@@ -16,11 +16,6 @@
     max-height: 60vh;
 }
 
-.image_wrapper {
-    display: inline-block;
-    border: 2px solid green;
-}
-
     .gallery_item img {
         margin:auto;
         display:block;
