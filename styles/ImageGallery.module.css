@@ -20,29 +20,30 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
-    height: fit-content;
-    width: fit-content;
-    margin: auto;
+    height:auto;
+    max-height:85%;
+    width: auto;
+    margin:auto;
+    border: 1px solid #e25022;
 }
+
+    .image_wrapper hover {
+        transform: scale(1.025);
+        cursor: pointer;
+    }
 
 .gallery_item img {
     margin: auto;
     display: block;
     height:fit-content;
-    max-height: 95%;
+    max-height: 100%;
     width:fit-content;
-    max-width:95%;
+    max-width:100%;
     filter: brightness(1);
     transition: all 0.3s ease-in-out;
     object-fit: contain;
-    border: 1px solid #e25022;
+    margin:0;
 }
-
-        .gallery_item img:hover {
-            transform: scale(1.025);
-            cursor: pointer;
-        }
 
     .gallery_item p {
         color: white;
