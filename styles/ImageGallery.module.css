@@ -16,17 +16,24 @@
     max-height: 60vh;
 }
 
+.image_wrapper {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #e25022;
+    overflow: hidden;
+}
+
     .gallery_item img {
         margin:auto;
         display:block;
-        max-height: 85%;
+        max-height: 100%;
         width:100%;
         max-width:fit-content;
         min-width: 50%;
         filter: brightness(1);
         transition: all 0.3s ease-in-out;
-        border: 2px solid #e25022;
-        object-position:center;
+        object-fit:contain;
     }
 
         .gallery_item img:hover {
