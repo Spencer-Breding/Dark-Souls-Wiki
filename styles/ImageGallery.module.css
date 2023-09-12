@@ -14,7 +14,6 @@
     width: 30%;
     height: auto;
     max-height: 60vh;
-    flex-shrink:0;
 }
 
     .gallery_item img {
