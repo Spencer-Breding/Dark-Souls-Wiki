@@ -14,6 +14,7 @@
     width: 30%;
     height: auto;
     max-height: 60vh;
+    flex-shrink:0;
 }
 
     .gallery_item img {
@@ -21,8 +22,9 @@
         margin: auto;
         height:auto;
         max-height: 85%;
-        width:auto;
+        width:100%;
         max-width:fit-content;
+        min-width: 50%;
         filter: brightness(1);
         transition: all 0.3s ease-in-out;
         border: 2px solid #e25022;
