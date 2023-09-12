@@ -18,10 +18,12 @@
 
 .image_wrapper {
     display: inline-block;
+    border: 2px solid green;
 }
 
     .gallery_item img {
-        margin: auto;
+        margin:auto;
+        display:block;
         max-height: 85%;
         width:100%;
         max-width:fit-content;
@@ -42,7 +44,7 @@
         font-size: 1.5rem;
         text-align: center;
         font-weight:500;
-        margin-top: auto;
+        margin-top: 1em;
         margin-bottom:0;
     }
 
