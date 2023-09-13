@@ -10,9 +10,10 @@ export default function ImageGallery({ items, setCurrentIndex }) {
                         <Image
                             src={item.source}
                             alt={item.description}
-                            width={640}
-                            height={480}
-                            style={{ width: '100%', height: 'auto' }}
+                            layout="responsive"  // Makes the image responsive
+                            width={1}  // The actual value doesn't matter when layout="responsive"
+                            height={1} // The actual value doesn't matter when layout="responsive"
+                            objectFit="contain"
                             loading="lazy"
                             onClick={() => {
                                 setCurrentIndex(index)
