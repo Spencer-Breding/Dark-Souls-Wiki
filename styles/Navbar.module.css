@@ -532,7 +532,7 @@
     }
 }
 
-@media(max-height: 720px) {
+@media(max-height: 45em) {
     #equipment_dropdown {
         height: 50vh;
         overflow-y: auto;
