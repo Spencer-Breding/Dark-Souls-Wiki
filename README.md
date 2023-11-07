@@ -5,7 +5,3 @@ This project was made in order to enhance both my frontend and backend developme
 ## Frontend
 
 The frontend of this site is being built with Next.js, HTML, and CSS.
-
-## TBD
-
-Backend and Database
