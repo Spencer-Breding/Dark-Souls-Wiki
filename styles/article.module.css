@@ -130,6 +130,12 @@
     filter: brightness(1.0);
     width: 95%;
     object-fit: contain;
+    transition: all linear 0.3s;
+    cursor:pointer;
+}
+
+.cover:hover{
+    filter: brightness(1.2);
 }
 
 .external {

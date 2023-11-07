@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Head from "next/head";
 import Link from 'next/link';
+import Image from 'next/image';
 import Contents from "../../components/contents";
 import TitleDiv from "../../components/TitleDiv";
 import Grad from "../../components/grad";
@@ -112,6 +113,7 @@ const reception = <text className={styles.body_text}><em>Dark Souls</em> receive
 export default function About_ds() {
     const [currentIndex, setCurrentIndex] = useState(null);
     const imageItems = [
+        { source: "https://i.imgur.com/nvd5Nsj.jpg", description: "Playstation 3 Cover"},
         { source: "https://www.gematsu.com/wp-content/uploads/2011/05/Dark-Souls-Jap-Box-Art.jpg", description: "Japanese Box Art" },
         { source: "https://conceptartworld.com/wp-content/uploads/2014/01/Dark_Souls_Design_Works_01.jpg", description: "Western Box Art" },
         { source: "https://m.media-amazon.com/images/I/71sXzLCahJL.jpg", description: "Prepare to Die Edition Box Art" },
@@ -123,6 +125,8 @@ export default function About_ds() {
         { source: "https://cdn.cloudflare.steamstatic.com/steam/apps/570940/ss_f60f54e58b13d0744853672ccd35810397e3fa26.1920x1080.jpg?t=1668145065", description: "Enemy Encounter Promotional Image" }
     ]
 
+    const galleryItems = imageItems.slice(1);
+
     const videoItems = [
         { source: "https://www.youtube.com/embed/9IbPrk-yuts", description: "Dark Souls E3 2011 - Official Trailer" },
         { source: "https://www.youtube.com/embed/WlVBVKAFFg4", description: "Dark Souls Prepare to Die Edition Trailer - GGD" },
@@ -131,8 +135,6 @@ export default function About_ds() {
         { source: "https://www.youtube.com/embed/QNpLhv21BS0", description: "Darl Souls: All Saints' Day Trailer" },
         { source: "https://www.youtube.com/embed/93LFz_j5fQA", description: "Dark Souls: Bartholomew Trailer" }
     ]
-
-    const allItems = [...imageItems, ...videoItems];
 
     const closeLightbox = () => setCurrentIndex(null);
 
@@ -160,9 +162,10 @@ export default function About_ds() {
                     <div className={styles.info_table}>
                         <h2>Dark Souls</h2>
                         <div className={styles.cover_container}>
-                            <a href="https://i.imgur.com/nvd5Nsj.jpeg" target="blank">
-                                <img className={styles.cover} src="https://i.imgur.com/nvd5Nsj.jpg" width={379} height={440} alt="" />
-                            </a>
+                            <Image className={styles.cover} src="https://i.imgur.com/nvd5Nsj.jpg" width={379} height={440} alt="" onClick={() => {
+                                setCurrentIndex(0)
+                                document.body.style.overflowY = 'hidden'
+                            }} />
                         </div>
                         <div className={styles.info_table_item}>
                             <text className={styles.info_table_header}>Release Date</text>
@@ -241,7 +244,7 @@ export default function About_ds() {
                     <br />
                     <h3 className={styles.body_header} id="Gallery">Gallery</h3>
                     <TitleDiv />
-                    <ImageGallery items={imageItems} setCurrentIndex={(index) => setCurrentIndex(index)} />
+                    <ImageGallery items={galleryItems} setCurrentIndex={(index) => setCurrentIndex(index+1)} />
                 </div>
                 <br />
                 <br />

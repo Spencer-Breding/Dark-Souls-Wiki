@@ -12,16 +12,16 @@
     display: flex;
     flex-direction: column;
     width: 30%;
-    height: auto; /* Height will auto-adjust */
+    height: auto;
 }
 
 .image_wrapper {
-    display:flex;
+    display: flex;
     width: 100%;
     position: relative;
     overflow: hidden;
-    border: 1px solid #e25022;
-    margin:auto;
+    margin: auto;
+    transition: transform 0.3s ease-in-out;
 }
 
     .image_wrapper:hover {
@@ -31,9 +31,9 @@
 
     .image_wrapper img {
         display:flex;
-        width: 100%; /* Full width */
-        height: 100%; /* Full height */
-        object-fit: contain; /* Maintain aspect ratio */
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
         margin:auto;
     }
 

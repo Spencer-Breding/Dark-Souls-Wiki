@@ -444,7 +444,7 @@ export default function Navbar(props) {
                         </Link>
                     </div>
                     <div className={styles.dropdown_item}>
-                        <Link href="/Equipment/Armor#Helms">
+                        <Link href="/Equipment/Items">
                             <Image src="https://darksouls.wiki.fextralife.com/file/Dark-Souls/2051.png" width={25} height={25}></Image>
                             <text>Items</text>
                         </Link>

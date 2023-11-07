@@ -1,19 +1,11 @@
-import { useState, useEffect, useCallback } from 'react';
+"use client";
+import Image from 'next/image';
+import { useState, useEffect, useCallback, useRef } from 'react';
 import styles from '../styles/Lightbox.module.css';
 
-const getPreviewItems = (currentIndex, items) => {
-    var startIdx
-    if (window.matchMedia("(max-width: 37.5em)").matches) {
-        startIdx = currentIndex - 2
-    } else {
-        startIdx = currentIndex - 3
-    }
-    var endIdx
-    if (window.matchMedia("(max-width: 37.5em)").matches) {
-        endIdx = startIdx + 5
-    } else {
-        endIdx = startIdx + 7
-    }
+const getPreviewItems = (currentIndex, items, previewIdx) => {
+    var startIdx = currentIndex - previewIdx
+    var endIdx = currentIndex + previewIdx + 1;
     const placeholder = { source: "", description: "" };
     let placeholdersBefore = 0;
     let placeholdersAfter = 0;
@@ -38,16 +30,27 @@ export default function Lightbox({ item, items, currentIndex, onClose, onPrev, o
     const [isVisible, setIsVisible] = useState(false);
     const [imageAnimation, setImageAnimation] = useState('');
     const [transitioning, setTransitioning] = useState(false);
-    let touchStartX = 0;
-    let touchEndX = 0;
-    const MIN_SWIPE_DISTANCE = 50;
+    const [previewIdx, setPreviewIdx] = useState(3);
+    let touchStartX = useRef(0);
+    let touchEndX = useRef(0);
+    let numberOfFingers = useRef(0);
+    const MIN_SWIPE_DISTANCE = 75;
 
-    var previewIdx
-    if (window.matchMedia("(max-width: 37.5em)").matches) {
-        previewIdx = 2
-    } else {
-        previewIdx = 3
-    }
+    useEffect(() => {
+        const handleResize = () => {
+            if (window.matchMedia("(max-width: 42.5em)").matches) {
+                setPreviewIdx(2);
+            } else {
+                setPreviewIdx(3);
+            }
+        };
+        handleResize();
+
+        window.addEventListener('resize', handleResize);
+
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
+
     useEffect(() => {
         const timer = setTimeout(() => setIsVisible(true), 25);
         return () => clearTimeout(timer);
@@ -77,7 +80,7 @@ export default function Lightbox({ item, items, currentIndex, onClose, onPrev, o
         });
     }, [currentIndex]);
 
-    const previewItems = getPreviewItems(currentIndex, items);
+    const previewItems = getPreviewItems(currentIndex, items, previewIdx);
 
     const handleClose = useCallback(() => {
         setIsVisible(false);
@@ -102,17 +105,19 @@ export default function Lightbox({ item, items, currentIndex, onClose, onPrev, o
         }
     }, [handleClose, currentIndex, items.length, transitioning, handleAnimation, onNext, onPrev]);
 
-    const handleTouchStart = (e) => {
-        touchStartX = e.touches[0].clientX;
-    };
+    const handleTouchStart = useCallback((e) => {
+        numberOfFingers.current = e.touches.length;
+        if (numberOfFingers === 1) {
+            touchStartX.current = e.touches[0].clientX;
+        }
+    }, []);
 
-    const handleTouchEnd = (e) => {
-        if (transitioning) return;
+    const handleTouchEnd = useCallback((e) => {
+        if (numberOfFingers !== 1 || transitioning) return;
 
-        touchEndX = e.changedTouches[0].clientX;
+        touchEndX.current = e.changedTouches[0].clientX;
 
         const swipeDistance = Math.abs(touchEndX - touchStartX);
-
         if (swipeDistance < MIN_SWIPE_DISTANCE) {
             return;
         }
@@ -122,7 +127,7 @@ export default function Lightbox({ item, items, currentIndex, onClose, onPrev, o
         } else if (touchEndX > touchStartX && currentIndex > 0) {
             handleAnimation(currentIndex - 1, onPrev);
         }
-    };
+    }, [currentIndex, handleAnimation, items.length, numberOfFingers, onNext, onPrev, touchStartX, transitioning]);
 
     useEffect(() => {
         document.addEventListener('keydown', handleKeyPress);
@@ -160,7 +165,7 @@ export default function Lightbox({ item, items, currentIndex, onClose, onPrev, o
                 onTouchEnd={handleTouchEnd}>
                 <div className={`${styles.mainImageContainer} ${imageAnimation}`}>
                     <div className={styles.mainImageWrapper}>
-                        <img className={styles.mainImage} src={item.source} alt={item.description} />
+                        <Image className={styles.mainImage} src={item.source} alt={item.description} fill />
                     </div>
                     <p className={styles.imageDescription}>{item.description}</p>
                 </div>
@@ -180,20 +185,23 @@ export default function Lightbox({ item, items, currentIndex, onClose, onPrev, o
                         }
 
                         return (
-                            <img
-                                key={index}
-                                src={previewItem.source}
-                                alt={previewItem.description}
-                                className={`${styles.previewImage} ${index === previewIdx ? styles.selectedPreview : ''}`}
-                                onClick={() => {
-                                    if (actualIndex === currentIndex) {
-                                        return;
-                                    }
-                                    if (!transitioning) {
-                                        handleAnimation(actualIndex, () => onThumbnailClick(actualIndex));
-                                    }
-                                }}
-                            />
+                            <div className={styles.previewImageWrapper}>
+                                <Image
+                                    key={index}
+                                    src={previewItem.source}
+                                    alt={previewItem.description}
+                                    className={`${styles.previewImage} ${index === previewIdx ? styles.selectedPreview : ''}`}
+                                    onClick={() => {
+                                        if (actualIndex === currentIndex) {
+                                            return;
+                                        }
+                                        if (!transitioning) {
+                                            handleAnimation(actualIndex, () => onThumbnailClick(actualIndex));
+                                        }
+                                    }}
+                                    fill
+                                />
+                            </div>
                         );
                     })}
                 </div>
