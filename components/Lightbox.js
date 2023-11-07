@@ -108,7 +108,7 @@ export default function Lightbox({ item, items, currentIndex, onClose, onPrev, o
     const handleTouchStart = useCallback((e) => {
         numberOfFingers.current = e.touches.length;
         if (numberOfFingers === 1) {
-            touchStartX.current = e.touches[0].clientX;
+            touchStartX.cur = e.touches[0].clientX;
         }
     }, []);
 
@@ -117,14 +117,14 @@ export default function Lightbox({ item, items, currentIndex, onClose, onPrev, o
 
         touchEndX.current = e.changedTouches[0].clientX;
 
-        const swipeDistance = Math.abs(touchEndX - touchStartX);
+        const swipeDistance = Math.abs(touchEndX.current - touchStartX.current);
         if (swipeDistance < MIN_SWIPE_DISTANCE) {
             return;
         }
 
-        if (touchEndX < touchStartX && currentIndex < items.length - 1) {
+        if (touchEndX.current < touchStartX.current && currentIndex < items.length - 1) {
             handleAnimation(currentIndex + 1, onNext);
-        } else if (touchEndX > touchStartX && currentIndex > 0) {
+        } else if (touchEndX.current > touchStartX.current && currentIndex > 0) {
             handleAnimation(currentIndex - 1, onPrev);
         }
     }, [currentIndex, handleAnimation, items.length, numberOfFingers, onNext, onPrev, touchStartX, transitioning]);
