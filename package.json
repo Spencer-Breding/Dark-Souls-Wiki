@@ -16,6 +16,9 @@
     "react-transition-group": "^4.4.5",
     "web-vitals": "^4.0.0"
   },
+  "engines":{
+    "node": ">=20.13.1"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
