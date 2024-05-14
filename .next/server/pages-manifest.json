@@ -1,6 +1,1 @@
-{
-  "/_app": "pages/_app.js",
-  "/_error": "pages/_error.js",
-  "/_document": "pages/_document.js",
-  "/General/About_Dark_Souls": "pages/General/About_Dark_Souls.js"
-}
+{"/_app":"pages/_app.js","/_document":"pages/_document.js","/Character/Classes":"pages/Character/Classes.html","/Character":"pages/Character.html","/Equipment":"pages/Equipment.html","/General/About_Dark_Souls":"pages/General/About_Dark_Souls.html","/Equipment/Armor":"pages/Equipment/Armor.html","/General/Mechanics/Damage":"pages/General/Mechanics/Damage.html","/General/Mechanics/Damage/physical_damage":"pages/General/Mechanics/Damage/physical_damage.html","/General":"pages/General.html","/Guides":"pages/Guides.html","/General/Mechanics":"pages/General/Mechanics.html","/Online":"pages/Online.html","/":"pages/index.html","/World":"pages/World.html","/_error":"pages/_error.js","/404":"pages/404.html"}
