@@ -4,6 +4,7 @@ module.exports = {
     output: 'export',  // This is the new property you need to add
     assetPrefix: isProd ? '/Dark-Souls-Wiki/' : '',
     images: {
+        unoptimized: true,
         remotePatterns: [
             {
                 protocol: 'https',
